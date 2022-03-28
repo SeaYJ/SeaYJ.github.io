@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>SeaYJ</title>
+  
+  <subtitle>晊恦</subtitle>
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2022-03-28T01:30:40.676Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>SeaYJ</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>宝剑锋从磨砺出，梅花香自苦寒来</title>
+    <link href="http://example.com/2022/03/28/bao-jian-feng-cong-mo-li-chu-mei-hua-xiang-zi-ku-han-lai/"/>
+    <id>http://example.com/2022/03/28/bao-jian-feng-cong-mo-li-chu-mei-hua-xiang-zi-ku-han-lai/</id>
+    <published>2022-03-28T01:25:42.000Z</published>
+    <updated>2022-03-28T01:30:40.676Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;此刻的我坐在电脑前，格外兴奋！因为我终于有一个自己的博客了！&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="博文" scheme="http://example.com/tags/%E5%8D%9A%E6%96%87/"/>
+    
+  </entry>
+  
+</feed>
