@@ -8,7 +8,7 @@
       <link href="/2022/03/28/bao-jian-feng-cong-mo-li-chu-mei-hua-xiang-zi-ku-han-lai/"/>
       <url>/2022/03/28/bao-jian-feng-cong-mo-li-chu-mei-hua-xiang-zi-ku-han-lai/</url>
       
-        <content type="html"><![CDATA[<p>此刻的我坐在电脑前，格外兴奋！因为我终于有一个自己的博客了！</p><span id="more"></span><p>之前一直依靠博客园写博客，但是问题很多也很麻烦。虽然说总体还不错，但是毕竟是商业的博客网站，还是有很多限制的。后来，<a href="https://www.cnblogs.com/SeaYJ/">我的博客园博客</a>中 JS 代码突然由于某种原因不能正常加载了。这样一来，更加坚定了我搭建一个自己的博客的欲望。</p><p>终于，在前辈们的帮助下我终于搭建了这个博客！非常感谢大家对我的帮助，也感谢 <a href="https://hexo.io/">HEXO</a> 提供的帮助！</p><p>谢谢！</p>]]></content>
+        <content type="html"><![CDATA[<p>此刻的我坐在电脑前，格外兴奋！因为我终于有一个自己的博客了！</p><span id="more"></span><p>之前一直依靠博客园写博客，但是问题很多也很麻烦。虽然说总体还不错，但是毕竟是商业的博客网站，还是有很多限制的。后来，<a href="https://www.cnblogs.com/SeaYJ/">我的博客园博客</a>中 JS 代码突然由于某种原因不能正常加载了。这样一来，更加坚定了我搭建一个自己的博客的欲望。</p><p>终于，在前辈们的帮助下我终于搭建了这个博客！非常感谢大家对我的帮助，也感谢 <a href="https://hexo.io/">HEXO</a> 提供的帮助！</p><p>谢谢！</p><pre><code>#include &lt;stdio.h&gt;int main(int argc, char *argv[])&#123;    printf(&quot;Hello World!\n&quot;);    return 0;&#125;</code></pre>]]></content>
       
       
       

@@ -1,1 +1,8 @@
 /* Here is your custom css styles. */
+
+/**********\
+*  代码块  *
+\**********/
+#articleContent .code-area pre {
+	background-color: #272822;
+}
