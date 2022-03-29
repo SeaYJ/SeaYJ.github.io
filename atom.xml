@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-03-29T03:52:39.729Z</updated>
+  <updated>2022-03-29T09:25:18.417Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,25 +17,95 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>解决 Win32 系统控件都是老式的问题</title>
+    <link href="http://example.com/2022/03/29/jie-jue-win32-xi-tong-kong-jian-du-shi-lao-shi-de-wen-ti/"/>
+    <id>http://example.com/2022/03/29/jie-jue-win32-xi-tong-kong-jian-du-shi-lao-shi-de-wen-ti/</id>
+    <published>2022-03-29T06:23:33.000Z</published>
+    <updated>2022-03-29T09:25:18.417Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在 Win32 编程时我们时常会遇到使用系统窗口类的情况。按理说我们使用的系统窗口类样式应该与我们正在使用的操作系统版本保持一致才是，但为什么往往都是老式的控件呢？&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="博文" scheme="http://example.com/tags/%E5%8D%9A%E6%96%87/"/>
+    
+    <category term="Win32 编程" scheme="http://example.com/tags/Win32-%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>控制台程序运行时不显示 CMD 窗口</title>
+    <link href="http://example.com/2022/03/29/kong-zhi-tai-cheng-xu-yun-xing-shi-bu-xian-shi-cmd-chuang-kou/"/>
+    <id>http://example.com/2022/03/29/kong-zhi-tai-cheng-xu-yun-xing-shi-bu-xian-shi-cmd-chuang-kou/</id>
+    <published>2022-03-29T06:18:45.000Z</published>
+    <updated>2022-03-29T06:49:03.494Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;我们知道，控制台应用程序本身是没有窗口的。系统为了让我们能看到程序执行的结果，会在程序执行时借一个命令提示符窗口(CMD 窗口)。所以，就有了这个黑黑的窗口…&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./2573290-20220108165410630-278740407.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;有时候我们又不想让这个窗口显示出来，那么我们该怎么做呢？&lt;/p&gt;
+&lt;p&gt;我总结了以下几种方法：&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="博文" scheme="http://example.com/tags/%E5%8D%9A%E6%96%87/"/>
+    
+    <category term="Win32 编程" scheme="http://example.com/tags/Win32-%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Win32】 UAC用户账户控制 (提权)</title>
+    <link href="http://example.com/2022/03/29/win32-uac-yong-hu-zhang-hu-kong-zhi-ti-quan/"/>
+    <id>http://example.com/2022/03/29/win32-uac-yong-hu-zhang-hu-kong-zhi-ti-quan/</id>
+    <published>2022-03-29T06:16:27.000Z</published>
+    <updated>2022-03-29T06:17:16.606Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近写程序时遇到一个问题，就是当一个程序需要管理员权限才能正常运行该怎么办？&lt;/p&gt;
+&lt;p&gt;通过查阅多方资料，我总结出来几个比较实用的办法！</summary>
+    
+    
+    
+    
+    <category term="博文" scheme="http://example.com/tags/%E5%8D%9A%E6%96%87/"/>
+    
+    <category term="Win32 编程" scheme="http://example.com/tags/Win32-%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Visual Studio 设置背景图片主题（所有版本设置方法）</title>
+    <link href="http://example.com/2022/03/29/visual-studio-she-zhi-bei-jing-tu-pian-zhu-ti-suo-you-ban-ben-she-zhi-fang-fa/"/>
+    <id>http://example.com/2022/03/29/visual-studio-she-zhi-bei-jing-tu-pian-zhu-ti-suo-you-ban-ben-she-zhi-fang-fa/</id>
+    <published>2022-03-29T05:48:47.000Z</published>
+    <updated>2022-03-29T05:55:18.693Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;你知道吗？Visual Studio 编辑器也能设置背景哦~&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="编辑器" scheme="http://example.com/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
+    
+    <category term="博文" scheme="http://example.com/tags/%E5%8D%9A%E6%96%87/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Windows 10 如何在当前位置打开 CMD 命令窗口？</title>
     <link href="http://example.com/2022/03/29/windows-10-ru-he-zai-dang-qian-wei-zhi-da-kai-cmd-ming-ling-chuang-kou/"/>
     <id>http://example.com/2022/03/29/windows-10-ru-he-zai-dang-qian-wei-zhi-da-kai-cmd-ming-ling-chuang-kou/</id>
     <published>2022-03-29T02:53:26.000Z</published>
-    <updated>2022-03-29T03:52:39.729Z</updated>
+    <updated>2022-03-29T05:59:36.094Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;方法一&quot;&gt;方法一&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Win + R 键召唤出运行窗口，然后输入 “CMD” 打开命令提示符。&lt;/li&gt;
-&lt;li&gt;使用 cd 命令更改当前命令提示符的工作环境。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class=&quot;line-numbers</summary>
-        
-      
+    <summary type="html">&lt;p&gt;打开 CMD 后还要 CD 配置运行环境？太麻烦了！&lt;/p&gt;
+&lt;p&gt;来看看我是怎么在当前位置一键打开 CMD 命令窗口的吧！&lt;/p&gt;</summary>
     
     
     
@@ -88,7 +158,7 @@
     <link href="http://example.com/2022/03/28/bao-jian-feng-cong-mo-li-chu-mei-hua-xiang-zi-ku-han-lai/"/>
     <id>http://example.com/2022/03/28/bao-jian-feng-cong-mo-li-chu-mei-hua-xiang-zi-ku-han-lai/</id>
     <published>2022-03-28T01:25:42.000Z</published>
-    <updated>2022-03-28T04:29:58.288Z</updated>
+    <updated>2022-03-29T05:44:09.165Z</updated>
     
     
     <summary type="html">&lt;p&gt;此刻的我坐在电脑前，格外兴奋！因为我终于有一个自己的博客了！&lt;/p&gt;</summary>

@@ -101,7 +101,7 @@ blockquote {
 }
 
 pre {
-    padding: 2rem 1rem 1rem 3rem !important;
+    padding: 2rem 1rem 1rem 2rem !important;
     border-radius: 0.35rem;
     tab-size: 4;
 }
@@ -184,7 +184,7 @@ code {
 pre code {
     padding: 0;
     color: #e8eaf6;
-    background-color: #272822;
+    background-color: inherit;
 }
 
 /* 键盘 kbd 标签样式 */
