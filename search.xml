@@ -4,6 +4,67 @@
   
     
     <entry>
+      <title>Windows 10 如何在当前位置打开 CMD 命令窗口？</title>
+      <link href="/2022/03/29/windows-10-ru-he-zai-dang-qian-wei-zhi-da-kai-cmd-ming-ling-chuang-kou/"/>
+      <url>/2022/03/29/windows-10-ru-he-zai-dang-qian-wei-zhi-da-kai-cmd-ming-ling-chuang-kou/</url>
+      
+        <content type="html"><![CDATA[<h2 id="方法一">方法一</h2><ol><li>Win + R 键召唤出运行窗口，然后输入 “CMD” 打开命令提示符。</li><li>使用 cd 命令更改当前命令提示符的工作环境。</li></ol><pre class="line-numbers language-none"><code class="language-none">cd&#x2F;              - 退到当前所在盘符cd..             - 返回上一目录cd &quot;FilesPath&quot;   - 进入 FilesPath 目录D:               - 进入 D: 盘（其他盘符类似）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;int main(int argc, char *argv[])&#123;    printf(&quot;Hello World!\n&quot;);    return 0;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="方法二">方法二</h2><ol><li>直接在文件资源管理器的某个目录下的地址栏中输入 “cmd”。</li><li>回车，就可以直接打开 cmd 并且在该目录下工作。</li></ol><h2 id="方法三-一劳永逸-注册表">方法三(一劳永逸/注册表)</h2><p>提醒：虽然涉及到注册表，但是操作非常简单。不需要备份。<br>你备份了也没有用，重新导入备份的注册表无法删除你新建的注册表。<br>不过，你要是担心，可以备份一下！</p><ol><li>Win + R 打开运行窗口，输入 “regedit” 打开注册表编辑器。</li><li>打开 “计算机\HKEY_CLASSES_ROOT\Directory\Background\shell\”。</li><li>然后右键新建一个 “项”，名字叫 <code>OpenCMDHere</code> 。</li><li>接着在 OpenCMDHere 项下新建一个项叫 <code>command</code>。</li><li>再接着将 OpenCMDHere 项中的默认值的数据改成 <code>在当前目录启动 CMD</code>（这个名字就是你右键时将看到的名字）。</li><li>最后将 OpenCMDHere 项下的 command 项中的默认值的数据改成 <code>cmd.exe /s /k pushd &quot;%V&quot;</code>。</li></ol><p>重新启动一下 Windows资源管理器 或者 重新启动一下电脑 就行了。<br>以后，你就会发现你的右键菜单多了一项 在当前目录启动 CMD 。<br>点击该项即可在右键位置目录打开 命令提示符 了，就和打开 Powershell 一样，可谓一劳永逸。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 博文 </tag>
+            
+            <tag> 计算机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VC 2010 Express 学生版(中文版)</title>
+      <link href="/2022/03/29/vc-2010-express-xue-sheng-ban-zhong-wen-ban/"/>
+      <url>/2022/03/29/vc-2010-express-xue-sheng-ban-zhong-wen-ban/</url>
+      
+        <content type="html"><![CDATA[<p>Microsoft Visual C++ 2010 Express 虽然微软已经不再提供下载，但是很多时候教学还是要用…</p><span id="more"></span><p>无语…找了半天终于找到了中文版的。这里挂个链接，分享给大家！<br>希望能帮到大家！</p><h2 id="Microsoft-Visual-C-2010-Express-学生版">Microsoft Visual C++ 2010 Express 学生版</h2><p><a href="https://pan.baidu.com/s/1q9rfbN-114zaDBPxZUeqUQ">下载传送门(提取码:r7sm)</a></p><h2 id="如何安装">如何安装</h2><ol><li><p>拿到压缩文件后，解压到桌面(别怕，安装完后这个文件夹是可以删除的)。</p></li><li><p>在 <strong>“.\vc2010express\VCExpress2010\”</strong> 文件夹中找到 <strong>steup.exe</strong> 文件。然后右键，选择 <strong>“打开”</strong> 。</p></li><li><p>配置好安装路径后(想配置安装路径就自己配置，不会的或者不想的就默认就行了^-^)一路下一步就好了。</p></li><li><p>(*)可能有人安装后桌面找不到桌面图标，从而不知道怎么打开 VC 2010 。别急，方法我放在图里了，大家自己看就行了！</p></li></ol><p><img src="./2573290-20211023221044090-485750094.png" alt=""></p><p><img src="./2573290-20211023221149424-1971937898.png" alt=""></p><p><img src="./2573290-20211023221316953-1394538470.png" alt=""></p><p><img src="./2573290-20211023221506887-1825171777.png" alt=""></p><p><img src="./2573290-20211023221632636-1958762448.png" alt=""></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 编辑器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>电脑重装系统后要做的那些事</title>
+      <link href="/2022/03/29/dian-nao-chong-zhuang-xi-tong-hou-yao-zuo-de-na-xie-shi/"/>
+      <url>/2022/03/29/dian-nao-chong-zhuang-xi-tong-hou-yao-zuo-de-na-xie-shi/</url>
+      
+        <content type="html"><![CDATA[<p>花了点时间整理了一下重装系统后要做的事。</p><p>这些都是按照我个人喜好设置的，大家可以自行选取操作！</p><span id="more"></span><h2 id="大纲">大纲</h2><ol><li><a href="#step1">系统相关</a><ul><li><a href="#step1-1">更改桌面图标</a></li><li><a href="#step1-2">更改新内容存储的位置</a></li><li><a href="#step1-3">更改“视频”、“图片”、“文档”等的保存位置</a></li></ul></li><li><a href="#step2">软件相关</a><ul><li><a href="#step2-1">安全软件</a></li><li><a href="#step2-2">浏览器</a></li><li><a href="#step2-3">解压软件</a></li><li><a href="#step2-4">Office系列办公软件</a></li><li><a href="#step2-5">Notepad++</a></li></ul></li><li><a href="#step3">优化相关</a><ul><li><a href="#step3-1">电脑鼠标指针</a></li><li><a href="#step3-2">电脑壁纸</a></li></ul></li></ol><h2 id="简略操作解释">简略操作解释</h2><h3 id="step1">系统相关</h3><h4 id="step1-1">1. 更改桌面图标</h4><p><img src="./2573290-20211020064929758-546120728.png" alt=""></p><p><img src="./2573290-20211020065011223-2063110694.png" alt=""></p><p><img src="./2573290-20211020065045358-430429568.png" alt=""></p><h4 id="step1-2">2. 更改新内容存储的位置</h4><p><img src="./2573290-20211020065211274-1200984641.png" alt=""></p><p><img src="./2573290-20211020065249931-1359983939.png" alt=""></p><p><img src="./2573290-20211020065357887-1413384634.png" alt=""></p><h4 id="step1-3">3. 更改“视频”、“图片”、“文档”等的保存位置</h4><p><img src="./2573290-20211020065841756-302612061.png" alt=""></p><p><img src="./2573290-20211020070223294-1497201277.png" alt=""></p><p><strong>注释：这里我是根据 “2. 更改新内容存储的位置” 里的操作进行选择位置的！</strong></p><p><strong>例如</strong>：我在 “2. 更改新内容存储的位置” 操作中，将视频默认更改到了<strong>D盘</strong>。</p><p>那么在路径 <strong>“D:\电脑用户名\”</strong> 中就会有一个默认的 “Videos” 文件夹(其中文名为“视频”)！</p><p><strong>将新位置定在这里会更加有条理一些！</strong></p><p><img src="./2573290-20211020070404784-1708735807.png" alt=""></p><h3 id="step2">软件相关</h3><p>注意：我这里使用的软件都是我自己喜欢的！</p><p>大家也可以按照自己的意愿自行替换相应的软件！</p><h4 id="step2-1">1. 安全软件</h4><p><img src="./2573290-20211020175910587-244774172.png" alt=""></p><p>安全软件我一直以来用的就是 “<strong><a href="https://www.huorong.cn/">火绒</a></strong>” ，这里是描述我的配置方案。</p><p>至于为什么选 <a href="https://www.huorong.cn/">火绒</a> 我就不做过多的赘述了！</p><p>大家可以自行百度 <a href="https://www.huorong.cn/">火绒</a> 作为安全软件的优缺点！</p><h4 id="step2-2">2. 浏览器</h4><p><img src="./2573290-20211020180046902-2006605773.png" alt=""></p><p>之前我的浏览器一直是标配的 “<a href="https://www.google.cn/chrome/index.html">Chrome</a>” ，但由于 <a href="https://www.google.cn/chrome/index.html">Chrome</a> 隶属于 Google 公司，导致有些功能在国内很难使用！</p><p>外加上 Microsoft 推出**<a href="https://www.microsoft.com/zh-cn/edge#platform">最新版EDGE</a><strong>后，我就果断选择了</strong><a href="https://www.microsoft.com/zh-cn/edge#platform">最新版EDGE</a>**。</p><p>大家可以自行了解相关信息，我不做过多赘述！</p><h4 id="step2-3">3. 解压软件</h4><p><img src="./2573290-20211020180120639-1409023001.png" alt=""></p><p><a href="https://pan.baidu.com/s/1aEB59J4OGgfujATOa5aJng">WinRAR</a> (提取码:a5rw)虽然有广告，但是我已经做好破解版了！</p><p>大家可以按照操作说明进行操作，使用我的破解版 <a href="https://pan.baidu.com/s/1aEB59J4OGgfujATOa5aJng">WinRAR</a> 。</p><h4 id="step2-4">4. Office系列办公软件</h4><p><img src="./2573290-20211020180217427-1890024410.png" alt=""></p><p>我使用的是 <a href="https://otp.landian.vip/zh-cn/">Office_Tool_Pro</a> 来配置我需要的 Office！</p><p>软件官网和程序内部均有详细说明，我这里也不过多介绍了！</p><h4 id="step2-5">5. Notepad++</h4><p>一个小巧实用的编辑软件还是很有必要的，特别是针对我这种经常需要在各大编程语言的来回变换的苦逼孩子TOT~</p><p>所以，我选择了 <a href="https://pan.baidu.com/s/1z17dS3biGv5fk_LdL_f2dg/">Notepad++</a> (提取码:mxd3) !</p><p>有兴趣的可以自己去了解 <a href="https://pan.baidu.com/s/1z17dS3biGv5fk_LdL_f2dg/">Notepad++</a> 的强大之处！</p><h3 id="step3">优化相关</h3><h4 id="step3-1">电脑鼠标指针</h4><p>这个我一直用的是 <a href="https://pan.baidu.com/s/16rTA9aIEKm5I6YtS7n6NrQ">Helltaker Stroke Version</a> (提取码:davh)!</p><p><img src="./2573290-20211020175737852-883422927.png" alt=""></p><p>声明：这个鼠标指针原作者不是我！</p><p>我只是把鼠标指针的安装模块和对应指针的名称进行了修改，使得其看起来更专业一些！</p><p>强迫症~<br>哈哈哈哈~<br>见谅~</p><h4 id="step3-2">电脑壁纸</h4><p>电脑壁纸也是电脑美观的一大亮点！</p><p>当然，找壁纸大家都是有能力的！我就不献丑了~</p><p>嘻嘻(●’◡’●)~</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 博文 </tag>
+            
+            <tag> 计算机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>宝剑锋从磨砺出，梅花香自苦寒来</title>
       <link href="/2022/03/28/bao-jian-feng-cong-mo-li-chu-mei-hua-xiang-zi-ku-han-lai/"/>
       <url>/2022/03/28/bao-jian-feng-cong-mo-li-chu-mei-hua-xiang-zi-ku-han-lai/</url>

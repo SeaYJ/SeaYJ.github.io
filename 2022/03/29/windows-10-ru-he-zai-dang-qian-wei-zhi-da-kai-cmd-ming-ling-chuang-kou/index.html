@@ -4,10 +4,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="宝剑锋从磨砺出，梅花香自苦寒来, SeaYJ">
-    <meta name="description" content="此刻的我坐在电脑前，格外兴奋！因为我终于有一个自己的博客了！
+    <meta name="keywords" content="Windows 10 如何在当前位置打开 CMD 命令窗口？, SeaYJ">
+    <meta name="description" content="方法一
 
-之前一直依靠博客园写博客，但是问题很多也很麻烦。虽然说总体还不错，但是毕竟是商业的博客网站，还是有很多限制的。后来，我的博客园博客中 JS 代码突然由于某种原因不能正常加载了。">
+Win + R 键召唤出运行窗口，然后输入 “CMD” 打开命令提示符。
+使用 cd 命令更改当前命令提示符的工作环境。
+
+cd&amp;#x2F;              - 退到当前所在盘符
+cd..             - 返">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +23,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>宝剑锋从磨砺出，梅花香自苦寒来 | SeaYJ</title>
+    <title>Windows 10 如何在当前位置打开 CMD 命令窗口？ | SeaYJ</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -322,12 +326,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">宝剑锋从磨砺出，梅花香自苦寒来</h1>
+                    <h1 class="description center-align post-title">Windows 10 如何在当前位置打开 CMD 命令窗口？</h1>
                 </div>
             </div>
         </div>
@@ -447,6 +451,10 @@
                                 <span class="chip bg-color">博文</span>
                             </a>
                         
+                            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">
+                                <span class="chip bg-color">计算机</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -459,7 +467,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-28
+                    2022-03-29
                 </div>
                 
 
@@ -483,19 +491,42 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>此刻的我坐在电脑前，格外兴奋！因为我终于有一个自己的博客了！</p>
-<span id="more"></span>
-<p>之前一直依靠博客园写博客，但是问题很多也很麻烦。虽然说总体还不错，但是毕竟是商业的博客网站，还是有很多限制的。后来，<a target="_blank" rel="noopener" href="https://www.cnblogs.com/SeaYJ/">我的博客园博客</a>中 JS 代码突然由于某种原因不能正常加载了。这样一来，更加坚定了我搭建一个自己的博客的欲望。</p>
-<p>终于，在前辈们的帮助下我终于搭建了这个博客！非常感谢大家对我的帮助，也感谢 <a target="_blank" rel="noopener" href="https://hexo.io/">HEXO</a> 提供的帮助！</p>
-<p>谢谢！</p>
-<pre><code>#include &lt;stdio.h&gt;
+                <h2 id="方法一">方法一</h2>
+<ol>
+<li>Win + R 键召唤出运行窗口，然后输入 “CMD” 打开命令提示符。</li>
+<li>使用 cd 命令更改当前命令提示符的工作环境。</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">cd&#x2F;              - 退到当前所在盘符
+cd..             - 返回上一目录
+cd &quot;FilesPath&quot;   - 进入 FilesPath 目录
+D:               - 进入 D: 盘（其他盘符类似）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
 
 int main(int argc, char *argv[])
 &#123;
     printf(&quot;Hello World!\n&quot;);
     return 0;
-&#125;
-</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="方法二">方法二</h2>
+<ol>
+<li>直接在文件资源管理器的某个目录下的地址栏中输入 “cmd”。</li>
+<li>回车，就可以直接打开 cmd 并且在该目录下工作。</li>
+</ol>
+<h2 id="方法三-一劳永逸-注册表">方法三(一劳永逸/注册表)</h2>
+<p>提醒：虽然涉及到注册表，但是操作非常简单。不需要备份。<br>
+你备份了也没有用，重新导入备份的注册表无法删除你新建的注册表。<br>
+不过，你要是担心，可以备份一下！</p>
+<ol>
+<li>Win + R 打开运行窗口，输入 “regedit” 打开注册表编辑器。</li>
+<li>打开 “计算机\HKEY_CLASSES_ROOT\Directory\Background\shell\”。</li>
+<li>然后右键新建一个 “项”，名字叫 <code>OpenCMDHere</code> 。</li>
+<li>接着在 OpenCMDHere 项下新建一个项叫 <code>command</code>。</li>
+<li>再接着将 OpenCMDHere 项中的默认值的数据改成 <code>在当前目录启动 CMD</code>（这个名字就是你右键时将看到的名字）。</li>
+<li>最后将 OpenCMDHere 项下的 command 项中的默认值的数据改成 <code>cmd.exe /s /k pushd &quot;%V&quot;</code>。</li>
+</ol>
+<p>重新启动一下 Windows资源管理器 或者 重新启动一下电脑 就行了。<br>
+以后，你就会发现你的右键菜单多了一项 在当前目录启动 CMD 。<br>
+点击该项即可在右键位置目录打开 命令提示符 了，就和打开 Powershell 一样，可谓一劳永逸。</p>
 
                 
             </div>
@@ -522,7 +553,7 @@ int main(int argc, char *argv[])
                     </i>
                     </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2022/03/28/bao-jian-feng-cong-mo-li-chu-mei-hua-xiang-zi-ku-han-lai/">http://example.com/2022/03/28/bao-jian-feng-cong-mo-li-chu-mei-hua-xiang-zi-ku-han-lai/</a>
+                    <a href="http://example.com/2022/03/29/windows-10-ru-he-zai-dang-qian-wei-zhi-da-kai-cmd-ming-ling-chuang-kou/">http://example.com/2022/03/29/windows-10-ru-he-zai-dang-qian-wei-zhi-da-kai-cmd-ming-ling-chuang-kou/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -562,6 +593,10 @@ int main(int argc, char *argv[])
                             
                                 <a href="/tags/%E5%8D%9A%E6%96%87/">
                                     <span class="chip bg-color">博文</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">
+                                    <span class="chip bg-color">计算机</span>
                                 </a>
                             
                         </div>
@@ -1009,30 +1044,30 @@ int main(int argc, char *argv[])
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/03/29/dian-nao-chong-zhuang-xi-tong-hou-yao-zuo-de-na-xie-shi/">
+                <a href="/2022/03/29/windows-10-ru-he-zai-dang-qian-wei-zhi-da-kai-cmd-ming-ling-chuang-kou/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="电脑重装系统后要做的那些事">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Windows 10 如何在当前位置打开 CMD 命令窗口？">
                         
-                        <span class="card-title">电脑重装系统后要做的那些事</span>
+                        <span class="card-title">Windows 10 如何在当前位置打开 CMD 命令窗口？</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            花了点时间整理了一下重装系统后要做的事。
-这些都是按照我个人喜好设置的，大家可以自行选取操作！
+                            
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1041,6 +1076,7 @@ int main(int argc, char *argv[])
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1060,27 +1096,27 @@ int main(int argc, char *argv[])
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/03/28/bao-jian-feng-cong-mo-li-chu-mei-hua-xiang-zi-ku-han-lai/">
+                <a href="/2022/03/29/vc-2010-express-xue-sheng-ban-zhong-wen-ban/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="宝剑锋从磨砺出，梅花香自苦寒来">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="VC 2010 Express 学生版(中文版)">
                         
-                        <span class="card-title">宝剑锋从磨砺出，梅花香自苦寒来</span>
+                        <span class="card-title">VC 2010 Express 学生版(中文版)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            此刻的我坐在电脑前，格外兴奋！因为我终于有一个自己的博客了！
+                            Microsoft Visual C++ 2010 Express 虽然微软已经不再提供下载，但是很多时候教学还是要用…
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-29
                             </span>
                         <span class="publish-author">
                             
@@ -1090,12 +1126,11 @@ int main(int argc, char *argv[])
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%8D%9A%E6%96%87/">
-                        <span class="chip bg-color">博文</span>
+                    <a href="/tags/%E7%BC%96%E8%BE%91%E5%99%A8/">
+                        <span class="chip bg-color">编辑器</span>
                     </a>
                     
                 </div>
