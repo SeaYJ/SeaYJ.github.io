@@ -478,7 +478,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    653
+                    667
                 </div>
                 
 
@@ -494,6 +494,9 @@
         </div>
         <hr class="clearfix">
 
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
         
 
         
@@ -515,25 +518,22 @@ LINK 的时候需要指定 /subsystem，这个链接选项告诉 Windows 如何�
 我们知道用 VC 编写的程序,运行的时候是需要 C/C++ 运行库支持的。<br>
 当我们运行一个 C/C++ 程序的时候，链接器会首先寻找应用程序的启动函数,例如:<br>
 如果你建立了一个 console 程序的话，编译器得链接开关会是以下这种形式：</p>
-<pre><code class="language-win32">/subsystem:&quot;console&quot; /entry:&quot;mainCRTStartup&quot; (ANSI)
-/subsystem:&quot;console&quot; /entry:&quot;wmainCRTStartuup&quot; (UNICODE)
-</code></pre>
+<pre class="line-numbers language-win32" data-language="win32"><code class="language-win32">&#x2F;subsystem:&quot;console&quot; &#x2F;entry:&quot;mainCRTStartup&quot; (ANSI)
+&#x2F;subsystem:&quot;console&quot; &#x2F;entry:&quot;wmainCRTStartuup&quot; (UNICODE)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>将 subsystem 选成&quot;console&quot;后，Windows在进入可执行文件的代码前（如mainCRTStartup），就会产生一个控制台窗口。之后mainCRTStartup 或 wmainCRTStartuup 会调用main或wmain。<br>
 如果你建立了一个win32 application,编译器得链接开关则会是一下形式</p>
-<pre><code class="language-win32">/subsystem:&quot;windows&quot; /entry:&quot;WinMainCRTStartup&quot; (ANSI)
-/sbusystem:&quot;windows&quot; /entry:&quot;wWinMainCRTStartup&quot; (UINCODE)
-</code></pre>
+<pre class="line-numbers language-win32" data-language="win32"><code class="language-win32">&#x2F;subsystem:&quot;windows&quot; &#x2F;entry:&quot;WinMainCRTStartup&quot; (ANSI)
+&#x2F;sbusystem:&quot;windows&quot; &#x2F;entry:&quot;wWinMainCRTStartup&quot; (UINCODE)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>将 subsystem 选成&quot;console&quot;后，操作系统就不产生console窗口,该类型应用程序的窗口由用户自己创建。WinMainCRTStartup 或 wWinMainCRTStartup 会调用 WinMain 或 wWinMain。<br>
 值得一提的是，在进入应用程序的Entry Point前，Windows的装载器已经做过C变量的初始化，有初值的全局变量拥有了它们的初值，没有初值的变量被设为0。</p>
 <h2 id="方法二-2">方法二</h2>
 <hr>
 <p>利用 VBS 脚本启动程序：</p>
-<pre><code class="language-win32">set objShell=wscript.createObject(&quot;wscript.shell&quot;)
-iReturn=objShell.Run(&quot;你的程序.exe&quot;, 0, FALSE) 'Run()
-'第一个参数是你要执行的程序的路径， 
-'第二个参数是窗口的形式，0后台运行；1正常运行；2最小化；3最大化；缺省的话表示正常运行 
-'第三个参数是表示这个脚本是等待还是继续执行，如果设为了True,脚本就会等待调用的程序退出后再向后执行。
-</code></pre>
+<pre class="line-numbers language-win32" data-language="win32"><code class="language-win32">set objShell&#x3D;wscript.createObject(&quot;wscript.shell&quot;)
+iReturn&#x3D;objShell.Run(&quot;你的程序.exe&quot;, 0, FALSE) &#39;Run()
+&#39;第一个参数是你要执行的程序的路径， 
+&#39;第二个参数是窗口的形式，0后台运行；1正常运行；2最小化；3最大化；缺省的话表示正常运行 
+&#39;第三个参数是表示这个脚本是等待还是继续执行，如果设为了True,脚本就会等待调用的程序退出后再向后执行。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="方法三">方法三</h2>
 <hr>
 <p>通过其他程序来调用需要隐藏窗口的程序（完全隐藏）：<br>
@@ -1098,7 +1098,7 @@ iReturn=objShell.Run(&quot;你的程序.exe&quot;, 0, FALSE) 'Run()
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">4.5k</span>
+                        class="white-color">4.6k</span>
             
             
             
@@ -1340,6 +1340,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":32},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"dialog":{"enable":true,"hittokoto":true},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":32},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
 
 </html>

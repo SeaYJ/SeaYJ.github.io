@@ -479,7 +479,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    549
+                    606
                 </div>
                 
 
@@ -496,6 +496,9 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
@@ -505,16 +508,15 @@
 <span id="more"></span>
 <p>其实解决办法很简单！</p>
 <p>将下列代码加入头文件顶部即可：</p>
-<pre><code class="language-win32">#ifdef _UNICODE
+<pre class="line-numbers language-win32" data-language="win32"><code class="language-win32">#ifdef _UNICODE
 #if defined _M_IX86
-#pragma comment(linker,&quot;/manifestdependency:\&quot;type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='x86' publicKeyToken='6595b64144ccf1df' language='*'\&quot;&quot;)
+#pragma comment(linker,&quot;&#x2F;manifestdependency:\&quot;type&#x3D;&#39;win32&#39; name&#x3D;&#39;Microsoft.Windows.Common-Controls&#39; version&#x3D;&#39;6.0.0.0&#39; processorArchitecture&#x3D;&#39;x86&#39; publicKeyToken&#x3D;&#39;6595b64144ccf1df&#39; language&#x3D;&#39;*&#39;\&quot;&quot;)
 #elif defined _M_X64
-#pragma comment(linker,&quot;/manifestdependency:\&quot;type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='amd64' publicKeyToken='6595b64144ccf1df' language='*'\&quot;&quot;)
+#pragma comment(linker,&quot;&#x2F;manifestdependency:\&quot;type&#x3D;&#39;win32&#39; name&#x3D;&#39;Microsoft.Windows.Common-Controls&#39; version&#x3D;&#39;6.0.0.0&#39; processorArchitecture&#x3D;&#39;amd64&#39; publicKeyToken&#x3D;&#39;6595b64144ccf1df&#39; language&#x3D;&#39;*&#39;\&quot;&quot;)
 #else
-#pragma comment(linker,&quot;/manifestdependency:\&quot;type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\&quot;&quot;)
+#pragma comment(linker,&quot;&#x2F;manifestdependency:\&quot;type&#x3D;&#39;win32&#39; name&#x3D;&#39;Microsoft.Windows.Common-Controls&#39; version&#x3D;&#39;6.0.0.0&#39; processorArchitecture&#x3D;&#39;*&#39; publicKeyToken&#x3D;&#39;6595b64144ccf1df&#39; language&#x3D;&#39;*&#39;\&quot;&quot;)
 #endif
-#endif
-</code></pre>
+#endif<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p> 简单来说，你看到的大部分 Win32 窗口方框都是由公共控件库（Common Control Library） Comctl32.dll 实现的窗口。要使应用程序能够显示出与操作系统版本匹配的视觉样式，必须使用<strong>ComCtl32.dll 版本 6.0 或更高版本</strong>；但在没有任何定义的默认情况下，应用程序使用 User32.dll 中定义的用户控件（User Controls）和 <strong>ComCtl32.dll 版本 5.0</strong> 中定义的公共控件（Common Controls）。如果要求指定应用程序使用 <strong>ComCtl32.dll 版本 6.0 或更高</strong>，则必须添加应用程序清单（manifest，如其他答主所述）或编译器指令（#pragma）使得使应用程序能够指定它需要的程序集（Assembly，一组由不同版本 dll 组成的对象列表）版本。</p>
 <p>具体可参考官方文档 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows/win32/controls/cookbook-overview">Enabling Visual Styles</a></p>
 <p> <strong>ComCtl32.dll 版本 6.0</strong> 不可再发行（redistributable），也就是说只有当应用程序在对应的 Windows 版本上运行时，这些对应的样式效果可用，也就是说你不能在 Windows 11 上编译程序之后拿到 Windows XP 上运行，要求其用这种方法显示 Windows 11 的效果。关于不同操作系统内置的对应版本：[2]</p>
@@ -1110,7 +1112,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">4.5k</span>
+                        class="white-color">4.6k</span>
             
             
             
@@ -1352,6 +1354,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":32},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"dialog":{"enable":true,"hittokoto":true},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":32},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
 
 </html>
