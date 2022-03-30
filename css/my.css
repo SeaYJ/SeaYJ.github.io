@@ -33,7 +33,14 @@
 	border-radius: 5px;
 }
 
-
+/************\
+*  选中文字  *
+\************/
+::selection {
+    border-radius: 5px;
+    background: #0db8e3;
+    color: #f7f7f7;
+}
 
 
 

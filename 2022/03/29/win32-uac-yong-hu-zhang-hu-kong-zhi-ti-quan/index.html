@@ -34,7 +34,10 @@ if exi">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
-
+	
+	<!--MyCode_BEGIN-->
+	<link rel="stylesheet" href="./js/prism.css">
+	<!--MyCode_END-->
 <meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="SeaYJ" type="application/atom+xml">
 </head>
 
@@ -70,7 +73,7 @@ if exi">
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/" class="waves-effect waves-light">
+    <a target="_blank" rel="noopener" href="https://seayj.github.io/" class="waves-effect waves-light">
       
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
@@ -171,7 +174,7 @@ if exi">
         
         <li class="m-nav-item">
 	  
-		<a href="/" class="waves-effect waves-light">
+		<a target="_blank" rel="noopener" href="https://seayj.github.io/" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-home"></i>
 			
@@ -535,14 +538,14 @@ if exi">
 <h2 id="方法三-动态提权">方法三(动态提权)</h2>
 <hr>
 <p>所谓动态提权，就是一个没有管理员权限的程序进程在他认为合适的时候创建一个有管理员权限的程序进程，代码很简单：</p>
-<pre class="line-numbers language-win32" data-language="win32"><code class="language-win32">HINSTANCE ShellExecuteA(
-  [in, optional] HWND   hwnd,            &#x2F;&#x2F; 父窗口的句柄，用于显示 UI 或错误消息。如果操作未与窗口关联，则此值可以为NULL。
-  &quot;runas&quot;,
-  [in]           LPCSTR lpFile,          &#x2F;&#x2F; 你的程序路径
-  [in, optional] LPCSTR lpParameters,    &#x2F;&#x2F; 需要传递的参数
-  [in, optional] LPCSTR lpDirectory,     &#x2F;&#x2F; 默认（工作）目录。如果此值为 NULL，则使用当前工作目录。如果在 lpFile 中提供了相对路径，则不要对 lpDirectory 使用相对路径。
-  [in]           INT    nShowCmd         &#x2F;&#x2F; 指定应用程序在打开时如何显示
-);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">HINSTANCE <span class="token function">ShellExecuteA</span><span class="token punctuation">(</span>
+  <span class="token punctuation">[</span>in<span class="token punctuation">,</span> optional<span class="token punctuation">]</span> HWND   hwnd<span class="token punctuation">,</span>            <span class="token comment">// 父窗口的句柄，用于显示 UI 或错误消息。如果操作未与窗口关联，则此值可以为NULL。</span>
+  <span class="token string">"runas"</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span>in<span class="token punctuation">]</span>           LPCSTR lpFile<span class="token punctuation">,</span>          <span class="token comment">// 你的程序路径</span>
+  <span class="token punctuation">[</span>in<span class="token punctuation">,</span> optional<span class="token punctuation">]</span> LPCSTR lpParameters<span class="token punctuation">,</span>    <span class="token comment">// 需要传递的参数</span>
+  <span class="token punctuation">[</span>in<span class="token punctuation">,</span> optional<span class="token punctuation">]</span> LPCSTR lpDirectory<span class="token punctuation">,</span>     <span class="token comment">// 默认（工作）目录。如果此值为 NULL，则使用当前工作目录。如果在 lpFile 中提供了相对路径，则不要对 lpDirectory 使用相对路径。</span>
+  <span class="token punctuation">[</span>in<span class="token punctuation">]</span>           INT    nShowCmd         <span class="token comment">// 指定应用程序在打开时如何显示</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>其中 INT nShowCmd 参数具体可参考 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-showwindow">Microsoft Docs - ShowWindow function</a>，</p>
 <p>具体函数详情参考 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows/win32/api/shellapi/nf-shellapi-shellexecutea">Microsoft Docs - ShellExecuteA function</a>。</p>
 <h2 id="方法四-利用微软-Windows-的漏洞">方法四(利用微软 Windows 的漏洞)</h2>
@@ -1184,7 +1187,6 @@ if exi">
 </footer>
 
 <div class="progress-bar"></div>
-
 
     <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
