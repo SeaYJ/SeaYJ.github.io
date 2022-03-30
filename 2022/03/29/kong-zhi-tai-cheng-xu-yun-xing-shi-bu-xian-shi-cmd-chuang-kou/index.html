@@ -32,10 +32,7 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
-	
-	<!--MyCode_BEGIN-->
-	<link rel="stylesheet" href="./js/prism.css">
-	<!--MyCode_END-->
+
 <meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="SeaYJ" type="application/atom+xml">
 </head>
 
@@ -71,7 +68,7 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a target="_blank" rel="noopener" href="https://seayj.github.io/" class="waves-effect waves-light">
+    <a href="/" class="waves-effect waves-light">
       
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
@@ -172,7 +169,7 @@
         
         <li class="m-nav-item">
 	  
-		<a target="_blank" rel="noopener" href="https://seayj.github.io/" class="waves-effect waves-light">
+		<a href="/" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-home"></i>
 			
@@ -511,7 +508,7 @@
 <p>有时候我们又不想让这个窗口显示出来，那么我们该怎么做呢？</p>
 <p>我总结了以下几种方法：</p>
 <span id="more"></span>
-<h2 id="方法一">方法一</h2>
+<h2 id="方法一-2">方法一</h2>
 <hr>
 <p>在头文件的后面加上一行代码：</p>
 <p><code>#pragma comment( linker, &quot;/subsystem:\&quot;windows\&quot; /entry:\&quot;mainCRTStartup\&quot;&quot; )</code></p>
@@ -529,7 +526,7 @@ LINK 的时候需要指定 /subsystem，这个链接选项告诉 Windows 如何�
 &#x2F;sbusystem:&quot;windows&quot; &#x2F;entry:&quot;wWinMainCRTStartup&quot; (UINCODE)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>将 subsystem 选成&quot;console&quot;后，操作系统就不产生console窗口,该类型应用程序的窗口由用户自己创建。WinMainCRTStartup 或 wWinMainCRTStartup 会调用 WinMain 或 wWinMain。<br>
 值得一提的是，在进入应用程序的Entry Point前，Windows的装载器已经做过C变量的初始化，有初值的全局变量拥有了它们的初值，没有初值的变量被设为0。</p>
-<h2 id="方法二">方法二</h2>
+<h2 id="方法二-2">方法二</h2>
 <hr>
 <p>利用 VBS 脚本启动程序：</p>
 <pre class="line-numbers language-win32" data-language="win32"><code class="language-win32">set objShell&#x3D;wscript.createObject(&quot;wscript.shell&quot;)
@@ -968,7 +965,7 @@ iReturn&#x3D;objShell.Run(&quot;你的程序.exe&quot;, 0, FALSE) &#39;Run()
             tocSelector: '#toc-content',
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
+            collapseDepth: Number('2'),
             headingSelector: 'h2, h3, h4'
         });
 
@@ -1100,9 +1097,6 @@ iReturn&#x3D;objShell.Run(&quot;你的程序.exe&quot;, 0, FALSE) &#39;Run()
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
-                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">4.6k</span>
-            
             
             
                 
@@ -1159,6 +1153,7 @@ iReturn&#x3D;objShell.Run(&quot;你的程序.exe&quot;, 0, FALSE) &#39;Run()
 
 </div>
     </div>
+	
 </footer>
 
 <div class="progress-bar"></div>
@@ -1300,7 +1295,7 @@ $(function () {
 
     <!-- 鼠标星星特效 -->
     
-
+	
     
 
     <!-- Baidu Analytics -->
@@ -1322,6 +1317,13 @@ $(function () {
 </script>
 
     
+	
+	
+	<!-- 鼠标烟花气泡特效 -->
+	
+		<script src="/js/new-js/click-firework.js" async="async"></script>
+	
+	
     
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
@@ -1342,6 +1344,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":32},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":16},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
 
 </html>

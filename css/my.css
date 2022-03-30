@@ -1,5 +1,23 @@
 /* Here is your custom css styles. */
 
+/****************************\
+*  禁止部分区域的文字被选中  *
+\****************************/
+.container .row .brand, footer {
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+
+/**********************\
+*  Live2D canvas 属性  *
+\**********************/
+#live2d-widget {
+	z-index: 3 !important;
+}
+
 /**********\
 *  代码块  *
 \**********/
@@ -41,14 +59,6 @@
     background: #0db8e3;
     color: #f7f7f7;
 }
-
-
-
-
-
-
-
-
 
 /***************************\
 *  post文章页面 banner 蒙板  *
