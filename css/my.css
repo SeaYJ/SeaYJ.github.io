@@ -3,7 +3,7 @@
 /****************************\
 *  禁止部分区域的文字被选中  *
 \****************************/
-.container .row .brand, footer {
+.container .row .brand, .container .cover-btns,  .container .cover-social-link, footer {
 	-webkit-user-select: none;
     -moz-user-select: none;
     -o-user-select: none;

@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-03-29T09:25:18.417Z</updated>
+  <updated>2022-03-30T13:09:56.871Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>博客添加 Live2D | Hexo-Matery</title>
+    <link href="http://example.com/2022/03/30/bo-ke-tian-jia-live2d-hexo-matery/"/>
+    <id>http://example.com/2022/03/30/bo-ke-tian-jia-live2d-hexo-matery/</id>
+    <published>2022-03-30T11:17:46.000Z</published>
+    <updated>2022-03-30T13:09:56.871Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;有谁会拒绝可爱的板娘入驻自己的博客呢？反正我不会吧o(^▽^)o&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="博文" scheme="http://example.com/tags/%E5%8D%9A%E6%96%87/"/>
+    
+    <category term="Live2D" scheme="http://example.com/tags/Live2D/"/>
+    
+    <category term="博客未来" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%9C%AA%E6%9D%A5/"/>
+    
+  </entry>
+  
+  <entry>
     <title>解决 Win32 系统控件都是老式的问题</title>
     <link href="http://example.com/2022/03/29/jie-jue-win32-xi-tong-kong-jian-du-shi-lao-shi-de-wen-ti/"/>
     <id>http://example.com/2022/03/29/jie-jue-win32-xi-tong-kong-jian-du-shi-lao-shi-de-wen-ti/</id>
     <published>2022-03-29T06:23:33.000Z</published>
-    <updated>2022-03-29T09:25:18.417Z</updated>
+    <updated>2022-03-30T10:46:24.223Z</updated>
     
     
     <summary type="html">&lt;p&gt;在 Win32 编程时我们时常会遇到使用系统窗口类的情况。按理说我们使用的系统窗口类样式应该与我们正在使用的操作系统版本保持一致才是，但为什么往往都是老式的控件呢？&lt;/p&gt;</summary>
@@ -40,7 +61,7 @@
     <link href="http://example.com/2022/03/29/kong-zhi-tai-cheng-xu-yun-xing-shi-bu-xian-shi-cmd-chuang-kou/"/>
     <id>http://example.com/2022/03/29/kong-zhi-tai-cheng-xu-yun-xing-shi-bu-xian-shi-cmd-chuang-kou/</id>
     <published>2022-03-29T06:18:45.000Z</published>
-    <updated>2022-03-29T06:49:03.494Z</updated>
+    <updated>2022-03-30T11:00:47.583Z</updated>
     
     
     <summary type="html">&lt;p&gt;我们知道，控制台应用程序本身是没有窗口的。系统为了让我们能看到程序执行的结果，会在程序执行时借一个命令提示符窗口(CMD 窗口)。所以，就有了这个黑黑的窗口…&lt;/p&gt;

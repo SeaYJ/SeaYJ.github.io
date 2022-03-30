@@ -472,14 +472,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-03-29
+                    2022-03-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    606
+                    537
                 </div>
                 
 
@@ -508,15 +508,15 @@
 <span id="more"></span>
 <p>其实解决办法很简单！</p>
 <p>将下列代码加入头文件顶部即可：</p>
-<pre class="line-numbers language-win32" data-language="win32"><code class="language-win32">#ifdef _UNICODE
-#if defined _M_IX86
-#pragma comment(linker,&quot;&#x2F;manifestdependency:\&quot;type&#x3D;&#39;win32&#39; name&#x3D;&#39;Microsoft.Windows.Common-Controls&#39; version&#x3D;&#39;6.0.0.0&#39; processorArchitecture&#x3D;&#39;x86&#39; publicKeyToken&#x3D;&#39;6595b64144ccf1df&#39; language&#x3D;&#39;*&#39;\&quot;&quot;)
-#elif defined _M_X64
-#pragma comment(linker,&quot;&#x2F;manifestdependency:\&quot;type&#x3D;&#39;win32&#39; name&#x3D;&#39;Microsoft.Windows.Common-Controls&#39; version&#x3D;&#39;6.0.0.0&#39; processorArchitecture&#x3D;&#39;amd64&#39; publicKeyToken&#x3D;&#39;6595b64144ccf1df&#39; language&#x3D;&#39;*&#39;\&quot;&quot;)
-#else
-#pragma comment(linker,&quot;&#x2F;manifestdependency:\&quot;type&#x3D;&#39;win32&#39; name&#x3D;&#39;Microsoft.Windows.Common-Controls&#39; version&#x3D;&#39;6.0.0.0&#39; processorArchitecture&#x3D;&#39;*&#39; publicKeyToken&#x3D;&#39;6595b64144ccf1df&#39; language&#x3D;&#39;*&#39;\&quot;&quot;)
-#endif
-#endif<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">_UNICODE</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression">defined _M_IX86</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">pragma</span> <span class="token expression"><span class="token function">comment</span><span class="token punctuation">(</span>linker<span class="token punctuation">,</span></span><span class="token string">"/manifestdependency:\"type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='x86' publicKeyToken='6595b64144ccf1df' language='*'\""</span><span class="token expression"><span class="token punctuation">)</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">elif</span> <span class="token expression">defined _M_X64</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">pragma</span> <span class="token expression"><span class="token function">comment</span><span class="token punctuation">(</span>linker<span class="token punctuation">,</span></span><span class="token string">"/manifestdependency:\"type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='amd64' publicKeyToken='6595b64144ccf1df' language='*'\""</span><span class="token expression"><span class="token punctuation">)</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">else</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">pragma</span> <span class="token expression"><span class="token function">comment</span><span class="token punctuation">(</span>linker<span class="token punctuation">,</span></span><span class="token string">"/manifestdependency:\"type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\""</span><span class="token expression"><span class="token punctuation">)</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p> 简单来说，你看到的大部分 Win32 窗口方框都是由公共控件库（Common Control Library） Comctl32.dll 实现的窗口。要使应用程序能够显示出与操作系统版本匹配的视觉样式，必须使用<strong>ComCtl32.dll 版本 6.0 或更高版本</strong>；但在没有任何定义的默认情况下，应用程序使用 User32.dll 中定义的用户控件（User Controls）和 <strong>ComCtl32.dll 版本 5.0</strong> 中定义的公共控件（Common Controls）。如果要求指定应用程序使用 <strong>ComCtl32.dll 版本 6.0 或更高</strong>，则必须添加应用程序清单（manifest，如其他答主所述）或编译器指令（#pragma）使得使应用程序能够指定它需要的程序集（Assembly，一组由不同版本 dll 组成的对象列表）版本。</p>
 <p>具体可参考官方文档 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows/win32/controls/cookbook-overview">Enabling Visual Styles</a></p>
 <p> <strong>ComCtl32.dll 版本 6.0</strong> 不可再发行（redistributable），也就是说只有当应用程序在对应的 Windows 版本上运行时，这些对应的样式效果可用，也就是说你不能在 Windows 11 上编译程序之后拿到 Windows XP 上运行，要求其用这种方法显示 Windows 11 的效果。关于不同操作系统内置的对应版本：[2]</p>
@@ -781,217 +781,6 @@
     
 
     
-        <style>
-    .waline-card {
-        margin: 1.5rem auto;
-    }
-    .waline-card .card-content {
-        padding: 20px 20px 5px 20px;
-    }
-
-    #waline p {
-        margin: 2px 2px 10px;
-        font-size: 1.05rem;
-        line-height: 1.78rem;
-    }
-    #waline blockquote p {
-        text-indent: 0.2rem;
-    }
-    #waline a {
-        padding: 0 2px;
-        color: #4cbf30;
-        font-weight: 500;
-        text-decoration: none;
-    }
-    #waline img {
-        max-width: 100%;
-        cursor: pointer;
-    }
-    #waline ol li {
-        list-style-type: decimal;
-    }
-    #waline ol,
-    ul {
-        display: block;
-        padding-left: 2em;
-        word-spacing: 0.05rem;
-    }
-    #waline ul li,
-    ol li {
-        display: list-item;
-        line-height: 1.8rem;
-        font-size: 1rem;
-    }
-    #waline ul li {
-        list-style-type: disc;
-    }
-    #waline ul ul li {
-        list-style-type: circle;
-    }
-    #waline table, th, td {
-        padding: 12px 13px;
-        border: 1px solid #dfe2e5;
-    }
-    #waline table, th, td {
-        border: 0;
-    }
-    table tr:nth-child(2n), thead {
-        background-color: #fafafa;
-    }
-    #waline table th {
-        background-color: #f2f2f2;
-        min-width: 80px;
-    }
-    #waline table td {
-        min-width: 80px;
-    }
-    #waline h1 {
-        font-size: 1.85rem;
-        font-weight: bold;
-        line-height: 2.2rem;
-    }
-    #waline h2 {
-        font-size: 1.65rem;
-        font-weight: bold;
-        line-height: 1.9rem;
-    }
-    #waline h3 {
-        font-size: 1.45rem;
-        font-weight: bold;
-        line-height: 1.7rem;
-    }
-    #waline h4 {
-        font-size: 1.25rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-    #waline h5 {
-        font-size: 1.1rem;
-        font-weight: bold;
-        line-height: 1.4rem;
-    }
-    #waline h6 {
-        font-size: 1rem;
-        line-height: 1.3rem;
-    }
-    #waline p {
-        font-size: 1rem;
-        line-height: 1.5rem;
-    }
-    #waline hr {
-        margin: 12px 0;
-        border: 0;
-        border-top: 1px solid #ccc;
-    }
-    #waline blockquote {
-        margin: 15px 0;
-        border-left: 5px solid #42b983;
-        padding: 1rem 0.8rem 0.3rem 0.8rem;
-        color: #666;
-        background-color: rgba(66, 185, 131, .1);
-    }
-    #waline pre {
-        font-family: monospace, monospace;
-        padding: 1.2em;
-        margin: .5em 0;
-        background: #272822;
-        overflow: auto;
-        border-radius: 0.3em;
-        tab-size: 4;
-    }
-    #waline code {
-        font-family: monospace, monospace;
-        padding: 1px 3px;
-        font-size: 0.92rem;
-        color: #e96900;
-        background-color: #f8f8f8;
-        border-radius: 2px;
-    }
-    #waline pre code {
-        font-family: monospace, monospace;
-        padding: 0;
-        color: #e8eaf6;
-        background-color: #272822;
-    }
-    #waline pre[class*="language-"] {
-        padding: 1.2em;
-        margin: .5em 0;
-    }
-    #waline code[class*="language-"],
-    pre[class*="language-"] {
-        color: #e8eaf6;
-    }
-    #waline [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-        position: inherit;
-        margin-left: -1.3rem;
-        margin-right: 0.4rem;
-        margin-top: -1px;
-        vertical-align: middle;
-        left: unset;
-        visibility: visible;
-    }
-    #waline b,
-    strong {
-        font-weight: bold;
-    }
-    #waline dfn {
-        font-style: italic;
-    }
-    #waline small {
-        font-size: 85%;
-    }
-    #waline cite {
-        font-style: normal;
-    }
-    #waline mark {
-        background-color: #fcf8e3;
-        padding: .2em;
-    }
-    #waline table, th, td {
-        padding: 12px 13px;
-        border: 1px solid #dfe2e5;
-    }
-    table tr:nth-child(2n), thead {
-        background-color: #fafafa;
-    }
-    #waline table th {
-        background-color: #f2f2f2;
-        min-width: 80px;
-    }
-    #waline table td {
-        min-width: 80px;
-    }
-    #waline [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-        position: inherit;
-        margin-left: -1.3rem;
-        margin-right: 0.4rem;
-        margin-top: -1px;
-        vertical-align: middle;
-        left: unset;
-        visibility: visible;
-    }
-  </style>
-  
-  <div class="card waline-card" data-aos="fade-up">
-    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
-        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
-        <span>评论</span>
-    </div>
-    <div id="waline" class="card-content" style="display: grid">
-    </div>
-  </div>
-  
-
-  <!-- <script src="//cdn.jsdelivr.net/npm/@waline/client"></script> -->
-  <script src="/libs/waline/Waline.min.js"></script>
-  <script>
-    new Waline({
-        el: '#waline',
-        serverURL: 'https://waline.your-domain.com',
-        avatar: 'mm'    
-    });
-  </script> 
-    
 
     
 
@@ -1002,30 +791,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/03/29/jie-jue-win32-xi-tong-kong-jian-du-shi-lao-shi-de-wen-ti/">
+                <a href="/2022/03/30/bo-ke-tian-jia-live2d-hexo-matery/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="解决 Win32 系统控件都是老式的问题">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="博客添加 Live2D | Hexo-Matery">
                         
-                        <span class="card-title">解决 Win32 系统控件都是老式的问题</span>
+                        <span class="card-title">博客添加 Live2D | Hexo-Matery</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            在 Win32 编程时我们时常会遇到使用系统窗口类的情况。按理说我们使用的系统窗口类样式应该与我们正在使用的操作系统版本保持一致才是，但为什么往往都是老式的控件呢？
+                            有谁会拒绝可爱的板娘入驻自己的博客呢？反正我不会吧o(^▽^)o
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-29
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-30
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1034,7 +822,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1042,8 +829,12 @@
                         <span class="chip bg-color">博文</span>
                     </a>
                     
-                    <a href="/tags/Win32-%E7%BC%96%E7%A8%8B/">
-                        <span class="chip bg-color">Win32 编程</span>
+                    <a href="/tags/Live2D/">
+                        <span class="chip bg-color">Live2D</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%9C%AA%E6%9D%A5/">
+                        <span class="chip bg-color">博客未来</span>
                     </a>
                     
                 </div>
@@ -1571,6 +1362,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":16},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":16},"mobile":{"show":true,"scale":1},"react":{"opacityDefault":0.7},"log":false});</script></body>
 
 </html>

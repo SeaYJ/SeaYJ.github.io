@@ -471,14 +471,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-03-29
+                    2022-03-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    667
+                    643
                 </div>
                 
 
@@ -518,18 +518,18 @@ LINK 的时候需要指定 /subsystem，这个链接选项告诉 Windows 如何�
 我们知道用 VC 编写的程序,运行的时候是需要 C/C++ 运行库支持的。<br>
 当我们运行一个 C/C++ 程序的时候，链接器会首先寻找应用程序的启动函数,例如:<br>
 如果你建立了一个 console 程序的话，编译器得链接开关会是以下这种形式：</p>
-<pre class="line-numbers language-win32" data-language="win32"><code class="language-win32">&#x2F;subsystem:&quot;console&quot; &#x2F;entry:&quot;mainCRTStartup&quot; (ANSI)
-&#x2F;subsystem:&quot;console&quot; &#x2F;entry:&quot;wmainCRTStartuup&quot; (UNICODE)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token operator">/</span>subsystem<span class="token operator">:</span><span class="token string">"console"</span> <span class="token operator">/</span>entry<span class="token operator">:</span><span class="token string">"mainCRTStartup"</span> <span class="token punctuation">(</span>ANSI<span class="token punctuation">)</span>
+<span class="token operator">/</span>subsystem<span class="token operator">:</span><span class="token string">"console"</span> <span class="token operator">/</span>entry<span class="token operator">:</span><span class="token string">"wmainCRTStartuup"</span> <span class="token punctuation">(</span>UNICODE<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>将 subsystem 选成&quot;console&quot;后，Windows在进入可执行文件的代码前（如mainCRTStartup），就会产生一个控制台窗口。之后mainCRTStartup 或 wmainCRTStartuup 会调用main或wmain。<br>
 如果你建立了一个win32 application,编译器得链接开关则会是一下形式</p>
-<pre class="line-numbers language-win32" data-language="win32"><code class="language-win32">&#x2F;subsystem:&quot;windows&quot; &#x2F;entry:&quot;WinMainCRTStartup&quot; (ANSI)
-&#x2F;sbusystem:&quot;windows&quot; &#x2F;entry:&quot;wWinMainCRTStartup&quot; (UINCODE)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token operator">/</span>subsystem<span class="token operator">:</span><span class="token string">"windows"</span> <span class="token operator">/</span>entry<span class="token operator">:</span><span class="token string">"WinMainCRTStartup"</span> <span class="token punctuation">(</span>ANSI<span class="token punctuation">)</span>
+<span class="token operator">/</span>sbusystem<span class="token operator">:</span><span class="token string">"windows"</span> <span class="token operator">/</span>entry<span class="token operator">:</span><span class="token string">"wWinMainCRTStartup"</span> <span class="token punctuation">(</span>UINCODE<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>将 subsystem 选成&quot;console&quot;后，操作系统就不产生console窗口,该类型应用程序的窗口由用户自己创建。WinMainCRTStartup 或 wWinMainCRTStartup 会调用 WinMain 或 wWinMain。<br>
 值得一提的是，在进入应用程序的Entry Point前，Windows的装载器已经做过C变量的初始化，有初值的全局变量拥有了它们的初值，没有初值的变量被设为0。</p>
 <h2 id="方法二-2">方法二</h2>
 <hr>
 <p>利用 VBS 脚本启动程序：</p>
-<pre class="line-numbers language-win32" data-language="win32"><code class="language-win32">set objShell&#x3D;wscript.createObject(&quot;wscript.shell&quot;)
+<pre class="line-numbers language-vbs" data-language="vbs"><code class="language-vbs">set objShell&#x3D;wscript.createObject(&quot;wscript.shell&quot;)
 iReturn&#x3D;objShell.Run(&quot;你的程序.exe&quot;, 0, FALSE) &#39;Run()
 &#39;第一个参数是你要执行的程序的路径， 
 &#39;第二个参数是窗口的形式，0后台运行；1正常运行；2最小化；3最大化；缺省的话表示正常运行 
@@ -770,217 +770,6 @@ iReturn&#x3D;objShell.Run(&quot;你的程序.exe&quot;, 0, FALSE) &#39;Run()
 
     
 
-    
-        <style>
-    .waline-card {
-        margin: 1.5rem auto;
-    }
-    .waline-card .card-content {
-        padding: 20px 20px 5px 20px;
-    }
-
-    #waline p {
-        margin: 2px 2px 10px;
-        font-size: 1.05rem;
-        line-height: 1.78rem;
-    }
-    #waline blockquote p {
-        text-indent: 0.2rem;
-    }
-    #waline a {
-        padding: 0 2px;
-        color: #4cbf30;
-        font-weight: 500;
-        text-decoration: none;
-    }
-    #waline img {
-        max-width: 100%;
-        cursor: pointer;
-    }
-    #waline ol li {
-        list-style-type: decimal;
-    }
-    #waline ol,
-    ul {
-        display: block;
-        padding-left: 2em;
-        word-spacing: 0.05rem;
-    }
-    #waline ul li,
-    ol li {
-        display: list-item;
-        line-height: 1.8rem;
-        font-size: 1rem;
-    }
-    #waline ul li {
-        list-style-type: disc;
-    }
-    #waline ul ul li {
-        list-style-type: circle;
-    }
-    #waline table, th, td {
-        padding: 12px 13px;
-        border: 1px solid #dfe2e5;
-    }
-    #waline table, th, td {
-        border: 0;
-    }
-    table tr:nth-child(2n), thead {
-        background-color: #fafafa;
-    }
-    #waline table th {
-        background-color: #f2f2f2;
-        min-width: 80px;
-    }
-    #waline table td {
-        min-width: 80px;
-    }
-    #waline h1 {
-        font-size: 1.85rem;
-        font-weight: bold;
-        line-height: 2.2rem;
-    }
-    #waline h2 {
-        font-size: 1.65rem;
-        font-weight: bold;
-        line-height: 1.9rem;
-    }
-    #waline h3 {
-        font-size: 1.45rem;
-        font-weight: bold;
-        line-height: 1.7rem;
-    }
-    #waline h4 {
-        font-size: 1.25rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-    #waline h5 {
-        font-size: 1.1rem;
-        font-weight: bold;
-        line-height: 1.4rem;
-    }
-    #waline h6 {
-        font-size: 1rem;
-        line-height: 1.3rem;
-    }
-    #waline p {
-        font-size: 1rem;
-        line-height: 1.5rem;
-    }
-    #waline hr {
-        margin: 12px 0;
-        border: 0;
-        border-top: 1px solid #ccc;
-    }
-    #waline blockquote {
-        margin: 15px 0;
-        border-left: 5px solid #42b983;
-        padding: 1rem 0.8rem 0.3rem 0.8rem;
-        color: #666;
-        background-color: rgba(66, 185, 131, .1);
-    }
-    #waline pre {
-        font-family: monospace, monospace;
-        padding: 1.2em;
-        margin: .5em 0;
-        background: #272822;
-        overflow: auto;
-        border-radius: 0.3em;
-        tab-size: 4;
-    }
-    #waline code {
-        font-family: monospace, monospace;
-        padding: 1px 3px;
-        font-size: 0.92rem;
-        color: #e96900;
-        background-color: #f8f8f8;
-        border-radius: 2px;
-    }
-    #waline pre code {
-        font-family: monospace, monospace;
-        padding: 0;
-        color: #e8eaf6;
-        background-color: #272822;
-    }
-    #waline pre[class*="language-"] {
-        padding: 1.2em;
-        margin: .5em 0;
-    }
-    #waline code[class*="language-"],
-    pre[class*="language-"] {
-        color: #e8eaf6;
-    }
-    #waline [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-        position: inherit;
-        margin-left: -1.3rem;
-        margin-right: 0.4rem;
-        margin-top: -1px;
-        vertical-align: middle;
-        left: unset;
-        visibility: visible;
-    }
-    #waline b,
-    strong {
-        font-weight: bold;
-    }
-    #waline dfn {
-        font-style: italic;
-    }
-    #waline small {
-        font-size: 85%;
-    }
-    #waline cite {
-        font-style: normal;
-    }
-    #waline mark {
-        background-color: #fcf8e3;
-        padding: .2em;
-    }
-    #waline table, th, td {
-        padding: 12px 13px;
-        border: 1px solid #dfe2e5;
-    }
-    table tr:nth-child(2n), thead {
-        background-color: #fafafa;
-    }
-    #waline table th {
-        background-color: #f2f2f2;
-        min-width: 80px;
-    }
-    #waline table td {
-        min-width: 80px;
-    }
-    #waline [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-        position: inherit;
-        margin-left: -1.3rem;
-        margin-right: 0.4rem;
-        margin-top: -1px;
-        vertical-align: middle;
-        left: unset;
-        visibility: visible;
-    }
-  </style>
-  
-  <div class="card waline-card" data-aos="fade-up">
-    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
-        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
-        <span>评论</span>
-    </div>
-    <div id="waline" class="card-content" style="display: grid">
-    </div>
-  </div>
-  
-
-  <!-- <script src="//cdn.jsdelivr.net/npm/@waline/client"></script> -->
-  <script src="/libs/waline/Waline.min.js"></script>
-  <script>
-    new Waline({
-        el: '#waline',
-        serverURL: 'https://waline.your-domain.com',
-        avatar: 'mm'    
-    });
-  </script> 
     
 
     
@@ -1557,6 +1346,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":16},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":16},"mobile":{"show":true,"scale":1},"react":{"opacityDefault":0.7},"log":false});</script></body>
 
 </html>
