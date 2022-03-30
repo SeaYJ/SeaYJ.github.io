@@ -511,7 +511,7 @@
 <p>有时候我们又不想让这个窗口显示出来，那么我们该怎么做呢？</p>
 <p>我总结了以下几种方法：</p>
 <span id="more"></span>
-<h2 id="方法一-2">方法一</h2>
+<h2 id="方法一">方法一</h2>
 <hr>
 <p>在头文件的后面加上一行代码：</p>
 <p><code>#pragma comment( linker, &quot;/subsystem:\&quot;windows\&quot; /entry:\&quot;mainCRTStartup\&quot;&quot; )</code></p>
@@ -529,7 +529,7 @@ LINK 的时候需要指定 /subsystem，这个链接选项告诉 Windows 如何�
 &#x2F;sbusystem:&quot;windows&quot; &#x2F;entry:&quot;wWinMainCRTStartup&quot; (UINCODE)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>将 subsystem 选成&quot;console&quot;后，操作系统就不产生console窗口,该类型应用程序的窗口由用户自己创建。WinMainCRTStartup 或 wWinMainCRTStartup 会调用 WinMain 或 wWinMain。<br>
 值得一提的是，在进入应用程序的Entry Point前，Windows的装载器已经做过C变量的初始化，有初值的全局变量拥有了它们的初值，没有初值的变量被设为0。</p>
-<h2 id="方法二-2">方法二</h2>
+<h2 id="方法二">方法二</h2>
 <hr>
 <p>利用 VBS 脚本启动程序：</p>
 <pre class="line-numbers language-win32" data-language="win32"><code class="language-win32">set objShell&#x3D;wscript.createObject(&quot;wscript.shell&quot;)
