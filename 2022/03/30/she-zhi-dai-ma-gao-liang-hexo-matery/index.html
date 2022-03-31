@@ -4,13 +4,19 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="【Win32】 UAC用户账户控制 (提权), SeaYJ">
-    <meta name="description" content="最近写程序时遇到一个问题，就是当一个程序需要管理员权限才能正常运行该怎么办？
-通过查阅多方资料，我总结出来几个比较实用的办法！(每种办法实现方法不同，同时功能上也有一些小小的差异。)
-方法一(批处理脚本)
+    <meta name="keywords" content="设置代码高亮 | Hexo-Matery, SeaYJ">
+    <meta name="description" content="代码不高亮？别逗！
+不高亮的代码莫得灵魂！
 
-@echo off
-if exi">
+
+这里先说明一下，我使用的是 hexo-theme-matery 和 hexo@6.1.0
+
+准备文件
+
+下载
+点击下载 prism.css
+点击下载 prism.js
+然后将这两份文件复制到 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +28,7 @@ if exi">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>【Win32】 UAC用户账户控制 (提权) | SeaYJ</title>
+    <title>设置代码高亮 | Hexo-Matery | SeaYJ</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -325,12 +331,12 @@ if exi">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">【Win32】 UAC用户账户控制 (提权)</h1>
+                    <h1 class="description center-align post-title">设置代码高亮 | Hexo-Matery</h1>
                 </div>
             </div>
         </div>
@@ -450,8 +456,12 @@ if exi">
                                 <span class="chip bg-color">博文</span>
                             </a>
                         
-                            <a href="/tags/Win32-%E7%BC%96%E7%A8%8B/">
-                                <span class="chip bg-color">Win32 编程</span>
+                            <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%9C%AA%E6%9D%A5/">
+                                <span class="chip bg-color">博客未来</span>
+                            </a>
+                        
+                            <a href="/tags/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/">
+                                <span class="chip bg-color">代码高亮</span>
                             </a>
                         
                     </div>
@@ -466,21 +476,21 @@ if exi">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-29
+                    2022-03-30
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-03-29
+                    2022-03-31
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    779
                 </div>
                 
 
@@ -501,62 +511,55 @@ if exi">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>最近写程序时遇到一个问题，就是当一个程序需要管理员权限才能正常运行该怎么办？</p>
-<p>通过查阅多方资料，我总结出来几个比较实用的办法！<span id="more"></span>(每种办法实现方法不同，同时功能上也有一些小小的差异。)</p>
-<h2 id="方法一-批处理脚本">方法一(批处理脚本)</h2>
-<hr>
-<pre class="line-numbers language-batch" data-language="batch"><code class="language-batch"><span class="token operator">@</span><span class="token command"><span class="token keyword">echo</span> off</span>
-<span class="token command"><span class="token keyword">if</span> <span class="token keyword">exist</span> <span class="token string">"%SystemRoot%\SysWOW64"</span></span> <span class="token command"><span class="token keyword">path</span> <span class="token variable">%path%</span>;<span class="token variable">%windir%</span>\SysNative;<span class="token variable">%SystemRoot%</span>\SysWOW64;<span class="token variable">%~dp0</span></span>
-<span class="token command"><span class="token keyword">bcdedit</span> >nul</span>
-<span class="token command"><span class="token keyword">if</span> '%<span class="token keyword">errorlevel</span>%' <span class="token operator">NEQ</span> '<span class="token number">0</span>'</span> <span class="token punctuation">(</span><span class="token command"><span class="token keyword">goto</span> UACPrompt</span><span class="token punctuation">)</span> <span class="token command"><span class="token keyword">else</span></span> <span class="token punctuation">(</span><span class="token command"><span class="token keyword">goto</span> UACAdmin</span><span class="token punctuation">)</span>
-<span class="token label property">:UACPrompt</span>
-%1 start "" mshta vbscript:createobject<span class="token punctuation">(</span>"shell.application"<span class="token punctuation">)</span>.shellexecute<span class="token punctuation">(</span>"""%~0""","::",,"runas",1<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token command"><span class="token keyword">window</span>.close</span><span class="token punctuation">)</span><span class="token operator">&amp;</span><span class="token command"><span class="token keyword">exit</span></span>
-<span class="token command"><span class="token keyword">exit</span> <span class="token parameter attr-name">/B</span></span>
-<span class="token label property">:UACAdmin</span>
-<span class="token command"><span class="token keyword">cd</span> <span class="token parameter attr-name">/d</span> <span class="token string">"%~dp0"</span></span>
-
-;你的代码写在这里，你可以在在这里启动你的程序<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>这个批处理脚本代码可以以管理员身份启动，并且会以文件所在位置为工作环境。</p>
-<p>所以，只要用这个脚本启动你的程序即可以管理员身份启动你的程序。</p>
-<p><strong>缺点：</strong></p>
-<ol>
-<li>会有一个命令提示符窗口一闪而过；</li>
-<li>程序启动入口是个批处理文件。</li>
-</ol>
-<h2 id="方法二-manifest">方法二(manifest)</h2>
-<hr>
-<p>在 VS 编辑器里这样设置项目属性后再编译出来的程序就会有个 UAC 盾，以后你的程序只要运行就都会请示管理员权限。</p>
-<p><img src="./2573290-20220108153151471-1065014989.png" alt=""></p>
-<p><img src="./2573290-20220108153023432-731459435.png" alt=""></p>
-<h2 id="方法三-动态提权">方法三(动态提权)</h2>
-<hr>
-<p>所谓动态提权，就是一个没有管理员权限的程序进程在他认为合适的时候创建一个有管理员权限的程序进程，代码很简单：</p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c">HINSTANCE <span class="token function">ShellExecuteA</span><span class="token punctuation">(</span>
-  <span class="token punctuation">[</span>in<span class="token punctuation">,</span> optional<span class="token punctuation">]</span> HWND   hwnd<span class="token punctuation">,</span>            <span class="token comment">// 父窗口的句柄，用于显示 UI 或错误消息。如果操作未与窗口关联，则此值可以为NULL。</span>
-  <span class="token string">"runas"</span><span class="token punctuation">,</span>
-  <span class="token punctuation">[</span>in<span class="token punctuation">]</span>           LPCSTR lpFile<span class="token punctuation">,</span>          <span class="token comment">// 你的程序路径</span>
-  <span class="token punctuation">[</span>in<span class="token punctuation">,</span> optional<span class="token punctuation">]</span> LPCSTR lpParameters<span class="token punctuation">,</span>    <span class="token comment">// 需要传递的参数</span>
-  <span class="token punctuation">[</span>in<span class="token punctuation">,</span> optional<span class="token punctuation">]</span> LPCSTR lpDirectory<span class="token punctuation">,</span>     <span class="token comment">// 默认（工作）目录。如果此值为 NULL，则使用当前工作目录。如果在 lpFile 中提供了相对路径，则不要对 lpDirectory 使用相对路径。</span>
-  <span class="token punctuation">[</span>in<span class="token punctuation">]</span>           INT    nShowCmd         <span class="token comment">// 指定应用程序在打开时如何显示</span>
-<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>其中 INT nShowCmd 参数具体可参考 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-showwindow">Microsoft Docs - ShowWindow function</a>，</p>
-<p>具体函数详情参考 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows/win32/api/shellapi/nf-shellapi-shellexecutea">Microsoft Docs - ShellExecuteA function</a>。</p>
-<h2 id="方法四-利用微软-Windows-的漏洞">方法四(利用微软 Windows 的漏洞)</h2>
-<hr>
-<p>这些方法因为不推荐使用，所以不多介绍了。有 Windows UAC 漏洞，但是微软会想办法去修补的，所以这类方法容易失效。</p>
-<h2 id="补充资料">补充资料</h2>
-<hr>
+                <p>代码不高亮？别逗！</p>
+<p>不高亮的代码莫得灵魂！</p>
+<span id="more"></span>
 <blockquote>
-<p>基本概念：</p>
-<p>1。进程的权限是继承的，也就是说，有管理员权限的程序创建的进程也有管理员权限，没有管理员权限的程序创建进程就没有管理员权限（但高权限进程创建进程必须是高权限不是绝对的）</p>
-<p>2。Windows Shell进程explorer本身没有管理员权限，如果explorer有管理员权限，大家可以想一下，那么它创建的进程都有管理员权限，那UAC不就形同虚设了吗</p>
-<p>3。没有权限的进程不能创建有权限的进程！是的，你没有听错，就是不能，这是Windows操作系统规定的。但你可能会问“那么如何提权？你不是说连explorer都没有权限吗？”，答案是：Windows系统中有一个开机自启的AppInfo服务，它直接以系统权限运行，在一个管理员用户登录时，系统会保留一份当前用户的高权限令牌并传给AppInfo服务，提权的过程本身就是一个进程通过进程通信把要提权的程序传给AppInfo服务，AppInfo服务会运行一个UI进程，UI进程会接收用户响应，如果用户同意这次提权，AppInfo服务就使用高权限令牌在当前用户会话的交互窗口站的当前桌面创建管理员权限的进程，创建时将进程的父进程替换为请求提权的进程。这样我们看起来就好像是“没权限进程创建有权限进程”了，其实高权限进程不是它创建的。</p>
+<p>这里先说明一下，我使用的是 <code>hexo-theme-matery</code> 和 <code>hexo@6.1.0</code></p>
 </blockquote>
-<h2 id="参考文档">参考文档</h2>
+<h2 id="准备文件">准备文件</h2>
 <hr>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/CSDN_C2/article/details/108408158">让bat批处理以管理员权限运行的实现方法</a><br>
-<a target="_blank" rel="noopener" href="https://blog.csdn.net/zuishikonghuan/article/details/46965159">[Win32] UAC用户账户控制（提权+降权）</a><br>
-<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/">Microsoft 技术文档</a></p>
+<h3 id="下载">下载</h3>
+<p><a href="./prism.css">点击下载</a> <code>prism.css</code><br>
+<a href="./prism.js">点击下载</a> <code>prism.js</code></p>
+<p>然后将这两份文件复制到 <code>博客根目录/themes/&#123;主题文件夹&#125;/source/libs/prism/</code> 目录下！</p>
+<h3 id="说明">说明</h3>
+<p>您可能会发现在该目录下会已经存在一个 <code>prism.css</code> 文件，那是主题自带的，也可以使用，您可以按照需自己的需求来！但是<strong>如果使用默认的</strong> <code>prism.css</code> <strong>一定使用配套的</strong> <code>prism.js</code> ！否则会出现问题！如果想使用自定义的 <code>prismJS</code> 高亮规则，可以去官网配置并下载：<a href="">自定义 prismJS 规则</a>！</p>
+<p><strong>补充：</strong><br>
+我不知道为什么，我的 <code>博客根目录/themes/&#123;主题文件夹&#125;/source/libs/prism/</code> 目录下只有一个 <code>prism.css</code> ，这使得我的博客代码高亮出了很大问题！后来我自己配置一套 <code>prismJS</code> 文件后才解决的问题！</p>
+<p>同时，您需要知道的是：PrismJS 官网下载的 prism 文件在 <code>hexo-theme-matery</code> 主题下显示有些冲突，需要您去修改对应的 CSS 文件。这里我已经修改好了，所以 <code>hexo-theme-matery</code> 主题的朋友，您可以直接使用我提供的下载，它支持几乎所有语言得代码高亮！（其他主题我未做探索）</p>
+<h2 id="配置-prismJS">配置 | prismJS</h2>
+<hr>
+<p>这里我只讲解 <code>prismJS</code> 的配置方法，因为它不会像 <code>Highlight</code> 在 <code>hexo-theme-matery</code> 主题中出现显示问题（个人感觉 Matery 主题更适合使用 <code>prismJS</code> 进行代码高亮）</p>
+<h3 id="修改-config-yml-根目录">修改 _config.yml(根目录)</h3>
+<p>在根目录下的 <code>_config.yml</code> 文件中找到对应代码位置并修改成如下内容：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><div class="caption"><span>_config.yml(根目录)</span></div><code class="language-yaml"><span class="token key atrule">highlight</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># 关闭 highlight</span>
+<span class="token key atrule">prismjs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># 启用 prismjs</span>
+  <span class="token key atrule">preprocess</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># Hexo 内建的 PrismJS 支持浏览器端高亮（preprocess 设置为 false）和服务器端高亮（preprocess 设置为 true）两种方式</span>
+  <span class="token key atrule">line_number</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># 是否显示行号</span>
+  <span class="token key atrule">line_threshold</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token comment"># 接受一个可选的阈值，只要代码块的行数超过这个阈值，就只显示行号。 默认值为 0。</span>
+  <span class="token key atrule">tab_replace</span><span class="token punctuation">:</span> <span class="token string">''</span> <span class="token comment"># 用代码内的 tab (\t) 替换为给定值，默认值是两个空格。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="修改-config-yml-主题目录">修改 _config.yml(主题目录)</h3>
+<p>在根目录下的 <code>_config.yml</code> 文件中找到对应代码位置并确保 <code>libs.css.prism</code> 和 <code>libs.js.prism</code> 中的路径如下（如果没有就手动添上）：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><div class="caption"><span>_config.yml(主题目录)</span></div><code class="language-yaml"><span class="token key atrule">libs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">css</span><span class="token punctuation">:</span>
+    <span class="token key atrule">prism</span><span class="token punctuation">:</span> /libs/prism/prism.css <span class="token comment"># 标注 prism.css 文件位置</span>
+    
+  <span class="token key atrule">js</span><span class="token punctuation">:</span>
+    <span class="token key atrule">prism</span><span class="token punctuation">:</span> /libs/prism/prism.js <span class="token comment"># 标注 prism.js 文件位置</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这是我的配置参数，<strong>仅供参考</strong>：<br>
+<img src="./Snipaste_2022-03-31_10-29-58.png" alt="我的配置"></p>
+<h3 id="修改-post-detail-ejs">修改 post-detail.ejs</h3>
+<p>最后打开 <code>博客根目录/themes/&#123;主题文件夹&#125;/layout/_partial/post-detail.ejs</code> 文件，确保（大概在 74 行）有如下代码（如果缺少就补上）：</p>
+<pre class="line-numbers language-ejs" data-language="ejs"><div class="caption"><span>post-detail.ejs</span></div><code class="language-ejs"><span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%</span><span class="token language-javascript"> <span class="token keyword">if</span> <span class="token punctuation">(</span>config<span class="token punctuation">.</span>prismjs <span class="token operator">&amp;&amp;</span> config<span class="token punctuation">.</span>prismjs<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> </span><span class="token delimiter punctuation">%></span></span>
+	<span class="token comment">&lt;!-- 是否加载使用自带的 prismjs. --></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%-</span><span class="token language-javascript"> theme<span class="token punctuation">.</span>jsDelivr<span class="token punctuation">.</span>url </span><span class="token delimiter punctuation">%></span></span><span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%-</span><span class="token language-javascript"> <span class="token function">url_for</span><span class="token punctuation">(</span>theme<span class="token punctuation">.</span>libs<span class="token punctuation">.</span>css<span class="token punctuation">.</span>prism<span class="token punctuation">)</span> </span><span class="token delimiter punctuation">%></span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%-</span><span class="token language-javascript"> theme<span class="token punctuation">.</span>jsDelivr<span class="token punctuation">.</span>url </span><span class="token delimiter punctuation">%></span></span><span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%-</span><span class="token language-javascript"> <span class="token function">url_for</span><span class="token punctuation">(</span>theme<span class="token punctuation">.</span>libs<span class="token punctuation">.</span>js<span class="token punctuation">.</span>prism<span class="token punctuation">)</span> </span><span class="token delimiter punctuation">%></span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%</span><span class="token language-javascript"> <span class="token punctuation">&#125;</span> </span><span class="token delimiter punctuation">%></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="参考文章-2">参考文章</h2>
+<p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/syntax-highlight.html#PrismJS">代码高亮|Hexo</a></p>
 
                 
             </div>
@@ -583,7 +586,7 @@ if exi">
                     </i>
                     </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2022/03/29/win32-uac-yong-hu-zhang-hu-kong-zhi-ti-quan/">http://example.com/2022/03/29/win32-uac-yong-hu-zhang-hu-kong-zhi-ti-quan/</a>
+                    <a href="http://example.com/2022/03/30/she-zhi-dai-ma-gao-liang-hexo-matery/">http://example.com/2022/03/30/she-zhi-dai-ma-gao-liang-hexo-matery/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -625,8 +628,12 @@ if exi">
                                     <span class="chip bg-color">博文</span>
                                 </a>
                             
-                                <a href="/tags/Win32-%E7%BC%96%E7%A8%8B/">
-                                    <span class="chip bg-color">Win32 编程</span>
+                                <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%9C%AA%E6%9D%A5/">
+                                    <span class="chip bg-color">博客未来</span>
+                                </a>
+                            
+                                <a href="/tags/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/">
+                                    <span class="chip bg-color">代码高亮</span>
                                 </a>
                             
                         </div>
@@ -800,32 +807,31 @@ if exi">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/03/29/kong-zhi-tai-cheng-xu-yun-xing-shi-bu-xian-shi-cmd-chuang-kou/">
+                <a href="/2022/03/30/she-zhi-dai-ma-gao-liang-hexo-matery/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="控制台程序运行时不显示 CMD 窗口">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="设置代码高亮 | Hexo-Matery">
                         
-                        <span class="card-title">控制台程序运行时不显示 CMD 窗口</span>
+                        <span class="card-title">设置代码高亮 | Hexo-Matery</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            我们知道，控制台应用程序本身是没有窗口的。系统为了让我们能看到程序执行的结果，会在程序执行时借一个命令提示符窗口(CMD 窗口)。所以，就有了这个黑黑的窗口…
-
-有时候我们又不想让这个窗口显示出来，那么我们该怎么做呢？
-我总结了以下几种方法
+                            代码不高亮？别逗！
+不高亮的代码莫得灵魂！
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-30
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -834,6 +840,7 @@ if exi">
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -841,8 +848,12 @@ if exi">
                         <span class="chip bg-color">博文</span>
                     </a>
                     
-                    <a href="/tags/Win32-%E7%BC%96%E7%A8%8B/">
-                        <span class="chip bg-color">Win32 编程</span>
+                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%9C%AA%E6%9D%A5/">
+                        <span class="chip bg-color">博客未来</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/">
+                        <span class="chip bg-color">代码高亮</span>
                     </a>
                     
                 </div>
@@ -856,24 +867,24 @@ if exi">
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/03/29/visual-studio-she-zhi-bei-jing-tu-pian-zhu-ti-suo-you-ban-ben-she-zhi-fang-fa/">
+                <a href="/2022/03/30/bo-ke-tian-jia-live2d-hexo-matery/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Visual Studio 设置背景图片主题（所有版本设置方法）">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="博客添加 Live2D | Hexo-Matery">
                         
-                        <span class="card-title">Visual Studio 设置背景图片主题（所有版本设置方法）</span>
+                        <span class="card-title">博客添加 Live2D | Hexo-Matery</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            你知道吗？Visual Studio 编辑器也能设置背景哦~
+                            有谁会拒绝可爱的板娘入驻自己的博客呢？反正我不会吧o(^▽^)o
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-30
                             </span>
                         <span class="publish-author">
                             
@@ -890,8 +901,12 @@ if exi">
                         <span class="chip bg-color">博文</span>
                     </a>
                     
-                    <a href="/tags/%E7%BC%96%E8%BE%91%E5%99%A8/">
-                        <span class="chip bg-color">编辑器</span>
+                    <a href="/tags/Live2D/">
+                        <span class="chip bg-color">Live2D</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%9C%AA%E6%9D%A5/">
+                        <span class="chip bg-color">博客未来</span>
                     </a>
                     
                 </div>

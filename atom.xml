@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-03-30T13:09:56.871Z</updated>
+  <updated>2022-03-31T02:43:06.624Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设置代码高亮 | Hexo-Matery</title>
+    <link href="http://example.com/2022/03/30/she-zhi-dai-ma-gao-liang-hexo-matery/"/>
+    <id>http://example.com/2022/03/30/she-zhi-dai-ma-gao-liang-hexo-matery/</id>
+    <published>2022-03-30T14:58:37.000Z</published>
+    <updated>2022-03-31T02:43:06.624Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;代码不高亮？别逗！&lt;/p&gt;
+&lt;p&gt;不高亮的代码莫得灵魂！&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="博文" scheme="http://example.com/tags/%E5%8D%9A%E6%96%87/"/>
+    
+    <category term="博客未来" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%9C%AA%E6%9D%A5/"/>
+    
+    <category term="代码高亮" scheme="http://example.com/tags/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>博客添加 Live2D | Hexo-Matery</title>
@@ -111,9 +133,9 @@
     
     
     
-    <category term="编辑器" scheme="http://example.com/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    
     <category term="博文" scheme="http://example.com/tags/%E5%8D%9A%E6%96%87/"/>
+    
+    <category term="编辑器" scheme="http://example.com/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
     
   </entry>
   
