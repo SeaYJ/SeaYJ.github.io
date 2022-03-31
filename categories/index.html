@@ -37,7 +37,7 @@
 
    <style>
     body{
-       background-image: url(https://cdn.jsdelivr.net/gh/SeaYJ/seayj.github.io@master/medias/blog-background.webp);
+       background-image: url(https://cdn.jsdelivr.net/gh/SeaYJ/seayj.github.io@master/medias/blog-background.webp), url(https://cdn.jsdelivr.net/gh/SeaYJ/seayj.github.io@master/medias/blog-background.png);
        background-repeat:no-repeat;
        background-size: 100% 100%;
        background-attachment:fixed;
@@ -358,8 +358,10 @@
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.webp';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+	var bannerUrl_png = "/medias/banner/" + new Date().getDay() + '.png';
+    var bannerUrl_webp = "/medias/banner/" + new Date().getDay() + '.webp';
+	var bannerUrl = 'url(' + bannerUrl_webp + ')' + ', url(' + bannerUrl_png + ')';
+    $('.bg-cover').css('background-image', bannerUrl);
 </script>
 
 

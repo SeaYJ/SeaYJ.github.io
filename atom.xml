@@ -133,9 +133,9 @@
     
     
     
-    <category term="编辑器" scheme="http://example.com/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    
     <category term="博文" scheme="http://example.com/tags/%E5%8D%9A%E6%96%87/"/>
+    
+    <category term="编辑器" scheme="http://example.com/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
     
   </entry>
   
