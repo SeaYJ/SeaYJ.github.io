@@ -48,7 +48,7 @@
 
    <style>
     body{
-       background-image: url(https://cdn.jsdelivr.net/gh/SeaYJ/seayj.github.io@master/medias/blog-background.png);
+       background-image: url(https://cdn.jsdelivr.net/gh/SeaYJ/seayj.github.io@master/medias/blog-background.webp);
        background-repeat:no-repeat;
        background-size: 100% 100%;
        background-attachment:fixed;
@@ -550,7 +550,7 @@
   <span class="token key atrule">js</span><span class="token punctuation">:</span>
     <span class="token key atrule">prism</span><span class="token punctuation">:</span> /libs/prism/prism.js <span class="token comment"># 标注 prism.js 文件位置</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>这是我的配置参数，<strong>仅供参考</strong>：<br>
-<img src="./Snipaste_2022-03-31_10-29-58.png" alt="我的配置"></p>
+<img src="./Snipaste_2022-03-31_10-29-58.webp" alt="我的配置"></p>
 <h3 id="修改-post-detail-ejs">修改 post-detail.ejs</h3>
 <p>最后打开 <code>博客根目录/themes/&#123;主题文件夹&#125;/layout/_partial/post-detail.ejs</code> 文件，确保（大概在 74 行）有如下代码（如果缺少就补上）：</p>
 <pre class="line-numbers language-ejs" data-language="ejs"><div class="caption"><span>post-detail.ejs</span></div><code class="language-ejs"><span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%</span><span class="token language-javascript"> <span class="token keyword">if</span> <span class="token punctuation">(</span>config<span class="token punctuation">.</span>prismjs <span class="token operator">&amp;&amp;</span> config<span class="token punctuation">.</span>prismjs<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> </span><span class="token delimiter punctuation">%></span></span>
@@ -1136,16 +1136,6 @@
             
             
             
-                <span id="busuanzi_container_site_pv">
-                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
-                    <span id="busuanzi_value_site_pv" class="white-color"></span>
-            </span>
-            
-            
-                <span id="busuanzi_container_site_uv">
-                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
-                    <span id="busuanzi_value_site_uv" class="white-color"></span>
-            </span>
             
             <br>
 

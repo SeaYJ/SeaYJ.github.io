@@ -47,7 +47,7 @@ npm install --save">
 
    <style>
     body{
-       background-image: url(https://cdn.jsdelivr.net/gh/SeaYJ/seayj.github.io@master/medias/blog-background.png);
+       background-image: url(https://cdn.jsdelivr.net/gh/SeaYJ/seayj.github.io@master/medias/blog-background.webp);
        background-repeat:no-repeat;
        background-size: 100% 100%;
        background-attachment:fixed;
@@ -482,7 +482,7 @@ npm install --save">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-03-30
+                    2022-03-31
                 </div>
                 
 
@@ -516,7 +516,7 @@ npm install --save">
 <blockquote>
 <p>我的博客主题模板的是 hexo-theme-martery</p>
 </blockquote>
-<p><img src="./Snipaste_2022-03-30_20-58-57.png" alt=""></p>
+<p><img src="./Snipaste_2022-03-30_20-58-57.webp" alt=""></p>
 <h2 id="安装">安装</h2>
 <hr>
 <h3 id="安装模块：">安装模块：</h3>
@@ -535,8 +535,7 @@ npm install --save">
 </ol>
 </li>
 </ol>
-<p><strong>注意！模型的 json 文件路径必须为</strong><br>
-<strong>/live2d_models/{name}/{name}.model.json</strong></p>
+<p><strong>注意！模型的 json 文件路径必须为</strong><code>/live2d_models/&#123;name&#125;/&#123;name&#125;.model.json</code></p>
 <pre class="line-numbers language-fileTree" data-language="fileTree"><div class="caption"><span>模拟文件路径（仅供参考）</span></div><code class="language-fileTree">根目录
  |
  +-----live2d-widget.js-3.0.6
@@ -565,32 +564,32 @@ npm install --save">
 <h2 id="配置">配置</h2>
 <hr>
 <p>向 HEXO 的 <code>_config.yml</code> 文件或 主题(hexo-theme-martery)的 <code>_config.yml</code> 文件中添加如下配置信息：</p>
-<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml"># live2d 相关配置 - SeaYJ
-live2d:
-  enable: true # 是否开启 live2d
-  scriptFrom: local # 默认
-  pluginRootPath: live2dw&#x2F; # &lt;不需要改动&gt;插件在站点上的根目录(相对路径)
-  pluginJsPath: lib&#x2F; # &lt;不需要改动&gt;脚本文件相对与插件根目录路径
-  pluginModelPath: assets&#x2F; # &lt;不需要改动&gt;模型文件相对与插件根目录路径
-  tagMode: false # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中
-  debug: false # 调试, 是否在控制台输出日志
-  model:
-    use: &#123;modelName&#125; # &lt;注意：&#123;modelName&#125; 就是之前那个 &#123;name&#125; 文件夹的名字&gt;模型文件名
-    scale: 1 # 模型与canvas的缩放，默认为 1
-    hHeadPos: 0.5 # &lt;似乎没什么用&gt;模型相对于 canvas 的水平位置
-    vHeadPos: 0.618 # &lt;似乎没什么用&gt;模型相对于 canvas 的竖直位置
-  display:
-    superSample: 2 # &lt;似乎没什么用&gt;超采样等级,默认为 2
-    width: 150 # &lt;可以直接理解为你想显示 live2d 为多宽&gt;canvas的长度，默认为 150
-    height: 300 # &lt;可以直接理解为你想显示 live2d 为多高&gt;canvas的高度，默认为 300
-    position: left # 模型显示位置：right(默认) 或 left
-    hOffset: 0 # &lt;+值代表向上&gt;canvas水平偏移，默认为 0
-    vOffset: 16 # &lt;+值代表向 position 设置的方向&gt;canvas垂直偏移，默认为 -20
-  mobile:
-    show: true # 是否在手机上显示，默认为 true
-    scale: 1 # 手机上的缩放倍数，默认为 0.5
-  react:
-    opacityDefault: 0.7 # 模型透明度，默认为 0.7<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># live2d 相关配置 - SeaYJ</span>
+<span class="token key atrule">live2d</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># 是否开启 live2d</span>
+  <span class="token key atrule">scriptFrom</span><span class="token punctuation">:</span> local <span class="token comment"># 默认</span>
+  <span class="token key atrule">pluginRootPath</span><span class="token punctuation">:</span> live2dw/ <span class="token comment"># &lt;不需要改动>插件在站点上的根目录(相对路径)</span>
+  <span class="token key atrule">pluginJsPath</span><span class="token punctuation">:</span> lib/ <span class="token comment"># &lt;不需要改动>脚本文件相对与插件根目录路径</span>
+  <span class="token key atrule">pluginModelPath</span><span class="token punctuation">:</span> assets/ <span class="token comment"># &lt;不需要改动>模型文件相对与插件根目录路径</span>
+  <span class="token key atrule">tagMode</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中</span>
+  <span class="token key atrule">debug</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># 调试, 是否在控制台输出日志</span>
+  <span class="token key atrule">model</span><span class="token punctuation">:</span>
+    <span class="token key atrule">use</span><span class="token punctuation">:</span> <span class="token punctuation">&#123;</span>modelName<span class="token punctuation">&#125;</span> <span class="token comment"># &lt;注意：&#123;modelName&#125; 就是之前那个 &#123;name&#125; 文件夹的名字>模型文件名</span>
+    <span class="token key atrule">scale</span><span class="token punctuation">:</span> <span class="token number">1</span> <span class="token comment"># 模型与canvas的缩放，默认为 1</span>
+    <span class="token key atrule">hHeadPos</span><span class="token punctuation">:</span> <span class="token number">0.5</span> <span class="token comment"># &lt;似乎没什么用>模型相对于 canvas 的水平位置</span>
+    <span class="token key atrule">vHeadPos</span><span class="token punctuation">:</span> <span class="token number">0.618</span> <span class="token comment"># &lt;似乎没什么用>模型相对于 canvas 的竖直位置</span>
+  <span class="token key atrule">display</span><span class="token punctuation">:</span>
+    <span class="token key atrule">superSample</span><span class="token punctuation">:</span> <span class="token number">2</span> <span class="token comment"># &lt;似乎没什么用>超采样等级,默认为 2</span>
+    <span class="token key atrule">width</span><span class="token punctuation">:</span> <span class="token number">150</span> <span class="token comment"># &lt;可以直接理解为你想显示 live2d 为多宽>canvas的长度，默认为 150</span>
+    <span class="token key atrule">height</span><span class="token punctuation">:</span> <span class="token number">300</span> <span class="token comment"># &lt;可以直接理解为你想显示 live2d 为多高>canvas的高度，默认为 300</span>
+    <span class="token key atrule">position</span><span class="token punctuation">:</span> left <span class="token comment"># 模型显示位置：right(默认) 或 left</span>
+    <span class="token key atrule">hOffset</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token comment"># &lt;+值代表向上>canvas水平偏移，默认为 0</span>
+    <span class="token key atrule">vOffset</span><span class="token punctuation">:</span> <span class="token number">16</span> <span class="token comment"># &lt;+值代表向 position 设置的方向>canvas垂直偏移，默认为 -20</span>
+  <span class="token key atrule">mobile</span><span class="token punctuation">:</span>
+    <span class="token key atrule">show</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># 是否在手机上显示，默认为 true</span>
+    <span class="token key atrule">scale</span><span class="token punctuation">:</span> <span class="token number">1</span> <span class="token comment"># 手机上的缩放倍数，默认为 0.5</span>
+  <span class="token key atrule">react</span><span class="token punctuation">:</span>
+    <span class="token key atrule">opacityDefault</span><span class="token punctuation">:</span> <span class="token number">0.7</span> <span class="token comment"># 模型透明度，默认为 0.7</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="模型">模型</h2>
 <hr>
 <h3 id="使用模型">使用模型</h3>
@@ -1214,16 +1213,6 @@ live2d:
             
             
             
-                <span id="busuanzi_container_site_pv">
-                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
-                    <span id="busuanzi_value_site_pv" class="white-color"></span>
-            </span>
-            
-            
-                <span id="busuanzi_container_site_uv">
-                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
-                    <span id="busuanzi_value_site_uv" class="white-color"></span>
-            </span>
             
             <br>
 

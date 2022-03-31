@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-03-31T02:43:06.624Z</updated>
+  <updated>2022-03-31T03:13:03.633Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2022/03/30/she-zhi-dai-ma-gao-liang-hexo-matery/"/>
     <id>http://example.com/2022/03/30/she-zhi-dai-ma-gao-liang-hexo-matery/</id>
     <published>2022-03-30T14:58:37.000Z</published>
-    <updated>2022-03-31T02:43:06.624Z</updated>
+    <updated>2022-03-31T03:13:03.633Z</updated>
     
     
     <summary type="html">&lt;p&gt;代码不高亮？别逗！&lt;/p&gt;
@@ -43,7 +43,7 @@
     <link href="http://example.com/2022/03/30/bo-ke-tian-jia-live2d-hexo-matery/"/>
     <id>http://example.com/2022/03/30/bo-ke-tian-jia-live2d-hexo-matery/</id>
     <published>2022-03-30T11:17:46.000Z</published>
-    <updated>2022-03-30T13:09:56.871Z</updated>
+    <updated>2022-03-31T03:06:55.857Z</updated>
     
     
     <summary type="html">&lt;p&gt;有谁会拒绝可爱的板娘入驻自己的博客呢？反正我不会吧o(^▽^)o&lt;/p&gt;</summary>
@@ -83,11 +83,11 @@
     <link href="http://example.com/2022/03/29/kong-zhi-tai-cheng-xu-yun-xing-shi-bu-xian-shi-cmd-chuang-kou/"/>
     <id>http://example.com/2022/03/29/kong-zhi-tai-cheng-xu-yun-xing-shi-bu-xian-shi-cmd-chuang-kou/</id>
     <published>2022-03-29T06:18:45.000Z</published>
-    <updated>2022-03-30T11:00:47.583Z</updated>
+    <updated>2022-03-31T03:12:53.280Z</updated>
     
     
     <summary type="html">&lt;p&gt;我们知道，控制台应用程序本身是没有窗口的。系统为了让我们能看到程序执行的结果，会在程序执行时借一个命令提示符窗口(CMD 窗口)。所以，就有了这个黑黑的窗口…&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;./2573290-20220108165410630-278740407.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./2573290-20220108165410630-278740407.webp&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;有时候我们又不想让这个窗口显示出来，那么我们该怎么做呢？&lt;/p&gt;
 &lt;p&gt;我总结了以下几种方法：&lt;/p&gt;</summary>
     
@@ -105,7 +105,7 @@
     <link href="http://example.com/2022/03/29/win32-uac-yong-hu-zhang-hu-kong-zhi-ti-quan/"/>
     <id>http://example.com/2022/03/29/win32-uac-yong-hu-zhang-hu-kong-zhi-ti-quan/</id>
     <published>2022-03-29T06:16:27.000Z</published>
-    <updated>2022-03-29T14:32:48.625Z</updated>
+    <updated>2022-03-31T03:11:31.412Z</updated>
     
     
     <summary type="html">&lt;p&gt;最近写程序时遇到一个问题，就是当一个程序需要管理员权限才能正常运行该怎么办？&lt;/p&gt;
@@ -125,7 +125,7 @@
     <link href="http://example.com/2022/03/29/visual-studio-she-zhi-bei-jing-tu-pian-zhu-ti-suo-you-ban-ben-she-zhi-fang-fa/"/>
     <id>http://example.com/2022/03/29/visual-studio-she-zhi-bei-jing-tu-pian-zhu-ti-suo-you-ban-ben-she-zhi-fang-fa/</id>
     <published>2022-03-29T05:48:47.000Z</published>
-    <updated>2022-03-29T14:30:08.048Z</updated>
+    <updated>2022-03-31T03:12:01.307Z</updated>
     
     
     <summary type="html">&lt;p&gt;你知道吗？Visual Studio 编辑器也能设置背景哦~&lt;/p&gt;</summary>
@@ -133,9 +133,9 @@
     
     
     
-    <category term="博文" scheme="http://example.com/tags/%E5%8D%9A%E6%96%87/"/>
-    
     <category term="编辑器" scheme="http://example.com/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
+    
+    <category term="博文" scheme="http://example.com/tags/%E5%8D%9A%E6%96%87/"/>
     
   </entry>
   
@@ -164,7 +164,7 @@
     <link href="http://example.com/2022/03/29/vc-2010-express-xue-sheng-ban-zhong-wen-ban/"/>
     <id>http://example.com/2022/03/29/vc-2010-express-xue-sheng-ban-zhong-wen-ban/</id>
     <published>2022-03-29T02:43:42.000Z</published>
-    <updated>2022-03-29T02:51:06.175Z</updated>
+    <updated>2022-03-31T03:11:40.818Z</updated>
     
     
     <summary type="html">&lt;p&gt;Microsoft Visual C++ 2010 Express 虽然微软已经不再提供下载，但是很多时候教学还是要用…&lt;/p&gt;</summary>
@@ -181,7 +181,7 @@
     <link href="http://example.com/2022/03/29/dian-nao-chong-zhuang-xi-tong-hou-yao-zuo-de-na-xie-shi/"/>
     <id>http://example.com/2022/03/29/dian-nao-chong-zhuang-xi-tong-hou-yao-zuo-de-na-xie-shi/</id>
     <published>2022-03-29T02:16:36.000Z</published>
-    <updated>2022-03-29T14:30:27.768Z</updated>
+    <updated>2022-03-31T03:12:38.602Z</updated>
     
     
     <summary type="html">&lt;p&gt;花了点时间整理了一下重装系统后要做的事。&lt;/p&gt;
