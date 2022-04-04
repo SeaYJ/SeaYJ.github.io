@@ -6,7 +6,7 @@
   <link href="https://seayj.github.io/atom.xml" rel="self"/>
   
   <link href="https://seayj.github.io/"/>
-  <updated>2022-04-03T03:24:18.556Z</updated>
+  <updated>2022-04-04T08:33:11.998Z</updated>
   <id>https://seayj.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【VS】如何获取应用程序所在路径？</title>
+    <link href="https://seayj.github.io/2022/04/04/vs-ru-he-huo-qu-ying-yong-cheng-xu-suo-zai-lu-jing/"/>
+    <id>https://seayj.github.io/2022/04/04/vs-ru-he-huo-qu-ying-yong-cheng-xu-suo-zai-lu-jing/</id>
+    <published>2022-04-04T07:10:46.000Z</published>
+    <updated>2022-04-04T08:33:11.998Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;众所周知程序当前所在目录在我们的编程中有着重要的作用，所以如何获取该变量显得很重要！&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Visual Studio" scheme="https://seayj.github.io/tags/Visual-Studio/"/>
+    
+    <category term="Win32" scheme="https://seayj.github.io/tags/Win32/"/>
+    
+  </entry>
   
   <entry>
     <title>设置代码高亮 | Hexo-Matery</title>
@@ -131,9 +150,9 @@
     
     
     
-    <category term="编辑器" scheme="https://seayj.github.io/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    
     <category term="博文" scheme="https://seayj.github.io/tags/%E5%8D%9A%E6%96%87/"/>
+    
+    <category term="编辑器" scheme="https://seayj.github.io/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
     
   </entry>
   

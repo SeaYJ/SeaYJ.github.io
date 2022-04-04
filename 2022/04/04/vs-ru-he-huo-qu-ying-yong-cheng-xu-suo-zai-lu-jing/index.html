@@ -4,19 +4,15 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="设置代码高亮 | Hexo-Matery, SeaYJ">
-    <meta name="description" content="代码不高亮？别逗！
-不高亮的代码莫得灵魂！
+    <meta name="keywords" content="【VS】如何获取应用程序所在路径？, SeaYJ">
+    <meta name="description" content="众所周知程序当前所在目录在我们的编程中有着重要的作用，所以如何获取该变量显得很重要！
 
+下面我说说我的思路，并保持更新！以便使用更优质的办法！
+实现思路
 
-这里先说明一下，我使用的是 hexo-theme-matery 和 hexo@6.1.0
+GetModuleFileName + _splitpath + sprintf
 
-准备文件
-
-下载
-点击下载 prism.css
-点击下载 prism.js
-然后将这两份文件复制到 ">
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -28,7 +24,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>设置代码高亮 | Hexo-Matery | SeaYJ</title>
+    <title>【VS】如何获取应用程序所在路径？ | SeaYJ</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -331,12 +327,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">设置代码高亮 | Hexo-Matery</h1>
+                    <h1 class="description center-align post-title">【VS】如何获取应用程序所在路径？</h1>
                 </div>
             </div>
         </div>
@@ -452,16 +448,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%8D%9A%E6%96%87/">
-                                <span class="chip bg-color">博文</span>
+                            <a href="/tags/Visual-Studio/">
+                                <span class="chip bg-color">Visual Studio</span>
                             </a>
                         
-                            <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%9C%AA%E6%9D%A5/">
-                                <span class="chip bg-color">博客未来</span>
-                            </a>
-                        
-                            <a href="/tags/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/">
-                                <span class="chip bg-color">代码高亮</span>
+                            <a href="/tags/Win32/">
+                                <span class="chip bg-color">Win32</span>
                             </a>
                         
                     </div>
@@ -476,21 +468,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-30
+                    2022-04-04
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-03
+                    2022-04-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    779
+                    2k
                 </div>
                 
 
@@ -511,55 +503,318 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>代码不高亮？别逗！</p>
-<p>不高亮的代码莫得灵魂！</p>
+                <p>众所周知程序当前所在目录在我们的编程中有着重要的作用，所以如何获取该变量显得很重要！</p>
 <span id="more"></span>
+<p>下面我说说我的思路，并保持更新！以便使用更优质的办法！</p>
+<h2 id="实现思路">实现思路</h2>
+<hr>
+<h3 id="GetModuleFileName-splitpath-sprintf">GetModuleFileName + _splitpath + sprintf</h3>
+<hr>
 <blockquote>
-<p>这里先说明一下，我使用的是 <code>hexo-theme-matery</code> 和 <code>hexo@6.1.0</code></p>
+<p>假设我的 Demo.exe 现在的路径信息是： C:\Test\Room\Demo.exe</p>
 </blockquote>
-<h2 id="准备文件">准备文件</h2>
+<ol>
+<li>
+<p>首先我们可以使用 <code>GetModuleFileName</code> 函数获取程序的绝对路径！也就是： <code>C:\Test\Room\Demo.exe</code> ！</p>
+</li>
+<li>
+<p>然后使用 <code>_splitpath</code> 函数分割该路径的个个部分，得到该路径的 “驱动器号(<code>C:</code>)”、“目录路径(<code>\Test\Room\</code>)”、“基文件名(<code>Demo</code>)”和“文件扩展名(<code>.exe</code>)”。</p>
+</li>
+<li>
+<p>最后用 <code>sprintf</code> 函数组装出我们需要的信息。</p>
+</li>
+</ol>
+<p>下面讲解一下用到的这三个函数，方便大家在今后的编程中灵活运用它们！</p>
+<h2 id="函数讲解">函数讲解</h2>
 <hr>
-<h3 id="下载">下载</h3>
-<p><a href="./prism.css">点击下载</a> <code>prism.css</code><br>
-<a href="./prism.js">点击下载</a> <code>prism.js</code></p>
-<p>然后将这两份文件复制到 <code>博客根目录/themes/&#123;主题文件夹&#125;/source/libs/prism/</code> 目录下！</p>
-<h3 id="说明">说明</h3>
-<p>您可能会发现在该目录下会已经存在一个 <code>prism.css</code> 文件，那是主题自带的，也可以使用，您可以按照需自己的需求来！但是<strong>如果使用默认的</strong> <code>prism.css</code> <strong>一定使用配套的</strong> <code>prism.js</code> ！否则会出现问题！如果想使用自定义的 <code>prismJS</code> 高亮规则，可以去官网配置并下载：<a href="">自定义 prismJS 规则</a>！</p>
-<p><strong>补充：</strong><br>
-我不知道为什么，我的 <code>博客根目录/themes/&#123;主题文件夹&#125;/source/libs/prism/</code> 目录下只有一个 <code>prism.css</code> ，这使得我的博客代码高亮出了很大问题！后来我自己配置一套 <code>prismJS</code> 文件后才解决的问题！</p>
-<p>同时，您需要知道的是：PrismJS 官网下载的 prism 文件在 <code>hexo-theme-matery</code> 主题下显示有些冲突，需要您去修改对应的 CSS 文件。这里我已经修改好了，所以 <code>hexo-theme-matery</code> 主题的朋友，您可以直接使用我提供的下载，它支持几乎所有语言得代码高亮！（其他主题我未做探索）</p>
-<h2 id="配置-prismJS">配置 | prismJS</h2>
+<blockquote>
+<p>详情请参考 Microsoft 的 MSDN 文档</p>
+</blockquote>
+<h3 id="一、GetModuleFileName">一、GetModuleFileName</h3>
+<h4 id="函数声明">函数声明</h4>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">DWORD <span class="token function">GetModuleFileNameA</span><span class="token punctuation">(</span>
+  <span class="token punctuation">[</span>in<span class="token punctuation">,</span> optional<span class="token punctuation">]</span> HMODULE hModule<span class="token punctuation">,</span>
+  <span class="token punctuation">[</span>out<span class="token punctuation">]</span>          LPSTR   lpFilename<span class="token punctuation">,</span>
+  <span class="token punctuation">[</span>in<span class="token punctuation">]</span>           DWORD   nSize
+<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ol>
+<li><strong>参数 <code>hModule</code></strong></li>
+</ol>
+<p> 正在请求其路径程序的句柄。</p>
+<p> 如果此参数为 <code>NULL</code>，则 <code>GetModuleFileName</code> 将检索当前进程的可执行文件的路径。</p>
+<p> 因为我们需要获取的是当前程序的路径，所以我们需要检索路径的程序就是当前进程对应的可执行文件。所以这一项我们可以填<code>NULL</code>。</p>
+<ol start="2">
+<li><strong>参数 <code>lpFilename</code></strong></li>
+</ol>
+<p> 指向接收模块的完全限定路径的缓冲区的指针。如果路径的长度小于 <code>nSize</code> 参数指定的大小，则函数将成功，并且路径将作为 <code>NULL</code> 终止的字符串返回。</p>
+<p> 如果路径的长度超过 <code>nSize</code> 参数指定的大小，则函数将成功，并且字符串将被截断为 <code>nSize</code> 字符，包括终止空字符。</p>
+<ol start="3">
+<li><strong>参数 <code>nSize</code></strong></li>
+</ol>
+<p> <code>lpFilename</code> 缓冲区的大小。</p>
+<h4 id="返回值">返回值</h4>
+<p>如果函数成功，则返回值是复制到缓冲区的字符串的长度（以字符为单位），不包括终止空字符。如果缓冲区太小而无法容纳模块名称，则字符串将被截断为 <code>nSize</code> 字符（包括终止空字符），函数返回 <code>nSize</code>，并且函数将最后一个错误设置为<code>ERROR_INSUFFICIENT_BUFFER</code>。</p>
+<p><strong>Windows XP：</strong> 如果缓冲区太小而无法保存模块名称，则该函数将返回 <code>nSize</code>。最后一个错误代码将保留<code>ERROR_SUCCESS</code>。如果 <code>nSize</code> 为零，则返回值为零，最后一个错误代码<code>ERROR_SUCCESS</code>。</p>
+<p>如果函数失败，则返回值为 0（零）。</p>
+<h4 id="要求">要求</h4>
+<p>记得使用该函数需要头文件 <code>&lt;Windows.h&gt;</code></p>
+<blockquote>
+<p>详情请参考 Microsoft 的 MSDN 文档: <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamea">GetModuleFileName</a></p>
+</blockquote>
+<h3 id="二、-splitpath">二、_splitpath</h3>
+<h4 id="函数声明-2">函数声明</h4>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">_splitpath</span><span class="token punctuation">(</span>
+   <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span>path<span class="token punctuation">,</span>
+   <span class="token keyword">char</span> <span class="token operator">*</span>drive<span class="token punctuation">,</span>
+   <span class="token keyword">char</span> <span class="token operator">*</span>dir<span class="token punctuation">,</span>
+   <span class="token keyword">char</span> <span class="token operator">*</span>fname<span class="token punctuation">,</span>
+   <span class="token keyword">char</span> <span class="token operator">*</span>ext
+<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ol>
+<li><strong>参数 <code>path</code></strong></li>
+</ol>
+<p> 此参数用于向函数传递需要分解的原路径。</p>
+<ol start="2">
+<li><strong>参数 <code>drive</code></strong></li>
+</ol>
+<p> 接收分割得到的“驱动器号”。</p>
+<ol start="3">
+<li><strong>参数 <code>dir</code></strong></li>
+</ol>
+<p> 接收分割得到的“目录路径”。</p>
+<ol start="4">
+<li><strong>参数 <code>fname</code></strong></li>
+</ol>
+<p> 接收分割得到的“基文件名”。</p>
+<ol start="5">
+<li><strong>参数 <code>ext</code></strong></li>
+</ol>
+<p> 接收分割得到的“文件扩展名”（带符号 ‘.’）。</p>
+<h4 id="返回值-2">返回值</h4>
+<p>该函数没有返回值，通过参数 <code>drive</code>、<code>dir</code>、<code>name</code> 和 <code>ext</code> 返回分解之后的各个部分。</p>
+<h4 id="要求-2">要求</h4>
+<p>记得使用该函数需要头文件 <code>&lt;stdlib.h&gt;</code></p>
+<blockquote>
+<p>详情请参考 Microsoft 的 MSDN 文档: <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/cpp/c-runtime-library/reference/splitpath-wsplitpath?view=msvc-170">_splitpath</a></p>
+</blockquote>
+<h3 id="三、-sprintf">三、 sprintf</h3>
+<h4 id="函数声明如下：">函数声明如下：</h4>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">sprintf</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span>str<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span>format<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ol>
+<li><strong>参数 <code>str</code></strong></li>
+</ol>
+<p> 这是指向一个字符数组的指针，该数组存储了 C 字符串。</p>
+<ol start="2">
+<li><strong>参数 <code>format</code></strong></li>
+</ol>
+<p> 这是字符串，包含了要被写入到字符串 <code>str</code> 的文本。它可以包含嵌入的 <code>format</code> 标签，<code>format</code> 标签可被随后的附加参数中指定的值替换，并按需求进行格式化。<code>format</code> 标签属性是 <strong>%[flags][width][.precision][length]specifier</strong>，具体讲解如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">specifier（说明符）</th>
+<th style="text-align:left">输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">c</td>
+<td style="text-align:left">字符</td>
+</tr>
+<tr>
+<td style="text-align:center">d 或 i</td>
+<td style="text-align:left">有符号十进制整数</td>
+</tr>
+<tr>
+<td style="text-align:center">e</td>
+<td style="text-align:left">使用 e 字符的科学科学记数法（尾数和指数）</td>
+</tr>
+<tr>
+<td style="text-align:center">E</td>
+<td style="text-align:left">使用 E 字符的科学科学记数法（尾数和指数）</td>
+</tr>
+<tr>
+<td style="text-align:center">f</td>
+<td style="text-align:left">十进制浮点数</td>
+</tr>
+<tr>
+<td style="text-align:center">g</td>
+<td style="text-align:left">自动选择 %e 或 %f 中合适的表示法</td>
+</tr>
+<tr>
+<td style="text-align:center">G</td>
+<td style="text-align:left">自动选择 %E 或 %f 中合适的表示法</td>
+</tr>
+<tr>
+<td style="text-align:center">o</td>
+<td style="text-align:left">有符号八进制</td>
+</tr>
+<tr>
+<td style="text-align:center">s</td>
+<td style="text-align:left">字符的字符串</td>
+</tr>
+<tr>
+<td style="text-align:center">u</td>
+<td style="text-align:left">无符号十进制整数</td>
+</tr>
+<tr>
+<td style="text-align:center">x</td>
+<td style="text-align:left">无符号十六进制整数</td>
+</tr>
+<tr>
+<td style="text-align:center">X</td>
+<td style="text-align:left">无符号十六进制整数（大写字母）</td>
+</tr>
+<tr>
+<td style="text-align:center">p</td>
+<td style="text-align:left">指针地址</td>
+</tr>
+<tr>
+<td style="text-align:center">n</td>
+<td style="text-align:left">无输出</td>
+</tr>
+<tr>
+<td style="text-align:center">%</td>
+<td style="text-align:left">字符</td>
+</tr>
+</tbody>
+</table>
 <hr>
-<p>这里我只讲解 <code>prismJS</code> 的配置方法，因为它不会像 <code>Highlight</code> 在 <code>hexo-theme-matery</code> 主题中出现显示问题（个人感觉 Matery 主题更适合使用 <code>prismJS</code> 进行代码高亮）</p>
-<h3 id="修改-config-yml-根目录">修改 _config.yml(根目录)</h3>
-<p>在根目录下的 <code>_config.yml</code> 文件中找到对应代码位置并修改成如下内容：</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><div class="caption"><span>_config.yml(根目录)</span></div><code class="language-yaml"><span class="token key atrule">highlight</span><span class="token punctuation">:</span>
-  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># 关闭 highlight</span>
-<span class="token key atrule">prismjs</span><span class="token punctuation">:</span>
-  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># 启用 prismjs</span>
-  <span class="token key atrule">preprocess</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># Hexo 内建的 PrismJS 支持浏览器端高亮（preprocess 设置为 false）和服务器端高亮（preprocess 设置为 true）两种方式</span>
-  <span class="token key atrule">line_number</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># 是否显示行号</span>
-  <span class="token key atrule">line_threshold</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token comment"># 接受一个可选的阈值，只要代码块的行数超过这个阈值，就只显示行号。 默认值为 0。</span>
-  <span class="token key atrule">tab_replace</span><span class="token punctuation">:</span> <span class="token string">''</span> <span class="token comment"># 用代码内的 tab (\t) 替换为给定值，默认值是两个空格。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="修改-config-yml-主题目录">修改 _config.yml(主题目录)</h3>
-<p>在根目录下的 <code>_config.yml</code> 文件中找到对应代码位置并确保 <code>libs.css.prism</code> 和 <code>libs.js.prism</code> 中的路径如下（如果没有就手动添上）：</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><div class="caption"><span>_config.yml(主题目录)</span></div><code class="language-yaml"><span class="token key atrule">libs</span><span class="token punctuation">:</span>
-  <span class="token key atrule">css</span><span class="token punctuation">:</span>
-    <span class="token key atrule">prism</span><span class="token punctuation">:</span> /libs/prism/prism.css <span class="token comment"># 标注 prism.css 文件位置</span>
-    
-  <span class="token key atrule">js</span><span class="token punctuation">:</span>
-    <span class="token key atrule">prism</span><span class="token punctuation">:</span> /libs/prism/prism.js <span class="token comment"># 标注 prism.js 文件位置</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>这是我的配置参数，<strong>仅供参考</strong>：<br>
-<img src="./Snipaste_2022-03-31_10-29-58.jpg" alt="我的配置"></p>
-<h3 id="修改-post-detail-ejs">修改 post-detail.ejs</h3>
-<p>最后打开 <code>博客根目录/themes/&#123;主题文件夹&#125;/layout/_partial/post-detail.ejs</code> 文件，确保（大概在 74 行）有如下代码（如果缺少就补上）：</p>
-<pre class="line-numbers language-ejs" data-language="ejs"><div class="caption"><span>post-detail.ejs</span></div><code class="language-ejs"><span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%</span><span class="token language-javascript"> <span class="token keyword">if</span> <span class="token punctuation">(</span>config<span class="token punctuation">.</span>prismjs <span class="token operator">&amp;&amp;</span> config<span class="token punctuation">.</span>prismjs<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> </span><span class="token delimiter punctuation">%></span></span>
-	<span class="token comment">&lt;!-- 是否加载使用自带的 prismjs. --></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%-</span><span class="token language-javascript"> theme<span class="token punctuation">.</span>jsDelivr<span class="token punctuation">.</span>url </span><span class="token delimiter punctuation">%></span></span><span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%-</span><span class="token language-javascript"> <span class="token function">url_for</span><span class="token punctuation">(</span>theme<span class="token punctuation">.</span>libs<span class="token punctuation">.</span>css<span class="token punctuation">.</span>prism<span class="token punctuation">)</span> </span><span class="token delimiter punctuation">%></span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%-</span><span class="token language-javascript"> theme<span class="token punctuation">.</span>jsDelivr<span class="token punctuation">.</span>url </span><span class="token delimiter punctuation">%></span></span><span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%-</span><span class="token language-javascript"> <span class="token function">url_for</span><span class="token punctuation">(</span>theme<span class="token punctuation">.</span>libs<span class="token punctuation">.</span>js<span class="token punctuation">.</span>prism<span class="token punctuation">)</span> </span><span class="token delimiter punctuation">%></span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-<span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%</span><span class="token language-javascript"> <span class="token punctuation">&#125;</span> </span><span class="token delimiter punctuation">%></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="参考文章-2">参考文章</h2>
-<p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/syntax-highlight.html#PrismJS">代码高亮|Hexo</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">flags（标识）</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">在给定的字段宽度内左对齐，默认是右对齐（参见 width 子说明符）。</td>
+</tr>
+<tr>
+<td style="text-align:center">+</td>
+<td style="text-align:left">强制在结果之前显示加号或减号（+ 或 -），即正数前面会显示 + 号。默认情况下，只有负数前面会显示一个 - 号。</td>
+</tr>
+<tr>
+<td style="text-align:center">(space)</td>
+<td style="text-align:left">如果没有写入任何符号，则在该值前面插入一个空格。</td>
+</tr>
+<tr>
+<td style="text-align:center">#</td>
+<td style="text-align:left">与 o、x 或 X 说明符一起使用时，非零值前面会分别显示 0、0x 或 0X。<br/>与 e、E 和 f 一起使用时，会强制输出包含一个小数点，即使后边没有数字时也会显示小数点。默认情况下，如果后边没有数字时候，不会显示显示小数点。<br/>与 g 或 G 一起使用时，结果与使用 e 或 E 时相同，但是尾部的零不会被移除。</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:left">在指定填充 padding 的数字左边放置零（0），而不是空格（参见 width 子说明符）。</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">width（宽度）</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">(number)</td>
+<td style="text-align:left">要输出的字符的最小数目。如果输出的值短于该数，结果会用空格填充。如果输出的值长于该数，结果不会被截断。</td>
+</tr>
+<tr>
+<td style="text-align:center">*</td>
+<td style="text-align:left">宽度在 format 字符串中未指定，但是会作为附加整数值参数放置于要被格式化的参数之前。</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">.precision（精度）</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">.number</td>
+<td style="text-align:left">对于整数说明符（d、i、o、u、x、X）：precision 指定了要写入的数字的最小位数。如果写入的值短于该数，结果会用前导零来填充。如果写入的值长于该数，结果不会被截断。精度为 0 意味着不写入任何字符。<br/>对于 e、E 和 f 说明符：要在小数点后输出的小数位数。<br/>对于 g 和 G 说明符：要输出的最大有效位数。<br/>对于 s: 要输出的最大字符数。默认情况下，所有字符都会被输出，直到遇到末尾的空字符。<br/>对于 c 类型：没有任何影响。<br/>当未指定任何精度时，默认为 1。如果指定时不带有一个显式值，则假定为 0。</td>
+</tr>
+<tr>
+<td style="text-align:center">.*</td>
+<td style="text-align:left">精度在 format 字符串中未指定，但是会作为附加整数值参数放置于要被格式化的参数之前。</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">length（长度）</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">h</td>
+<td style="text-align:left">参数被解释为短整型或无符号短整型（仅适用于整数说明符：i、d、o、u、x 和 X）。</td>
+</tr>
+<tr>
+<td style="text-align:center">l</td>
+<td style="text-align:left">参数被解释为长整型或无符号长整型，适用于整数说明符（i、d、o、u、x 和 X）及说明符 c（表示一个宽字符）和 s（表示宽字符字符串）。</td>
+</tr>
+<tr>
+<td style="text-align:center">L</td>
+<td style="text-align:left">参数被解释为长双精度型（仅适用于浮点数说明符：e、E、f、g 和 G）。</td>
+</tr>
+</tbody>
+</table>
+<ol start="3">
+<li><strong>附加参数</strong></li>
+</ol>
+<p> 根据不同的 <code>format</code> 字符串，函数可能需要一系列的附加参数，每个参数包含了一个要被插入的值，替换了 <code>format</code> 参数中指定的每个 % 标签。参数的个数应与 % 标签的个数相同。</p>
+<h4 id="返回值-3">返回值</h4>
+<p>如果成功，则返回写入的字符总数，不包括字符串追加在字符串末尾的空字符。如果失败，则返回一个负数。</p>
+<h4 id="要求-3">要求</h4>
+<p>记得使用该函数需要头文件 <code>&lt;stdio.h&gt;</code></p>
+<h2 id="具体实例">具体实例</h2>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">TCHAR proPath_m<span class="token punctuation">[</span>_MAX_PATH<span class="token punctuation">]</span><span class="token punctuation">,</span> 
+Drive_m<span class="token punctuation">[</span>_MAX_DRIVE<span class="token punctuation">]</span><span class="token punctuation">,</span> 
+Dir_m<span class="token punctuation">[</span>_MAX_DIR<span class="token punctuation">]</span><span class="token punctuation">,</span> 
+FName_m<span class="token punctuation">[</span>_MAX_FNAME<span class="token punctuation">]</span><span class="token punctuation">,</span> 
+Ext_m<span class="token punctuation">[</span>_MAX_EXT<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token function">GetModuleFileName</span><span class="token punctuation">(</span><span class="token constant">NULL</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>LPSTR<span class="token punctuation">)</span>proPath_m<span class="token punctuation">,</span> MAX_PATH<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">_splitpath</span><span class="token punctuation">(</span>proPath_m<span class="token punctuation">,</span> Drive_m<span class="token punctuation">,</span> Dir_m<span class="token punctuation">,</span> FName_m<span class="token punctuation">,</span> Ext_m<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">sprintf</span><span class="token punctuation">(</span>workDir<span class="token punctuation">,</span> <span class="token function">__TEXT</span><span class="token punctuation">(</span><span class="token string">"%s%s"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> Drive_m<span class="token punctuation">,</span> Dir_m<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 得到 C:\Test\Room\</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="补充">补充</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">属性</th>
+<th style="text-align:center">值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>_MAX_DRIVE</code></td>
+<td style="text-align:center"><code>3</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>_MAX_DIR</code></td>
+<td style="text-align:center"><code>256</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>_MAX_FNAME</code></td>
+<td style="text-align:center"><code>256</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>_MAX_EXT</code></td>
+<td style="text-align:center"><code>256</code></td>
+</tr>
+</tbody>
+</table>
 
                 
             </div>
@@ -586,7 +841,7 @@
                     </i>
                     </span>
                 <span class="reprint-info">
-                    <a href="https://seayj.github.io/2022/03/30/she-zhi-dai-ma-gao-liang-hexo-matery/">https://seayj.github.io/2022/03/30/she-zhi-dai-ma-gao-liang-hexo-matery/</a>
+                    <a href="https://seayj.github.io/2022/04/04/vs-ru-he-huo-qu-ying-yong-cheng-xu-suo-zai-lu-jing/">https://seayj.github.io/2022/04/04/vs-ru-he-huo-qu-ying-yong-cheng-xu-suo-zai-lu-jing/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -624,16 +879,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%8D%9A%E6%96%87/">
-                                    <span class="chip bg-color">博文</span>
+                                <a href="/tags/Visual-Studio/">
+                                    <span class="chip bg-color">Visual Studio</span>
                                 </a>
                             
-                                <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%9C%AA%E6%9D%A5/">
-                                    <span class="chip bg-color">博客未来</span>
-                                </a>
-                            
-                                <a href="/tags/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/">
-                                    <span class="chip bg-color">代码高亮</span>
+                                <a href="/tags/Win32/">
+                                    <span class="chip bg-color">Win32</span>
                                 </a>
                             
                         </div>
@@ -807,9 +1058,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/04/04/vs-ru-he-huo-qu-ying-yong-cheng-xu-suo-zai-lu-jing/">
                     <div class="card-image">
@@ -827,9 +1079,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -838,6 +1090,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -860,19 +1113,20 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/03/30/bo-ke-tian-jia-live2d-hexo-matery/">
+                <a href="/2022/03/30/she-zhi-dai-ma-gao-liang-hexo-matery/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="博客添加 Live2D | Hexo-Matery">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="设置代码高亮 | Hexo-Matery">
                         
-                        <span class="card-title">博客添加 Live2D | Hexo-Matery</span>
+                        <span class="card-title">设置代码高亮 | Hexo-Matery</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            有谁会拒绝可爱的板娘入驻自己的博客呢？反正我不会吧o(^▽^)o
+                            代码不高亮？别逗！
+不高亮的代码莫得灵魂！
                         
                     </div>
                     <div class="publish-info">
@@ -890,12 +1144,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Live2D/">
-                        <span class="chip bg-color">Live2D</span>
+                    <a href="/tags/%E5%8D%9A%E6%96%87/">
+                        <span class="chip bg-color">博文</span>
                     </a>
                     
                     <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%9C%AA%E6%9D%A5/">
                         <span class="chip bg-color">博客未来</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/">
+                        <span class="chip bg-color">代码高亮</span>
                     </a>
                     
                 </div>
