@@ -6,7 +6,7 @@
   <link href="https://seayj.github.io/atom.xml" rel="self"/>
   
   <link href="https://seayj.github.io/"/>
-  <updated>2022-04-04T08:33:11.998Z</updated>
+  <updated>2022-05-16T10:27:34.315Z</updated>
   <id>https://seayj.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CMD 选择菜单(键盘事件监听)</title>
+    <link href="https://seayj.github.io/2022/05/16/cmd-xuan-ze-cai-dan-jian-pan-shi-jian-jian-ting/"/>
+    <id>https://seayj.github.io/2022/05/16/cmd-xuan-ze-cai-dan-jian-pan-shi-jian-jian-ting/</id>
+    <published>2022-05-16T06:35:31.000Z</published>
+    <updated>2022-05-16T10:27:34.315Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;  控制台程序编程中，如果主菜单总是需要输入数字选择，那显得很不直观，不像正常主菜单方向键可以上下移动选择按钮，所以这一次写代码的时候就直接改善此问题！&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>解决 Wallpaper Engine 部分壁纸黑屏问题</title>
+    <link href="https://seayj.github.io/2022/04/06/jie-jue-wallpaper-engine-bu-fen-bi-zhi-hei-ping-wen-ti/"/>
+    <id>https://seayj.github.io/2022/04/06/jie-jue-wallpaper-engine-bu-fen-bi-zhi-hei-ping-wen-ti/</id>
+    <published>2022-04-06T15:40:43.000Z</published>
+    <updated>2022-04-06T15:46:02.496Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近遇到了 Wallpaper Engine 部分壁纸黑屏无法显示的问题…&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="计算机" scheme="https://seayj.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>【VS】如何获取应用程序所在路径？</title>
@@ -150,9 +182,9 @@
     
     
     
-    <category term="博文" scheme="https://seayj.github.io/tags/%E5%8D%9A%E6%96%87/"/>
-    
     <category term="编辑器" scheme="https://seayj.github.io/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
+    
+    <category term="博文" scheme="https://seayj.github.io/tags/%E5%8D%9A%E6%96%87/"/>
     
   </entry>
   

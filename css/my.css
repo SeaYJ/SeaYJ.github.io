@@ -20,6 +20,10 @@
 /**********\
 *  代码块  *
 \**********/
+#articleContent .code-area {
+    margin-bottom: 40px;
+}
+
 #articleContent .code-area pre {
 	overflow-x: scroll;
 	background-color: #111111;

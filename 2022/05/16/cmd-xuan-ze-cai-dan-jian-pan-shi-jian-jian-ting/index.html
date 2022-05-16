@@ -4,23 +4,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Visual Studio 设置背景图片主题（所有版本设置方法）, SeaYJ">
-    <meta name="description" content="你知道吗？Visual Studio 编辑器也能设置背景哦~
+    <meta name="keywords" content="CMD 选择菜单(键盘事件监听), SeaYJ">
+    <meta name="description" content="  控制台程序编程中，如果主菜单总是需要输入数字选择，那显得很不直观，不像正常主菜单方向键可以上下移动选择按钮，所以这一次写代码的时候就直接改善此问题！
 
-效果预览：
+效果预览
 
-目录
-
-
-扩展安装
-图片背景设置
-主题透明并扩展到 IDE
-
-内容
-
-扩展安装
-ClaudiaIDE 扩展下载
-我们打开VS的扩展安装界面：【扩展】-&amp;gt;【管">
+原理详释
+一、控制台窗口光标移动
+  原本控制台的光标是逐文本向后的，我">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -32,7 +23,7 @@ ClaudiaIDE 扩展下载
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Visual Studio 设置背景图片主题（所有版本设置方法） | SeaYJ</title>
+    <title>CMD 选择菜单(键盘事件监听) | SeaYJ</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -335,12 +326,12 @@ ClaudiaIDE 扩展下载
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Visual Studio 设置背景图片主题（所有版本设置方法）</h1>
+                    <h1 class="description center-align post-title">CMD 选择菜单(键盘事件监听)</h1>
                 </div>
             </div>
         </div>
@@ -454,17 +445,9 @@ ClaudiaIDE 扩展下载
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E7%BC%96%E8%BE%91%E5%99%A8/">
-                                <span class="chip bg-color">编辑器</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%8D%9A%E6%96%87/">
-                                <span class="chip bg-color">博文</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -476,21 +459,21 @@ ClaudiaIDE 扩展下载
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-29
+                    2022-05-16
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-03-31
+                    2022-05-16
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    659
+                    2.2k
                 </div>
                 
 
@@ -511,83 +494,535 @@ ClaudiaIDE 扩展下载
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>你知道吗？Visual Studio 编辑器也能设置背景哦~</p>
+                <p>  控制台程序编程中，如果主菜单总是需要输入数字选择，那显得很不直观，不像正常主菜单方向键可以上下移动选择按钮，所以这一次写代码的时候就直接改善此问题！</p>
 <span id="more"></span>
-<p>效果预览：</p>
-<p><img src="./2573290-20211226102206472-1095159371.jpg" alt=""></p>
-<h2 id="目录">目录</h2>
-<hr>
-<ol>
-<li><a href="#step1">扩展安装</a></li>
-<li><a href="#step2">图片背景设置</a></li>
-<li><a href="#step3">主题透明并扩展到 IDE</a></li>
-</ol>
-<h2 id="内容">内容</h2>
-<hr>
-<h3 id="step1">扩展安装</h3>
-<h4 id="ClaudiaIDE-扩展下载">ClaudiaIDE 扩展下载</h4>
-<p>我们打开VS的扩展安装界面：【扩展】-&gt;【管理扩展】-&gt;【联机】，输入 “ClaudiaIDE”，可以看到搜索结果：“ClaudiaIDE”。如果你是 Visual Studio 2022 用户，强烈建议不要用最新版（当前时间为2021.12.26日，我发现这个当前最新版3.0.5有个bug）。你可以进入 ClaudiaIDE 的 GitHub 官网选择旧版，但是只支持 3.0.1+ 版本，所以还是要注意(具体的官网也有说明，记得仔细阅读)。<br>
-<a target="_blank" rel="noopener" href="https://github.com/buchizo/ClaudiaIDE/releases">ClaudiaIDE GitHub 历代版本下载传送门</a></p>
-<p><img src="./2573290-20211226093730373-223597750.jpg" alt=""></p>
-<p><img src="./2573290-20211226093427376-1359247982.jpg" alt=""></p>
-<h4 id="主题背景编辑扩展下载">主题背景编辑扩展下载</h4>
-<h5 id="Visual-Studio-2022">Visual Studio 2022</h5>
-<p>我们打开VS的扩展安装界面：【扩展】-&gt;【管理扩展】-&gt;【联机】，输入 “Visual Studio Color Theme Designer 2022”，可以看到搜索结果：“Visual Studio Color Theme Designer 2022”。</p>
-<p><img src="./2573290-20211226093817971-1463883804.jpg" alt=""></p>
-<h5 id="Visual-Studio-2019-及旧版本">Visual Studio 2019 及旧版本</h5>
-<p>我们打开VS的扩展安装界面：【工具】-&gt;【扩展和更新】-&gt;【联机】，输入 “Color Theme Editor for Visual Studio 2019”(2019对于自己的版本号)，可以看到搜索结果：“Color Theme Editor for Visual Studio 2019”。具体其他操作可以参考这篇博客：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/stulzq/p/9393323.html">Visual Studio 2017 设置透明背景图</a>。</p>
-<p>因为操作方法略有小差异，我就只以 VS2022 版本为实例进行演示操作，旧版参考其他博客即可。</p>
-<h3 id="step2">图片背景设置</h3>
-<p>我们打开VS：【工具】-&gt;【选项】-&gt;【ClaudiaIDE】。</p>
-<p><img src="./2573290-20211226094940666-684800660.jpg" alt=""></p>
-<p>然后添加自己的图片，按照我这个配置即可：</p>
-<p><img src="./2573290-20211226095114210-1939152974.jpg" alt=""></p>
-<h3 id="step3">主题透明并扩展到 IDE</h3>
-<h3 id="step3-1">操作流程</h3>
-<p>我们重新启动 VS2022 ，然后新建一个项目（中途遇到问题请<a href="#step3-2">点击此处跳转</a>）：</p>
-<p><img src="./2573290-20211226095313186-425493518.jpg" alt=""></p>
-<p><img src="./2573290-20211226095323670-1937743407.jpg" alt=""></p>
-<p><img src="./2573290-20211226095341453-1778583874.jpg" alt=""></p>
-<p><img src="./2573290-20211226095405831-1649223623.jpg" alt=""></p>
-<p><img src="./2573290-20211226095420829-38330897.jpg" alt=""></p>
-<p><img src="./2573290-20211226095442059-1263447836.jpg" alt=""></p>
-<p>根据下面的列表，修改指定控件的指定属性值为 <code>2A252526</code>:<br>
-(VS2022 有部分是两个属性，只要修改颜色最深的那个就行了！不然会有问题，不信你试试awa)</p>
-<p>TreeView -&gt; Background</p>
-<p>Environment -&gt; Window</p>
-<p>Environment -&gt; EnvironmentBackground</p>
-<p>Environment -&gt; EnvironmentBackgroundGradientBegin<br>
-Environment -&gt; EnvironmentBackgroundGradientEnd<br>
-Environment -&gt; EnvironmentBackgroundGradientMiddle1<br>
-Environment -&gt; EnvironmentBackgroundGradientMiddle2</p>
-<p>Environment -&gt; MainWindowActiveCaption</p>
-<p>Environment -&gt; MainWindowInactiveCaption</p>
-<p>Environment -&gt; CommandShelfBackgroundGradientBegin<br>
-Environment -&gt; CommandShelfBackgroundGradientEnd<br>
-Environment -&gt; CommandShelfBackgroundGradientMiddle</p>
-<p>Environment -&gt; CommandShelfHighlightGradientBegin<br>
-Environment -&gt; CommandShelfHighlightGradientEnd<br>
-Environment -&gt; CommandShelfHighlightGradientMiddle</p>
-<p>Environment -&gt; CommandBarGradientBegin<br>
-Environment -&gt; CommandBarGradientEnd<br>
-Environment -&gt; CommandBarGradientMiddle</p>
-<p>Environment -&gt; CommandBarToolBarBorder</p>
-<p><strong>注意这三个选项，只改颜色最深的那个</strong>：<br>
-<img src="./2573290-20211226095851621-1598812548.jpg" alt=""><br>
-<img src="./2573290-20211226095935682-2046765014.jpg" alt=""><br>
-<img src="./2573290-20211226095957457-1961508691.jpg" alt=""></p>
-<h3 id="step3-2">问题说明</h3>
-<p>遇到这个问题的话可以看下面的操作</p>
-<p><img src="./2573290-20211226100651552-908751673.jpg" alt=""></p>
-<p><strong>操作</strong>：<br>
-打开 Visual Studio Installer ，然后选择【修改】，勾选对应的【.NET Framework 4.7.2 目标包】，最后【修改】即可。</p>
-<p><img src="./2573290-20211226100913956-983609967.jpg" alt=""></p>
-<p><img src="./2573290-20211226100938372-1036421929.jpg" alt=""></p>
-<p><img src="./2573290-20211226101017490-2084371103.jpg" alt=""></p>
-<p><a href="#step3-1">点我返回【操作流程】</a></p>
-<h4 id="应用">应用</h4>
-<p>修改好了后直接点击【应用】就可以看到透明背景主题了awa…</p>
-<p><img src="./2573290-20211226102041470-451541752.jpg" alt=""></p>
+<h2 id="效果预览">效果预览</h2>
+<p><img src="./Snipaste_2022-05-16_14-40-18.jpg" alt="帮同学写的结课作业"></p>
+<h2 id="原理详释">原理详释</h2>
+<h4 id="一、控制台窗口光标移动">一、控制台窗口光标移动</h4>
+<p>  原本控制台的光标是逐文本向后的，我们要想实现任意位置的文本重输出就需要将光标移动到指定位置，然后覆盖原文本。但是， Windows 系统并没有为我们提供相应的 API ，所以我们需要自己编写一个函数用来控制控制台光标的位置。</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;&#x2F;定位函数
+void gotoxy(int x, int y)
+&#123;
+	COORD pos &#x3D; &#123; x,y &#125;;&#x2F;&#x2F; 是表示 pos 坐标位置为参数对应的(x，y)
+	HANDLE hOut &#x3D; GetStdHandle(STD_OUTPUT_HANDLE);&#x2F;&#x2F; 创建一个 hOut 句柄变量来接收标准输出句柄
+	SetConsoleCursorPosition(hOut, pos);&#x2F;&#x2F; 该函数设置控制台(cmd)光标位置
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>注释：</strong><br>
+  COORD是Windows API中定义的一种结构，表示一个字符在控制台屏幕上的坐标。其定义为：</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">typedef struct _COORD &#123;
+	SHORT X; &#x2F;&#x2F; horizontal coordinate
+	SHORT Y; &#x2F;&#x2F; vertical coordinate
+&#125; COORD;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="二、键盘事件监听">二、键盘事件监听</h4>
+<p>  输入事件中的键盘事件通常有字符事件和按键事件，这些事件的附带信息构成了键盘输入的信息，而想要读取这些信息，是要通过API函数 ReadConsoleInput来获取的，函数原型如下：</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">
+BOOL ReadConsoleInput(              &#x2F;&#x2F;读取输入信息
+    HANDLE hConsoleInput,           &#x2F;&#x2F;句柄
+    PINPUT_RECORD lpBuffer,         &#x2F;&#x2F;输入事件结构体的指针
+    DWORD nLength,                  &#x2F;&#x2F;要读取的记录数
+    LPDWORD lpNumberOfEventsRead    &#x2F;&#x2F;用来接受成功读取记录数的指针
+);  &#x2F;&#x2F;如果该函数成功调用，返回非零值
+&#x2F;&#x2F;输入事件结构体的指针可以是结构体数组的首地址，这样就可以一次性读取多个记录数。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>  另外还需要了解几个和读取键盘输入事件有关的结构体，各结构体原型如下：</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">typedef struct _INPUT_RECORD    &#x2F;&#x2F;输入事件结构体
+&#123;
+    WORD  EventType;    &#x2F;&#x2F;事件类型
+    union
+    &#123;
+        KEY_EVENT_RECORD          KeyEvent;     &#x2F;&#x2F;按键事件
+        MOUSE_EVENT_RECORD        MouseEvent;   &#x2F;&#x2F;鼠标事件
+        WINDOW_BUFFER_SIZE_RECORD WindowBufferSizeEvent;
+        MENU_EVENT_RECORD         MenuEvent;
+        FOCUS_EVENT_RECORD        FocusEvent;
+    &#125; Event;    &#x2F;&#x2F;具体的事件
+&#125; INPUT_RECORD;
+&#x2F;*
+其中事件类型EventType的值有5种
+KEY_EVENT                   代表Event包含一个KEY_EVENT_RECODE结构体
+MOUSE_EVENT                 代表Event包含一个MOUSE_EVENT_RECODE结构体
+WINDOW_BUFFER_SIZE_EVENT    代表Event包含一个WINDOW_BUFFER_SIZE_EVENT_RECORD结构体
+MENU_EVENT                  代表Event包含一个MENU_EVENT_RECORD结构体
+FOCUS_EVENT                 代表Event包含一个FOCUS_EVENT_RECORD结构体
+*&#x2F;
+ 
+typedef struct _KEY_EVENT_RECORD    &#x2F;&#x2F;键盘事件结构体 
+&#123;
+    BOOL  bKeyDown;             &#x2F;&#x2F;按键状态，true代表键按下，false代表键释放
+    WORD  wRepeatCount;         &#x2F;&#x2F;按键次数
+    WORD  wVirtualKeyCode;      &#x2F;&#x2F;虚拟键
+    WORD  wVirtualScanCode;     &#x2F;&#x2F;虚拟键扫描码
+    union
+    &#123;
+        WCHAR UnicodeChar;      &#x2F;&#x2F;解释成Unicode宽字符
+        CHAR  AsciiChar;        &#x2F;&#x2F;解释成ASCII码字符
+    &#125; uChar;
+    DWORD dwControlKeyState;    &#x2F;&#x2F;控制键状态
+&#125; KEY_EVENT_RECORD;
+&#x2F;*
+控制键各状态的值
+ENHANCED_KEY        扩展键被按下
+LEFT_ALT_PRESSED    左Alt键被按下
+LEFT_CTRL_PRESSED   左Ctrl键被按下
+RIGHT_ALT_PRESSED   右Alt键被按下
+RIGHT_CTRL_PRESSED  右Ctrl键被按下
+NUMLOCK_ON          数字锁定被打开
+SCROLLLOCK_ON       滚动锁定被打开
+CAPSLOCK_ON         大写锁定被打开
+SHIFT_PRESSED       Shift键被按下
+*&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>  接下来我们可以写一个最简单的实例代码以供参考：</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;windows.h&gt;
+#include &lt;conio.h&gt;
+#define true 1
+#define false 0
+ 
+int main()
+&#123;
+    HANDLE handle_in &#x3D; GetStdHandle(STD_INPUT_HANDLE);      &#x2F;&#x2F;获得标准输入设备句柄
+    INPUT_RECORD keyrec;        &#x2F;&#x2F;定义输入事件结构体
+    DWORD res;      &#x2F;&#x2F;定义返回记录
+    
+	while (1)
+    &#123;
+        ReadConsoleInput(handle_in, &amp;keyrec, 1, &amp;res);      &#x2F;&#x2F;读取输入事件
+        if (keyrec.EventType &#x3D;&#x3D; KEY_EVENT)      &#x2F;&#x2F;如果当前事件是键盘事件
+        &#123;
+            if (keyrec.Event.KeyEvent.wVirtualKeyCode &#x3D;&#x3D; VK_ESCAPE) &#x2F;&#x2F;当前事件的虚拟键为Esc键
+            &#123;
+                printf(&quot;Esc &quot;);
+            &#125;
+        &#125;
+    &#125;
+	
+    return 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>注意：</strong><br>
+  在上面的样例程序中，当你按下Esc键后又马上释放，程序会输出<strong>两次Esc</strong>，因为有两次事件的虚拟键代码都是Esc键的代码，一次是<strong>按下</strong>，一次是<strong>释放</strong>。如果要实现按下键后出现反应，释放不出现反应，那么需将上例程序中第18行代码的条件改成：</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">if (keyrec.Event.KeyEvent.wVirtualKeyCode &#x3D;&#x3D; VK_ESCAPE
+    &amp;&amp; keyrec.Event.KeyEvent.bKeyDown &#x3D;&#x3D; true)     &#x2F;&#x2F;表示当前为键按下而不是键释放<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>  根据控制键的状态我们可以实现不同的状态输出不同的值以及组合键的实现，下面的样例程序在大写锁定打开时输入A键则输出大写字母A，否则输出小写字母a。而在Shift键被按下的状态是则输出Shift+A以及Shift+a。样例程序如下:</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;windows.h&gt;
+#include &lt;conio.h&gt;
+#define true 1
+#define false 0
+ 
+int main()
+&#123;
+    HANDLE handle_in &#x3D; GetStdHandle(STD_INPUT_HANDLE);      &#x2F;&#x2F;获得标准输入设备句柄
+    INPUT_RECORD keyrec;        &#x2F;&#x2F;定义输入事件结构体
+    DWORD res;      &#x2F;&#x2F;定义返回记录
+    while (1)
+    &#123;
+        ReadConsoleInput(handle_in, &amp;keyrec, 1, &amp;res);      &#x2F;&#x2F;读取输入事件
+        if (keyrec.EventType &#x3D;&#x3D; KEY_EVENT)      &#x2F;&#x2F;如果当前事件是键盘事件
+        &#123;
+            if (keyrec.Event.KeyEvent.wVirtualKeyCode &#x3D;&#x3D; &#39;A&#39;
+                &amp;&amp; keyrec.Event.KeyEvent.bKeyDown &#x3D;&#x3D; true)   &#x2F;&#x2F;当按下字母A键时
+            &#123;
+                if (keyrec.Event.KeyEvent.dwControlKeyState &amp; SHIFT_PRESSED)    &#x2F;&#x2F;Shift键为按下状态
+                &#123;
+                    printf(&quot;Shift+&quot;);
+                &#125;
+                
+				if (keyrec.Event.KeyEvent.dwControlKeyState &amp; CAPSLOCK_ON)  &#x2F;&#x2F;大写锁定为打开状态
+                &#123;
+                    printf(&quot;A &quot;);
+                &#125;
+                else        &#x2F;&#x2F;大写锁定关闭状态
+                &#123;
+                    printf(&quot;a &quot;);
+                &#125;
+            &#125;
+        &#125;
+    &#125;
+    return 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>  最后附上<strong>部分常用虚拟键代码表</strong>：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">虚拟键代码</th>
+<th style="text-align:center">值</th>
+<th style="text-align:center">键名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">VK_BACK</td>
+<td style="text-align:center">0x08</td>
+<td style="text-align:center">退格键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_TAB</td>
+<td style="text-align:center">0x09</td>
+<td style="text-align:center">Tab键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_RETURN</td>
+<td style="text-align:center">0x0D</td>
+<td style="text-align:center">回车键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_SHIFT</td>
+<td style="text-align:center">0x10</td>
+<td style="text-align:center">Shift键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_LSHIFT</td>
+<td style="text-align:center">0xA0</td>
+<td style="text-align:center">左Shift键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_RSHIFT</td>
+<td style="text-align:center">0xA1</td>
+<td style="text-align:center">右Shift键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_CONTROL</td>
+<td style="text-align:center">0x11</td>
+<td style="text-align:center">Ctrl键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_LCONTROL</td>
+<td style="text-align:center">0xA2</td>
+<td style="text-align:center">左Ctrl键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_RCONTROL</td>
+<td style="text-align:center">0xA3</td>
+<td style="text-align:center">右Ctrl键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_MENU</td>
+<td style="text-align:center">0x12</td>
+<td style="text-align:center">Alt键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_LMENU</td>
+<td style="text-align:center">0xA4</td>
+<td style="text-align:center">左Alt键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_RMENU</td>
+<td style="text-align:center">0xA5</td>
+<td style="text-align:center">右Alt键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_PAUSE</td>
+<td style="text-align:center">0x13</td>
+<td style="text-align:center">Pause键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_CAPITAL</td>
+<td style="text-align:center">0x14</td>
+<td style="text-align:center">Caps Lock键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_NUMLOCK</td>
+<td style="text-align:center">0x90</td>
+<td style="text-align:center">Num Lock键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_SCROLL</td>
+<td style="text-align:center">0x91</td>
+<td style="text-align:center">Scroll Lock键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_ESCAPE</td>
+<td style="text-align:center">0x1B</td>
+<td style="text-align:center">Esc键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_SPACE</td>
+<td style="text-align:center">0x20</td>
+<td style="text-align:center">空格键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_PRIOR</td>
+<td style="text-align:center">0x21</td>
+<td style="text-align:center">Page Up键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_NEXT</td>
+<td style="text-align:center">0x22</td>
+<td style="text-align:center">Page Down键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_END</td>
+<td style="text-align:center">0x23</td>
+<td style="text-align:center">End键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_HOME</td>
+<td style="text-align:center">0x24</td>
+<td style="text-align:center">Home键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_LEFT</td>
+<td style="text-align:center">0x25</td>
+<td style="text-align:center">左方向键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_UP</td>
+<td style="text-align:center">0x26</td>
+<td style="text-align:center">上方向键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_RIGHT</td>
+<td style="text-align:center">0x27</td>
+<td style="text-align:center">右方向键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_DOWN</td>
+<td style="text-align:center">0x28</td>
+<td style="text-align:center">下方向键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_DELETE</td>
+<td style="text-align:center">0x2E</td>
+<td style="text-align:center">Delete键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_INSERT</td>
+<td style="text-align:center">0x2D</td>
+<td style="text-align:center">Insert键</td>
+</tr>
+<tr>
+<td style="text-align:center">‘0’</td>
+<td style="text-align:center">0x30</td>
+<td style="text-align:center">0键（非小键盘）</td>
+</tr>
+<tr>
+<td style="text-align:center">‘1’</td>
+<td style="text-align:center">0x31</td>
+<td style="text-align:center">1键（非小键盘）</td>
+</tr>
+<tr>
+<td style="text-align:center">‘2’</td>
+<td style="text-align:center">0x32</td>
+<td style="text-align:center">2键（非小键盘）</td>
+</tr>
+<tr>
+<td style="text-align:center">…</td>
+<td style="text-align:center">…</td>
+<td style="text-align:center">…</td>
+</tr>
+<tr>
+<td style="text-align:center">‘9’</td>
+<td style="text-align:center">0x39</td>
+<td style="text-align:center">9键（非小键盘）</td>
+</tr>
+<tr>
+<td style="text-align:center">‘A’</td>
+<td style="text-align:center">0x41</td>
+<td style="text-align:center">A键</td>
+</tr>
+<tr>
+<td style="text-align:center">‘B’</td>
+<td style="text-align:center">0x42</td>
+<td style="text-align:center">B键</td>
+</tr>
+<tr>
+<td style="text-align:center">…</td>
+<td style="text-align:center">…</td>
+<td style="text-align:center">…</td>
+</tr>
+<tr>
+<td style="text-align:center">‘Z’</td>
+<td style="text-align:center">0x5A</td>
+<td style="text-align:center">Z键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_SLEEP</td>
+<td style="text-align:center">0x5F</td>
+<td style="text-align:center">Sleep键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_NUMPAD0</td>
+<td style="text-align:center">0x60</td>
+<td style="text-align:center">小键盘0键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_NUMPAD1</td>
+<td style="text-align:center">0x61</td>
+<td style="text-align:center">小键盘1键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_NUMPAD2</td>
+<td style="text-align:center">0x62</td>
+<td style="text-align:center">小键盘2键</td>
+</tr>
+<tr>
+<td style="text-align:center">…</td>
+<td style="text-align:center">…</td>
+<td style="text-align:center">…</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_NUMPAD9</td>
+<td style="text-align:center">0x69</td>
+<td style="text-align:center">小键盘9键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_MULTIPLY</td>
+<td style="text-align:center">0x6A</td>
+<td style="text-align:center">小键盘乘键*</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_ADD</td>
+<td style="text-align:center">0x6B</td>
+<td style="text-align:center">小键盘加键+</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_SUBTRACT</td>
+<td style="text-align:center">0x6D</td>
+<td style="text-align:center">小键盘减键-</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_DIVIDE</td>
+<td style="text-align:center">0x6F</td>
+<td style="text-align:center">小键盘除键/</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_DECIMAL</td>
+<td style="text-align:center">0x6E</td>
+<td style="text-align:center">小键盘点键.</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_F1</td>
+<td style="text-align:center">0x70</td>
+<td style="text-align:center">F1键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_F2</td>
+<td style="text-align:center">0x71</td>
+<td style="text-align:center">F2键</td>
+</tr>
+<tr>
+<td style="text-align:center">…</td>
+<td style="text-align:center">…</td>
+<td style="text-align:center">…</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_F12</td>
+<td style="text-align:center">0x7B</td>
+<td style="text-align:center">F12键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_F13</td>
+<td style="text-align:center">0x7C</td>
+<td style="text-align:center">F13键<br/>注：别问我，<br/>我也不知道<br/>什么电脑有这么多键</td>
+</tr>
+<tr>
+<td style="text-align:center">…</td>
+<td style="text-align:center">…</td>
+<td style="text-align:center">…</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_F24</td>
+<td style="text-align:center">0x87</td>
+<td style="text-align:center">F24键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_OEM_1</td>
+<td style="text-align:center">0xBA</td>
+<td style="text-align:center">;:键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_OEM_2</td>
+<td style="text-align:center">0xBF</td>
+<td style="text-align:center">/?键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_OEM_3</td>
+<td style="text-align:center">0xC0</td>
+<td style="text-align:center">·~键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_OEM_4</td>
+<td style="text-align:center">0xDB</td>
+<td style="text-align:center">[{键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_OEM_5</td>
+<td style="text-align:center">0xDC</td>
+<td style="text-align:center">\|键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_OEM_6</td>
+<td style="text-align:center">0xDD</td>
+<td style="text-align:center">]}键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_OEM_7</td>
+<td style="text-align:center">0xDE</td>
+<td style="text-align:center">'&quot;键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_OEM_PLUS</td>
+<td style="text-align:center">0xBB</td>
+<td style="text-align:center">=+键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_OEM_MINUS</td>
+<td style="text-align:center">0xBD</td>
+<td style="text-align:center">-_键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_OEM_COMMA</td>
+<td style="text-align:center">0xBC</td>
+<td style="text-align:center">,&lt;键</td>
+</tr>
+<tr>
+<td style="text-align:center">VK_OEM_PERIOD</td>
+<td style="text-align:center">0xBE</td>
+<td style="text-align:center">.&gt;键</td>
+</tr>
+</tbody>
+</table>
+<h4 id="三、按键高亮（控制台局部文本的样式控制）">三、按键高亮（控制台局部文本的样式控制）</h4>
+<p>  控制台局部文本样式是通过控制台的转义序列来实现的，这是文本模式下的系统显示功能。转义序列是以ESC开始的，即\033，ESC的十进制是27，转为八进制就是33了。<br>
+  通用格式大致为ESC<code>[&#123;attr1&#125;;&#123;attr2&#125;;…;&#123;attrn&#125;m</code>，其中 <strong>attr</strong> 表示的是属性，也是属性值，通常直接就是数字表示了。在此我们进行三个常用属性的设置，主要是<strong>显示方式</strong>、<strong>字体颜色</strong>和<strong>背景色</strong>。</p>
+<pre class="line-numbers language-batch" data-language="batch"><code class="language-batch">显示方式
+<span class="token command"><span class="token keyword">0</span> （默认值）</span>
+<span class="token command"><span class="token keyword">1</span> （高亮显示，顺便加粗？不确定）</span>
+<span class="token command"><span class="token keyword">2</span> （暗淡）</span>
+<span class="token command"><span class="token keyword">22</span>（非粗体，不确定）</span>
+<span class="token command"><span class="token keyword">4</span> （下划线）</span>
+<span class="token command"><span class="token keyword">5</span> （闪烁，但是我没看出有什么效果。。）</span>
+<span class="token command"><span class="token keyword">25</span>（非闪烁）</span>
+<span class="token command"><span class="token keyword">7</span> （反显，我也没看出效果）</span>
+<span class="token command"><span class="token keyword">27</span>（非反显）</span>
+<span class="token command"><span class="token keyword">8</span> （隐藏）</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-batch" data-language="batch"><code class="language-batch">字体颜色
+<span class="token command"><span class="token keyword">30</span>（黑色）</span>
+<span class="token command"><span class="token keyword">31</span>（红色）</span>
+<span class="token command"><span class="token keyword">32</span>（绿色）</span>
+<span class="token command"><span class="token keyword">33</span>（黄色）</span>
+<span class="token command"><span class="token keyword">34</span>（蓝色）</span>
+<span class="token command"><span class="token keyword">35</span>（品红）</span>
+<span class="token command"><span class="token keyword">36</span>（青色）</span>
+<span class="token command"><span class="token keyword">37</span>（白色）</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-batch" data-language="batch"><code class="language-batch">背景色
+<span class="token command"><span class="token keyword">40</span>（黑色）</span>
+<span class="token command"><span class="token keyword">41</span>（红色）</span>
+<span class="token command"><span class="token keyword">42</span>（绿色）</span>
+<span class="token command"><span class="token keyword">43</span>（黄色）</span>
+<span class="token command"><span class="token keyword">44</span>（蓝色）</span>
+<span class="token command"><span class="token keyword">45</span>（品红）</span>
+<span class="token command"><span class="token keyword">46</span>（青色）</span>
+<span class="token command"><span class="token keyword">47</span>（白色）</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>  下面给出一个参考实例，仅供参考：</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">printf(&quot;\033[4;31;42m*测试文本*\033[0m&quot;);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>效果图：</strong></p>
+<p><img src="./Snipaste_2022-05-16_18-18-28.jpg" alt=""></p>
+<h2 id="结束语">结束语</h2>
+<p>  到这里，相关的核心知识点都已经总结完成。剩下的具体功能还需要自己自行开发和实现，过多的叙述往往会限制大家的创造能力。所以，相关的逻辑代码就由大家自己完成吧！<br>
+  补充一下，那个按键选择实际上并不是真的有个按键，而是通过光标重新定位然后覆盖原输出，做出按键选择到了该位置的假象…好了，就说这么多吧！拜拜ヾ(•ω•`)o~</p>
 
                 
             </div>
@@ -614,7 +1049,7 @@ Environment -&gt; CommandBarGradientMiddle</p>
                     </i>
                     </span>
                 <span class="reprint-info">
-                    <a href="https://seayj.github.io/2022/03/29/visual-studio-she-zhi-bei-jing-tu-pian-zhu-ti-suo-you-ban-ben-she-zhi-fang-fa/">https://seayj.github.io/2022/03/29/visual-studio-she-zhi-bei-jing-tu-pian-zhu-ti-suo-you-ban-ben-she-zhi-fang-fa/</a>
+                    <a href="https://seayj.github.io/2022/05/16/cmd-xuan-ze-cai-dan-jian-pan-shi-jian-jian-ting/">https://seayj.github.io/2022/05/16/cmd-xuan-ze-cai-dan-jian-pan-shi-jian-jian-ting/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -651,15 +1086,7 @@ Environment -&gt; CommandBarGradientMiddle</p>
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E7%BC%96%E8%BE%91%E5%99%A8/">
-                                    <span class="chip bg-color">编辑器</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%8D%9A%E6%96%87/">
-                                    <span class="chip bg-color">博文</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -831,30 +1258,30 @@ Environment -&gt; CommandBarGradientMiddle</p>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/03/29/win32-uac-yong-hu-zhang-hu-kong-zhi-ti-quan/">
+                <a href="/2022/05/16/cmd-xuan-ze-cai-dan-jian-pan-shi-jian-jian-ting/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="【Win32】 UAC用户账户控制 (提权)">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="CMD 选择菜单(键盘事件监听)">
                         
-                        <span class="card-title">【Win32】 UAC用户账户控制 (提权)</span>
+                        <span class="card-title">CMD 选择菜单(键盘事件监听)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            最近写程序时遇到一个问题，就是当一个程序需要管理员权限才能正常运行该怎么办？
-通过查阅多方资料，我总结出来几个比较实用的办法！
+                              控制台程序编程中，如果主菜单总是需要输入数字选择，那显得很不直观，不像正常主菜单方向键可以上下移动选择按钮，所以这一次写代码的时候就直接改善此问题！
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -863,18 +1290,7 @@ Environment -&gt; CommandBarGradientMiddle</p>
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%8D%9A%E6%96%87/">
-                        <span class="chip bg-color">博文</span>
-                    </a>
-                    
-                    <a href="/tags/Win32-%E7%BC%96%E7%A8%8B/">
-                        <span class="chip bg-color">Win32 编程</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -885,25 +1301,24 @@ Environment -&gt; CommandBarGradientMiddle</p>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/03/29/windows-10-ru-he-zai-dang-qian-wei-zhi-da-kai-cmd-ming-ling-chuang-kou/">
+                <a href="/2022/04/06/jie-jue-wallpaper-engine-bu-fen-bi-zhi-hei-ping-wen-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Windows 10 如何在当前位置打开 CMD 命令窗口？">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="解决 Wallpaper Engine 部分壁纸黑屏问题">
                         
-                        <span class="card-title">Windows 10 如何在当前位置打开 CMD 命令窗口？</span>
+                        <span class="card-title">解决 Wallpaper Engine 部分壁纸黑屏问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            打开 CMD 后还要 CD 配置运行环境？太麻烦了！
-来看看我是怎么在当前位置一键打开 CMD 命令窗口的吧！
+                            最近遇到了 Wallpaper Engine 部分壁纸黑屏无法显示的问题…
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-06
                             </span>
                         <span class="publish-author">
                             
@@ -915,10 +1330,6 @@ Environment -&gt; CommandBarGradientMiddle</p>
                 </div>
                 
                 <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%8D%9A%E6%96%87/">
-                        <span class="chip bg-color">博文</span>
-                    </a>
                     
                     <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">
                         <span class="chip bg-color">计算机</span>
