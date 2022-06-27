@@ -6,7 +6,7 @@
   <link href="https://seayj.github.io/atom.xml" rel="self"/>
   
   <link href="https://seayj.github.io/"/>
-  <updated>2022-05-16T10:27:34.315Z</updated>
+  <updated>2022-06-27T12:19:36.198Z</updated>
   <id>https://seayj.github.io/</id>
   
   <author>
@@ -17,17 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>CMD 选择菜单(键盘事件监听)</title>
+    <title>IDEA 安装及汉化教程[2022]</title>
+    <link href="https://seayj.github.io/2022/06/27/idea-an-zhuang-ji-han-hua-jiao-cheng-2022/"/>
+    <id>https://seayj.github.io/2022/06/27/idea-an-zhuang-ji-han-hua-jiao-cheng-2022/</id>
+    <published>2022-06-27T11:13:05.000Z</published>
+    <updated>2022-06-27T12:19:36.198Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近要搞 JAVA ，又下回了那个熟悉的编辑器 IDEA ，正好乘此机会写个教程简单分享一下！&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="其他" scheme="https://seayj.github.io/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+    <category term="IDEA" scheme="https://seayj.github.io/tags/IDEA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CMD 选择菜单(键盘事件监听 + 字符颜色控制)</title>
     <link href="https://seayj.github.io/2022/05/16/cmd-xuan-ze-cai-dan-jian-pan-shi-jian-jian-ting/"/>
     <id>https://seayj.github.io/2022/05/16/cmd-xuan-ze-cai-dan-jian-pan-shi-jian-jian-ting/</id>
     <published>2022-05-16T06:35:31.000Z</published>
-    <updated>2022-05-16T10:27:34.315Z</updated>
+    <updated>2022-06-25T07:44:56.013Z</updated>
     
     
     <summary type="html">&lt;p&gt;  控制台程序编程中，如果主菜单总是需要输入数字选择，那显得很不直观，不像正常主菜单方向键可以上下移动选择按钮，所以这一次写代码的时候就直接改善此问题！&lt;/p&gt;</summary>
     
     
     
+    <category term="C/C++" scheme="https://seayj.github.io/categories/C-C/"/>
+    
+    
+    <category term="Console Application" scheme="https://seayj.github.io/tags/Console-Application/"/>
+    
+    <category term="事件监听" scheme="https://seayj.github.io/tags/%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC/"/>
     
   </entry>
   
@@ -36,15 +61,17 @@
     <link href="https://seayj.github.io/2022/04/06/jie-jue-wallpaper-engine-bu-fen-bi-zhi-hei-ping-wen-ti/"/>
     <id>https://seayj.github.io/2022/04/06/jie-jue-wallpaper-engine-bu-fen-bi-zhi-hei-ping-wen-ti/</id>
     <published>2022-04-06T15:40:43.000Z</published>
-    <updated>2022-04-06T15:46:02.496Z</updated>
+    <updated>2022-06-25T07:36:15.957Z</updated>
     
     
     <summary type="html">&lt;p&gt;最近遇到了 Wallpaper Engine 部分壁纸黑屏无法显示的问题…&lt;/p&gt;</summary>
     
     
     
+    <category term="其他" scheme="https://seayj.github.io/categories/%E5%85%B6%E4%BB%96/"/>
     
-    <category term="计算机" scheme="https://seayj.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    <category term="Wallpaper Engine" scheme="https://seayj.github.io/tags/Wallpaper-Engine/"/>
     
   </entry>
   
@@ -53,12 +80,14 @@
     <link href="https://seayj.github.io/2022/04/04/vs-ru-he-huo-qu-ying-yong-cheng-xu-suo-zai-lu-jing/"/>
     <id>https://seayj.github.io/2022/04/04/vs-ru-he-huo-qu-ying-yong-cheng-xu-suo-zai-lu-jing/</id>
     <published>2022-04-04T07:10:46.000Z</published>
-    <updated>2022-04-04T08:33:11.998Z</updated>
+    <updated>2022-06-25T07:39:54.357Z</updated>
     
     
     <summary type="html">&lt;p&gt;众所周知程序当前所在目录在我们的编程中有着重要的作用，所以如何获取该变量显得很重要！&lt;/p&gt;</summary>
     
     
+    
+    <category term="C/C++" scheme="https://seayj.github.io/categories/C-C/"/>
     
     
     <category term="Visual Studio" scheme="https://seayj.github.io/tags/Visual-Studio/"/>
@@ -72,7 +101,7 @@
     <link href="https://seayj.github.io/2022/03/30/she-zhi-dai-ma-gao-liang-hexo-matery/"/>
     <id>https://seayj.github.io/2022/03/30/she-zhi-dai-ma-gao-liang-hexo-matery/</id>
     <published>2022-03-30T14:58:37.000Z</published>
-    <updated>2022-04-03T03:24:18.556Z</updated>
+    <updated>2022-06-25T07:43:15.189Z</updated>
     
     
     <summary type="html">&lt;p&gt;代码不高亮？别逗！&lt;/p&gt;
@@ -80,12 +109,12 @@
     
     
     
+    <category term="Blog" scheme="https://seayj.github.io/categories/Blog/"/>
     
-    <category term="博文" scheme="https://seayj.github.io/tags/%E5%8D%9A%E6%96%87/"/>
     
-    <category term="博客未来" scheme="https://seayj.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%9C%AA%E6%9D%A5/"/>
+    <category term="Hexo-Matery" scheme="https://seayj.github.io/tags/Hexo-Matery/"/>
     
-    <category term="代码高亮" scheme="https://seayj.github.io/tags/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/"/>
+    <category term="代码块高亮" scheme="https://seayj.github.io/tags/%E4%BB%A3%E7%A0%81%E5%9D%97%E9%AB%98%E4%BA%AE/"/>
     
   </entry>
   
@@ -94,17 +123,19 @@
     <link href="https://seayj.github.io/2022/03/30/bo-ke-tian-jia-live2d-hexo-matery/"/>
     <id>https://seayj.github.io/2022/03/30/bo-ke-tian-jia-live2d-hexo-matery/</id>
     <published>2022-03-30T11:17:46.000Z</published>
-    <updated>2022-03-31T06:48:34.813Z</updated>
+    <updated>2022-06-25T07:46:06.886Z</updated>
     
     
     <summary type="html">&lt;p&gt;有谁会拒绝可爱的板娘入驻自己的博客呢？反正我不会吧o(^▽^)o&lt;/p&gt;</summary>
     
     
     
+    <category term="Blog" scheme="https://seayj.github.io/categories/Blog/"/>
+    
     
     <category term="Live2D" scheme="https://seayj.github.io/tags/Live2D/"/>
     
-    <category term="博客未来" scheme="https://seayj.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%9C%AA%E6%9D%A5/"/>
+    <category term="Hexo-Matery" scheme="https://seayj.github.io/tags/Hexo-Matery/"/>
     
   </entry>
   
@@ -113,17 +144,17 @@
     <link href="https://seayj.github.io/2022/03/29/jie-jue-win32-xi-tong-kong-jian-du-shi-lao-shi-de-wen-ti/"/>
     <id>https://seayj.github.io/2022/03/29/jie-jue-win32-xi-tong-kong-jian-du-shi-lao-shi-de-wen-ti/</id>
     <published>2022-03-29T06:23:33.000Z</published>
-    <updated>2022-03-30T10:46:24.223Z</updated>
+    <updated>2022-06-25T07:53:03.739Z</updated>
     
     
     <summary type="html">&lt;p&gt;在 Win32 编程时我们时常会遇到使用系统窗口类的情况。按理说我们使用的系统窗口类样式应该与我们正在使用的操作系统版本保持一致才是，但为什么往往都是老式的控件呢？&lt;/p&gt;</summary>
     
     
     
+    <category term="C/C++" scheme="https://seayj.github.io/categories/C-C/"/>
     
-    <category term="博文" scheme="https://seayj.github.io/tags/%E5%8D%9A%E6%96%87/"/>
     
-    <category term="Win32 编程" scheme="https://seayj.github.io/tags/Win32-%E7%BC%96%E7%A8%8B/"/>
+    <category term="Win32" scheme="https://seayj.github.io/tags/Win32/"/>
     
   </entry>
   
@@ -132,7 +163,7 @@
     <link href="https://seayj.github.io/2022/03/29/kong-zhi-tai-cheng-xu-yun-xing-shi-bu-xian-shi-cmd-chuang-kou/"/>
     <id>https://seayj.github.io/2022/03/29/kong-zhi-tai-cheng-xu-yun-xing-shi-bu-xian-shi-cmd-chuang-kou/</id>
     <published>2022-03-29T06:18:45.000Z</published>
-    <updated>2022-03-31T06:25:57.179Z</updated>
+    <updated>2022-06-25T07:46:54.077Z</updated>
     
     
     <summary type="html">&lt;p&gt;我们知道，控制台应用程序本身是没有窗口的。系统为了让我们能看到程序执行的结果，会在程序执行时借一个命令提示符窗口(CMD 窗口)。所以，就有了这个黑黑的窗口…&lt;/p&gt;
@@ -142,10 +173,12 @@
     
     
     
+    <category term="C/C++" scheme="https://seayj.github.io/categories/C-C/"/>
     
-    <category term="博文" scheme="https://seayj.github.io/tags/%E5%8D%9A%E6%96%87/"/>
     
-    <category term="Win32 编程" scheme="https://seayj.github.io/tags/Win32-%E7%BC%96%E7%A8%8B/"/>
+    <category term="Console Application" scheme="https://seayj.github.io/tags/Console-Application/"/>
+    
+    <category term="Win32" scheme="https://seayj.github.io/tags/Win32/"/>
     
   </entry>
   
@@ -154,7 +187,7 @@
     <link href="https://seayj.github.io/2022/03/29/win32-uac-yong-hu-zhang-hu-kong-zhi-ti-quan/"/>
     <id>https://seayj.github.io/2022/03/29/win32-uac-yong-hu-zhang-hu-kong-zhi-ti-quan/</id>
     <published>2022-03-29T06:16:27.000Z</published>
-    <updated>2022-03-31T06:24:37.524Z</updated>
+    <updated>2022-06-25T07:52:09.588Z</updated>
     
     
     <summary type="html">&lt;p&gt;最近写程序时遇到一个问题，就是当一个程序需要管理员权限才能正常运行该怎么办？&lt;/p&gt;
@@ -162,10 +195,12 @@
     
     
     
+    <category term="C/C++" scheme="https://seayj.github.io/categories/C-C/"/>
     
-    <category term="博文" scheme="https://seayj.github.io/tags/%E5%8D%9A%E6%96%87/"/>
     
-    <category term="Win32 编程" scheme="https://seayj.github.io/tags/Win32-%E7%BC%96%E7%A8%8B/"/>
+    <category term="Win32" scheme="https://seayj.github.io/tags/Win32/"/>
+    
+    <category term="UAC" scheme="https://seayj.github.io/tags/UAC/"/>
     
   </entry>
   
@@ -174,17 +209,19 @@
     <link href="https://seayj.github.io/2022/03/29/visual-studio-she-zhi-bei-jing-tu-pian-zhu-ti-suo-you-ban-ben-she-zhi-fang-fa/"/>
     <id>https://seayj.github.io/2022/03/29/visual-studio-she-zhi-bei-jing-tu-pian-zhu-ti-suo-you-ban-ben-she-zhi-fang-fa/</id>
     <published>2022-03-29T05:48:47.000Z</published>
-    <updated>2022-03-31T06:25:05.187Z</updated>
+    <updated>2022-06-25T07:54:50.836Z</updated>
     
     
     <summary type="html">&lt;p&gt;你知道吗？Visual Studio 编辑器也能设置背景哦~&lt;/p&gt;</summary>
     
     
     
+    <category term="其他" scheme="https://seayj.github.io/categories/%E5%85%B6%E4%BB%96/"/>
     
-    <category term="编辑器" scheme="https://seayj.github.io/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
     
-    <category term="博文" scheme="https://seayj.github.io/tags/%E5%8D%9A%E6%96%87/"/>
+    <category term="美化体验" scheme="https://seayj.github.io/tags/%E7%BE%8E%E5%8C%96%E4%BD%93%E9%AA%8C/"/>
+    
+    <category term="Visual Studio" scheme="https://seayj.github.io/tags/Visual-Studio/"/>
     
   </entry>
   
@@ -193,7 +230,7 @@
     <link href="https://seayj.github.io/2022/03/29/windows-10-ru-he-zai-dang-qian-wei-zhi-da-kai-cmd-ming-ling-chuang-kou/"/>
     <id>https://seayj.github.io/2022/03/29/windows-10-ru-he-zai-dang-qian-wei-zhi-da-kai-cmd-ming-ling-chuang-kou/</id>
     <published>2022-03-29T02:53:26.000Z</published>
-    <updated>2022-04-03T03:32:53.684Z</updated>
+    <updated>2022-06-25T07:41:07.300Z</updated>
     
     
     <summary type="html">&lt;p&gt;打开 CMD 后还要 CD 配置运行环境？太麻烦了！&lt;/p&gt;
@@ -201,10 +238,10 @@
     
     
     
+    <category term="其他" scheme="https://seayj.github.io/categories/%E5%85%B6%E4%BB%96/"/>
     
-    <category term="博文" scheme="https://seayj.github.io/tags/%E5%8D%9A%E6%96%87/"/>
     
-    <category term="计算机" scheme="https://seayj.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    <category term="CMD" scheme="https://seayj.github.io/tags/CMD/"/>
     
   </entry>
   
@@ -213,15 +250,19 @@
     <link href="https://seayj.github.io/2022/03/29/vc-2010-express-xue-sheng-ban-zhong-wen-ban/"/>
     <id>https://seayj.github.io/2022/03/29/vc-2010-express-xue-sheng-ban-zhong-wen-ban/</id>
     <published>2022-03-29T02:43:42.000Z</published>
-    <updated>2022-03-31T06:24:48.850Z</updated>
+    <updated>2022-06-25T07:50:20.493Z</updated>
     
     
     <summary type="html">&lt;p&gt;Microsoft Visual C++ 2010 Express 虽然微软已经不再提供下载，但是很多时候教学还是要用…&lt;/p&gt;</summary>
     
     
     
+    <category term="其他" scheme="https://seayj.github.io/categories/%E5%85%B6%E4%BB%96/"/>
     
-    <category term="编辑器" scheme="https://seayj.github.io/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
+    
+    <category term="Visual C++" scheme="https://seayj.github.io/tags/Visual-C/"/>
+    
+    <category term="资源分享" scheme="https://seayj.github.io/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
@@ -230,7 +271,7 @@
     <link href="https://seayj.github.io/2022/03/29/dian-nao-chong-zhuang-xi-tong-hou-yao-zuo-de-na-xie-shi/"/>
     <id>https://seayj.github.io/2022/03/29/dian-nao-chong-zhuang-xi-tong-hou-yao-zuo-de-na-xie-shi/</id>
     <published>2022-03-29T02:16:36.000Z</published>
-    <updated>2022-06-12T15:00:17.198Z</updated>
+    <updated>2022-06-25T07:49:01.966Z</updated>
     
     
     <summary type="html">&lt;p&gt;花了点时间整理了一下重装系统后要做的事。&lt;/p&gt;
@@ -238,10 +279,14 @@
     
     
     
+    <category term="其他" scheme="https://seayj.github.io/categories/%E5%85%B6%E4%BB%96/"/>
     
-    <category term="博文" scheme="https://seayj.github.io/tags/%E5%8D%9A%E6%96%87/"/>
     
-    <category term="计算机" scheme="https://seayj.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    <category term="美化体验" scheme="https://seayj.github.io/tags/%E7%BE%8E%E5%8C%96%E4%BD%93%E9%AA%8C/"/>
+    
+    <category term="重装系统" scheme="https://seayj.github.io/tags/%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="系统优化" scheme="https://seayj.github.io/tags/%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96/"/>
     
   </entry>
   
@@ -250,15 +295,17 @@
     <link href="https://seayj.github.io/2022/03/28/bao-jian-feng-cong-mo-li-chu-mei-hua-xiang-zi-ku-han-lai/"/>
     <id>https://seayj.github.io/2022/03/28/bao-jian-feng-cong-mo-li-chu-mei-hua-xiang-zi-ku-han-lai/</id>
     <published>2022-03-28T01:25:42.000Z</published>
-    <updated>2022-03-29T13:46:08.826Z</updated>
+    <updated>2022-06-25T07:54:08.284Z</updated>
     
     
     <summary type="html">&lt;p&gt;此刻的我坐在电脑前，格外兴奋！因为我终于有一个自己的博客了！&lt;/p&gt;</summary>
     
     
     
+    <category term="成长之路" scheme="https://seayj.github.io/categories/%E6%88%90%E9%95%BF%E4%B9%8B%E8%B7%AF/"/>
     
-    <category term="博文" scheme="https://seayj.github.io/tags/%E5%8D%9A%E6%96%87/"/>
+    
+    <category term="开始" scheme="https://seayj.github.io/tags/%E5%BC%80%E5%A7%8B/"/>
     
   </entry>
   
