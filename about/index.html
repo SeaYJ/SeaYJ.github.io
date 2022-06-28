@@ -364,8 +364,7 @@
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
 	var bannerUrl_jpg = "/medias/banner/" + new Date().getDay() + '.jpg';
-    var bannerUrl_webp = "/medias/banner/" + new Date().getDay() + '.webp';
-	var bannerUrl = 'url(' + bannerUrl_webp + ')' + ', url(' + bannerUrl_jpg + ')';
+	var bannerUrl = 'url(' + bannerUrl_jpg + ')';
     $('.bg-cover').css('background-image', bannerUrl);
 </script>
 
@@ -612,7 +611,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"C/C++","value":5},{"name":"其他","value":6},{"name":"Blog","value":2},{"name":"成长之路","value":1}],
+                data: [{"name":"C/C++","value":5},{"name":"其他","value":6},{"name":"成长之路","value":1},{"name":"Blog","value":2}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -636,7 +635,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Win32","Console Application","美化体验","Visual Studio","Hexo-Matery","事件监听","Visual C++","资源分享","IDEA","CMD"]
+                data: ["Win32","Console Application","美化体验","Visual Studio","Hexo-Matery","事件监听","IDEA","Visual C++","资源分享","CMD"]
             }
         ],
         yAxis: [
@@ -831,6 +830,12 @@
             
             
             
+            <a href="/tags/IDEA/">
+                <span class="chip center-align waves-effect waves-light chip-default">IDEA</span>
+            </a>
+            
+            
+            
             <a href="/tags/Visual-C/">
                 <span class="chip center-align waves-effect waves-light chip-default">Visual C++</span>
             </a>
@@ -839,12 +844,6 @@
             
             <a href="/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/">
                 <span class="chip center-align waves-effect waves-light chip-default">资源分享</span>
-            </a>
-            
-            
-            
-            <a href="/tags/IDEA/">
-                <span class="chip center-align waves-effect waves-light chip-default">IDEA</span>
             </a>
             
             
@@ -873,18 +872,6 @@
             
             
             
-            <a href="/tags/Live2D/">
-                <span class="chip center-align waves-effect waves-light chip-default">Live2D</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Hexo-Matery/">
-                <span class="chip center-align waves-effect waves-light chip-default">Hexo-Matery</span>
-            </a>
-            
-            
-            
             <a href="/tags/UAC/">
                 <span class="chip center-align waves-effect waves-light chip-default">UAC</span>
             </a>
@@ -893,6 +880,18 @@
             
             <a href="/tags/%E5%BC%80%E5%A7%8B/">
                 <span class="chip center-align waves-effect waves-light chip-default">开始</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Live2D/">
+                <span class="chip center-align waves-effect waves-light chip-default">Live2D</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Hexo-Matery/">
+                <span class="chip center-align waves-effect waves-light chip-default">Hexo-Matery</span>
             </a>
             
             
@@ -1056,13 +1055,29 @@
             
             
             
+			
+			
+				<!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?357ff6763243aa1b690a664da5d24f98";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+			
+			
             <br>
 
             <!-- 运行天数提醒. -->
             
                 <span id="sitetime"> Loading ...</span>
                 <script>
-                    var calcSiteTime = function () {
+                    /* var calcSiteTime = function () {
                         var seconds = 1000;
                         var minutes = seconds * 60;
                         var hours = minutes * 60;
@@ -1111,7 +1126,50 @@
                         }
                     }
 
-                    calcSiteTime();
+                    calcSiteTime(); */
+					
+					function siteTime() {
+						var seconds = 1000;
+						var minutes = seconds * 60;
+						var hours = minutes * 60;
+						var days = hours * 24;
+						var years = days * 365;
+						var today = new Date();
+						var startYear = "2022";
+                        var startMonth = "5";
+                        var startDate = "20";
+                        var startHour = "13";
+                        var startMinute = "14";
+                        var startSecond = "16";
+						var todayYear = today.getFullYear();
+						var todayMonth = today.getMonth() + 1;
+						var todayDate = today.getDate();
+						var todayHour = today.getHours();
+						var todayMinute = today.getMinutes();
+						var todaySecond = today.getSeconds();
+						var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+						var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+						var diff = t2 - t1;
+						var diffYears = Math.floor(diff / years);
+						var diffDays = Math.floor((diff / days) - diffYears * 365);
+						var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+						var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+							minutes);
+						var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+							diffMinutes * minutes) / seconds);
+							
+						// 区分是否有年份(改版)
+						if (startYear == todayYear) {
+							document.getElementById("year").innerHTML = todayYear;
+							document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+								" 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+						} else {
+							document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+							document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+								" 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+						}
+					}
+					setInterval(siteTime, 1000);
                 </script>
             
             <br>
@@ -1296,6 +1354,16 @@ $(function () {
     
 
     <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?357ff6763243aa1b690a664da5d24f98";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
 
     <!-- Baidu Push -->
 

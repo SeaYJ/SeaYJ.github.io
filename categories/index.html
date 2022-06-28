@@ -357,8 +357,7 @@
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
 	var bannerUrl_jpg = "/medias/banner/" + new Date().getDay() + '.jpg';
-    var bannerUrl_webp = "/medias/banner/" + new Date().getDay() + '.webp';
-	var bannerUrl = 'url(' + bannerUrl_webp + ')' + ', url(' + bannerUrl_jpg + ')';
+	var bannerUrl = 'url(' + bannerUrl_jpg + ')';
     $('.bg-cover').css('background-image', bannerUrl);
 </script>
 
@@ -398,20 +397,20 @@
                 </a>
                 
                 
-                <a href="/categories/Blog/" title="Blog: 2">
+                <a href="/categories/%E6%88%90%E9%95%BF%E4%B9%8B%E8%B7%AF/" title="成长之路: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #D5F5E3;">Blog
-                        <span class="tag-length">2</span>
+                            style="background-color: #D5F5E3;">成长之路
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/%E6%88%90%E9%95%BF%E4%B9%8B%E8%B7%AF/" title="成长之路: 1">
+                <a href="/categories/Blog/" title="Blog: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #E8F8F5;">成长之路
-                        <span class="tag-length">1</span>
+                            style="background-color: #E8F8F5;">Blog
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -458,7 +457,7 @@
                     color: '#3C4858'
                 }
             },
-            indicator: [{"name":"C/C++","max":7},{"name":"其他","max":7},{"name":"Blog","max":7},{"name":"成长之路","max":7}],
+            indicator: [{"name":"C/C++","max":7},{"name":"其他","max":7},{"name":"成长之路","max":7},{"name":"Blog","max":7}],
             nameGap: 5,
             center: ['50%','55%'],
             radius: '66%'
@@ -469,7 +468,7 @@
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data : [
                 {
-                    value : [5,6,2,1],
+                    value : [5,6,1,2],
                     name : '文章分类数量'
                 }
             ]
@@ -560,13 +559,29 @@
             
             
             
+			
+			
+				<!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?357ff6763243aa1b690a664da5d24f98";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+			
+			
             <br>
 
             <!-- 运行天数提醒. -->
             
                 <span id="sitetime"> Loading ...</span>
                 <script>
-                    var calcSiteTime = function () {
+                    /* var calcSiteTime = function () {
                         var seconds = 1000;
                         var minutes = seconds * 60;
                         var hours = minutes * 60;
@@ -615,7 +630,50 @@
                         }
                     }
 
-                    calcSiteTime();
+                    calcSiteTime(); */
+					
+					function siteTime() {
+						var seconds = 1000;
+						var minutes = seconds * 60;
+						var hours = minutes * 60;
+						var days = hours * 24;
+						var years = days * 365;
+						var today = new Date();
+						var startYear = "2022";
+                        var startMonth = "5";
+                        var startDate = "20";
+                        var startHour = "13";
+                        var startMinute = "14";
+                        var startSecond = "16";
+						var todayYear = today.getFullYear();
+						var todayMonth = today.getMonth() + 1;
+						var todayDate = today.getDate();
+						var todayHour = today.getHours();
+						var todayMinute = today.getMinutes();
+						var todaySecond = today.getSeconds();
+						var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+						var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+						var diff = t2 - t1;
+						var diffYears = Math.floor(diff / years);
+						var diffDays = Math.floor((diff / days) - diffYears * 365);
+						var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+						var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+							minutes);
+						var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+							diffMinutes * minutes) / seconds);
+							
+						// 区分是否有年份(改版)
+						if (startYear == todayYear) {
+							document.getElementById("year").innerHTML = todayYear;
+							document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+								" 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+						} else {
+							document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+							document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+								" 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+						}
+					}
+					setInterval(siteTime, 1000);
                 </script>
             
             <br>
@@ -800,6 +858,16 @@ $(function () {
     
 
     <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?357ff6763243aa1b690a664da5d24f98";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
 
     <!-- Baidu Push -->
 
