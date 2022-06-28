@@ -241,7 +241,8 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #30bfb0 0%, #0f739d 100%);
+    /* background-image: linear-gradient(to right, #30bfb0 0%, #0f739d 100%); */
+	background-image: linear-gradient(to right, #3CA0D0cc 0%, #086FA1ff 100%);
 }
 
 .text-color {
@@ -993,8 +994,13 @@ article .article-tags .chip {
 }
 
 .paging .page-info {
-    font-size: 1.4rem;
+	/* font-size: 1.4rem;
     color: #888;
+    padding-top: 1rem; */
+	font-family: Georgia,'Noto Serif SC',serif!important;
+    font-weight: 800;
+    font-size: 2rem;
+	color: #2f2f2f;
     padding-top: 1rem;
 }
 

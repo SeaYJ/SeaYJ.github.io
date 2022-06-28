@@ -162,3 +162,8 @@
         background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
     }
 }
+
+/* 封面大图蒙版效果 */
+.bg-cover::before {
+	background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/grid.png);
+}

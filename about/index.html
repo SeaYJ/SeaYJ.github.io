@@ -612,7 +612,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"其他","value":6},{"name":"C/C++","value":5},{"name":"Blog","value":2},{"name":"成长之路","value":1}],
+                data: [{"name":"C/C++","value":5},{"name":"其他","value":6},{"name":"Blog","value":2},{"name":"成长之路","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -636,7 +636,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Win32","Console Application","美化体验","Visual Studio","Hexo-Matery","IDEA","事件监听","Visual C++","资源分享","CMD"]
+                data: ["Win32","Console Application","美化体验","Visual Studio","Hexo-Matery","事件监听","IDEA","Visual C++","资源分享","CMD"]
             }
         ],
         yAxis: [
@@ -819,12 +819,6 @@
         <div class="tag-chips center-align">
             
             
-            <a href="/tags/IDEA/">
-                <span class="chip center-align waves-effect waves-light chip-default">IDEA</span>
-            </a>
-            
-            
-            
             <a href="/tags/Console-Application/">
                 <span class="chip center-align waves-effect waves-light chip-default">Console Application</span>
             </a>
@@ -833,6 +827,12 @@
             
             <a href="/tags/%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC/">
                 <span class="chip center-align waves-effect waves-light chip-default">事件监听</span>
+            </a>
+            
+            
+            
+            <a href="/tags/IDEA/">
+                <span class="chip center-align waves-effect waves-light chip-default">IDEA</span>
             </a>
             
             
@@ -867,14 +867,14 @@
             
             
             
-            <a href="/tags/UAC/">
-                <span class="chip center-align waves-effect waves-light chip-default">UAC</span>
+            <a href="/tags/Win32/">
+                <span class="chip center-align waves-effect waves-light chip-default">Win32</span>
             </a>
             
             
             
-            <a href="/tags/Win32/">
-                <span class="chip center-align waves-effect waves-light chip-default">Win32</span>
+            <a href="/tags/UAC/">
+                <span class="chip center-align waves-effect waves-light chip-default">UAC</span>
             </a>
             
             
@@ -1038,7 +1038,7 @@
     
 
     <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
+         style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
@@ -1049,6 +1049,9 @@
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">11.2k</span>
+            
             
             
             
@@ -1056,6 +1059,60 @@
             <br>
 
             <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2022";
+                        var startMonth = "5";
+                        var startDate = "20";
+                        var startHour = "13";
+                        var startMinute = "14";
+                        var startSecond = "16";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
             
             <br>
             
