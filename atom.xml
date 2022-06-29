@@ -6,7 +6,7 @@
   <link href="https://seayj.cn/atom.xml" rel="self"/>
   
   <link href="https://seayj.cn/"/>
-  <updated>2022-06-28T03:25:45.841Z</updated>
+  <updated>2022-06-29T13:16:58.002Z</updated>
   <id>https://seayj.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VSCode For Java</title>
+    <link href="https://seayj.cn/2022/06/29/vscode-for-java/"/>
+    <id>https://seayj.cn/2022/06/29/vscode-for-java/</id>
+    <published>2022-06-29T09:54:21.000Z</published>
+    <updated>2022-06-29T13:16:58.002Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近要重新学习 Java 了，所以又下载回了 IDEA 编辑器。但是，感觉 IDEA 对天朝程序员很不友好，体验感真的很差（可能是我已经习惯了使用 Visual Studio</summary>
+        
+      
+    
+    
+    
+    <category term="其他" scheme="https://seayj.cn/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+    <category term="VSCode" scheme="https://seayj.cn/tags/VSCode/"/>
+    
+    <category term="Java" scheme="https://seayj.cn/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>IDEA 安装及汉化教程[2022]</title>

@@ -125,8 +125,10 @@ code {
     top: 13px !important;
     font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
     font-size: 0.91rem;
-    color: #e96900;
-    background-color: #f8f8f8;
+    /* color: #e96900;
+    background-color: #f8f8f8; */
+    color: #c7254e;
+    background-color: #f9f2f4;
     border-radius: 2px;
 }
 
