@@ -71,7 +71,7 @@
     animation: rainbow-postHead-cover 60s infinite;
 }
 
-@-webkit-keyframes rainbow-postHead-cover {
+/* @-webkit-keyframes rainbow-postHead-cover {
 
     0%,
     100% {
@@ -161,9 +161,37 @@
         background: -moz-linear-gradient(135deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
     }
+} */
+
+@-webkit-keyframes rainbow-postHead-cover {
+
+    0%,
+    100% {
+        background: rgba(64, 64, 64, 0.45);
+        background: linear-gradient(45deg, rgba(64, 64, 64, 0.45) 0%, rgba(64, 64, 64, 0.65) 100%);
+        background: -moz-linear-gradient(135deg, rgba(64, 64, 64, 0.45) 0%, rgba(64, 64, 64, 0.65) 100%);
+        background: -webkit-linear-gradient(135deg, rgba(64, 64, 64, 0.45) 0%, rgba(64, 64, 64, 0.65) 100%);
+    }
+}
+
+@keyframes rainbow-postHead-cover {
+
+    0%,
+    100% {
+        background: rgba(64, 64, 64, 0.45);
+        background: linear-gradient(45deg, rgba(64, 64, 64, 0.45) 0%, rgba(64, 64, 64, 0.65) 100%);
+        background: -moz-linear-gradient(135deg, rgba(64, 64, 64, 0.45) 0%, rgba(64, 64, 64, 0.65) 100%);
+        background: -webkit-linear-gradient(135deg, rgba(64, 64, 64, 0.45) 0%, rgba(64, 64, 64, 0.65) 100%);
+    }
 }
 
 /* 封面大图蒙版效果 */
 .bg-cover::before {
 	background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/grid.png);
+}
+
+/* 文章中图片大小调整 */
+#articleContent img {
+    max-width: 100%;
+    height: auto;
 }
