@@ -6,7 +6,7 @@
   <link href="https://seayj.cn/atom.xml" rel="self"/>
   
   <link href="https://seayj.cn/"/>
-  <updated>2022-06-29T13:16:58.002Z</updated>
+  <updated>2022-06-30T09:01:35.522Z</updated>
   <id>https://seayj.cn/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VSCode For Python</title>
+    <link href="https://seayj.cn/2022/06/30/vscode-for-python/"/>
+    <id>https://seayj.cn/2022/06/30/vscode-for-python/</id>
+    <published>2022-06-30T05:39:40.000Z</published>
+    <updated>2022-06-30T09:01:35.522Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近打算用 VSCode 集成我电脑上的众多编辑器，毕竟谁不想拥有一个万能的 IDE 呢？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;强调:&lt;/strong&gt; 本篇只注重对 Python 的配置，对于其他不相关内容不做赘述。&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="其他" scheme="https://seayj.cn/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+    <category term="VSCode" scheme="https://seayj.cn/tags/VSCode/"/>
+    
+    <category term="Python" scheme="https://seayj.cn/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>VSCode For Java</title>
@@ -296,9 +325,9 @@
     <category term="C/C++" scheme="https://seayj.cn/categories/C-C/"/>
     
     
-    <category term="UAC" scheme="https://seayj.cn/tags/UAC/"/>
-    
     <category term="Win32" scheme="https://seayj.cn/tags/Win32/"/>
+    
+    <category term="UAC" scheme="https://seayj.cn/tags/UAC/"/>
     
   </entry>
   

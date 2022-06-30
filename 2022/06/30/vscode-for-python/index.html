@@ -4,11 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="解决 Win32 系统控件都是老式的问题, SeaYJ">
-    <meta name="description" content="在 Win32 编程时我们时常会遇到使用系统窗口类的情况。按理说我们使用的系统窗口类样式应该与我们正在使用的操作系统版本保持一致才是，但为什么往往都是老式的控件呢？
-其实解决办法很简单！
-将下列代码加入头文件顶部即可：
-#ifdef _UN">
+    <meta name="keywords" content="VSCode For Python, SeaYJ">
+    <meta name="description" content="最近打算用 VSCode 集成我电脑上的众多编辑器，毕竟谁不想拥有一个万能的 IDE 呢？
+强调: 本篇只注重对 Python 的配置，对于其他不相关内容不做赘述。
+一、安装 VSCode
+这里默许大家已经装好 VSCode 了。要是还没有">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +20,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>解决 Win32 系统控件都是老式的问题 | SeaYJ</title>
+    <title>VSCode For Python | SeaYJ</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -323,12 +323,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">解决 Win32 系统控件都是老式的问题</h1>
+                    <h1 class="description center-align post-title">VSCode For Python</h1>
                 </div>
             </div>
         </div>
@@ -444,8 +444,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Win32/">
-                                <span class="chip bg-color">Win32</span>
+                            <a href="/tags/VSCode/">
+                                <span class="chip bg-color">VSCode</span>
+                            </a>
+                        
+                            <a href="/tags/Python/">
+                                <span class="chip bg-color">Python</span>
                             </a>
                         
                     </div>
@@ -456,8 +460,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/C-C/" class="post-category">
-                                C/C++
+                            <a href="/categories/%E5%85%B6%E4%BB%96/" class="post-category">
+                                其他
                             </a>
                         
                     </div>
@@ -469,21 +473,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-29
+                    2022-06-30
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-06-28
+                    2022-06-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    537
+                    744
                 </div>
                 
 
@@ -504,49 +508,93 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>在 Win32 编程时我们时常会遇到使用系统窗口类的情况。按理说我们使用的系统窗口类样式应该与我们正在使用的操作系统版本保持一致才是，但为什么往往都是老式的控件呢？</p>
-<p>其实解决办法很简单！</p>
-<p>将下列代码加入头文件顶部即可：</p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">_UNICODE</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression">defined _M_IX86</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">pragma</span> <span class="token expression"><span class="token function">comment</span><span class="token punctuation">(</span>linker<span class="token punctuation">,</span></span><span class="token string">"/manifestdependency:\"type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='x86' publicKeyToken='6595b64144ccf1df' language='*'\""</span><span class="token expression"><span class="token punctuation">)</span></span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">elif</span> <span class="token expression">defined _M_X64</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">pragma</span> <span class="token expression"><span class="token function">comment</span><span class="token punctuation">(</span>linker<span class="token punctuation">,</span></span><span class="token string">"/manifestdependency:\"type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='amd64' publicKeyToken='6595b64144ccf1df' language='*'\""</span><span class="token expression"><span class="token punctuation">)</span></span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">else</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">pragma</span> <span class="token expression"><span class="token function">comment</span><span class="token punctuation">(</span>linker<span class="token punctuation">,</span></span><span class="token string">"/manifestdependency:\"type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\""</span><span class="token expression"><span class="token punctuation">)</span></span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p> 简单来说，你看到的大部分 Win32 窗口方框都是由公共控件库（Common Control Library） Comctl32.dll 实现的窗口。要使应用程序能够显示出与操作系统版本匹配的视觉样式，必须使用<strong>ComCtl32.dll 版本 6.0 或更高版本</strong>；但在没有任何定义的默认情况下，应用程序使用 User32.dll 中定义的用户控件（User Controls）和 <strong>ComCtl32.dll 版本 5.0</strong> 中定义的公共控件（Common Controls）。如果要求指定应用程序使用 <strong>ComCtl32.dll 版本 6.0 或更高</strong>，则必须添加应用程序清单（manifest，如其他答主所述）或编译器指令（#pragma）使得使应用程序能够指定它需要的程序集（Assembly，一组由不同版本 dll 组成的对象列表）版本。</p>
-<p>具体可参考官方文档 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows/win32/controls/cookbook-overview">Enabling Visual Styles</a></p>
-<p> <strong>ComCtl32.dll 版本 6.0</strong> 不可再发行（redistributable），也就是说只有当应用程序在对应的 Windows 版本上运行时，这些对应的样式效果可用，也就是说你不能在 Windows 11 上编译程序之后拿到 Windows XP 上运行，要求其用这种方法显示 Windows 11 的效果。关于不同操作系统内置的对应版本：[2]</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center"><strong>Version</strong></th>
-<th style="text-align:left"><strong>Distribution Platform</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">5.81</td>
-<td style="text-align:left">Microsoft Internet Explorer 5.01</br>Microsoft Internet Explorer 5.5</br>Microsoft Internet Explorer 6</td>
-</tr>
-<tr>
-<td style="text-align:center">5.82</td>
-<td style="text-align:left">Windows Server 2003</br>Windows Vista</br>Windows Server 2008</br>Windows 7</td>
-</tr>
-<tr>
-<td style="text-align:center">6.0</td>
-<td style="text-align:left">Windows Server 2003</td>
-</tr>
-<tr>
-<td style="text-align:center">6.10</td>
-<td style="text-align:left">Windows Vista</br>Windows Server 2008</br>Windows 7</td>
-</tr>
-</tbody>
-</table>
-<h3 id="声明">声明</h3>
-<p>原文链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/489914730">https://www.zhihu.com/question/489914730</a></p>
+                <p>最近打算用 VSCode 集成我电脑上的众多编辑器，毕竟谁不想拥有一个万能的 IDE 呢？</p>
+<p><strong>强调:</strong> 本篇只注重对 Python 的配置，对于其他不相关内容不做赘述。</p>
+<h2 id="一、安装-VSCode-2">一、安装 VSCode</h2>
+<p>这里默许大家已经装好 VSCode 了。要是还没有装的话可以去 <a target="_blank" rel="noopener" href="https://code.visualstudio.com/">VSCode 官网</a>下载合适版本的 VSCode 。</p>
+<blockquote>
+<p>我的 VSCode 版本为 Windows x64 1.68.1</p>
+</blockquote>
+<h2 id="二、安装-Python-开发环境">二、安装 Python 开发环境</h2>
+<h4 id=""></h4>
+<h4 id="①-安装-Python">① 安装 Python</h4>
+<p>大家可以去 <a target="_blank" rel="noopener" href="https://www.python.org/downloads/">Python 下载官网</a>下载自己需要的 Python 版本。唯一要注意的是，在安装过程中<strong>一定要勾选 <code>Add Python to Path</code> 项</strong>，否则安装完成后还需要我们手动配置环境变量。</p>
+<p>具体过程可以参考此图：</p>
+<p><img src="v2-ecd62d681c929429e8e0b95c2cf6afdc_b.gif" alt="本图源于知乎——浪普"></p>
+<h4 id="②-检查-Python-安装情况">② 检查 Python 安装情况</h4>
+<p>打开 CMD 命令提示符，输入 <code>python -V</code> （注意：这个 V 是大写的 V），能显示版本序列号即为安装成功。详情请见下图。</p>
+<p>如果发生了错误或者不显示，则可能是安装时未勾选 <code>Add Python to Path</code> 项，需要手动配置环境变量。</p>
+<p><img src="./Snipaste_2022-06-30_14-08-44.jpg" alt=""></p>
+<h4 id="③-安装-Python-第三方包">③ 安装 Python 第三方包</h4>
+<p>这里需要下载两个 Python 的第三方包，他们分别是 <strong>flake8</strong> 和 <strong>yapf</strong> 。</p>
+<ul>
+<li><strong>flake8</strong> 会检查编写代码时的不规范的地方和语法错误。</li>
+<li><strong>yapf</strong> 是一个代码格式化工具，可以一键美化代码。</li>
+</ul>
+<h5 id="安装步骤如下：">安装步骤如下：</h5>
+<ol>
+<li>
+<p>打开 CMD 输入 <code>pip list</code> 检查是否已经安装有这两个包；</p>
+</li>
+<li>
+<p>如果没有，则输入命令 <code>pip install flake8</code> 下载安装 <strong>flake8</strong> 或输入 <code>pip install yapf</code> 下载安装 <strong>yapf</strong> ；</p>
+</li>
+<li>
+<p>下载完成后再次输入 <code>pip list</code> 检查是否成功安装这两个包。</p>
+</li>
+</ol>
+<p>安装成功可参考下图。</p>
+<p><img src="./Snipaste_2022-06-30_14-44-37.jpg" alt=""></p>
+<h5 id="补充">补充</h5>
+<p>Ⅰ）中途有的小伙伴可能会遇到下图显示的情况。</p>
+<p>别担心，这只是 pip 提醒你有新版本的 pip 可以用，要你更新一下而已。你可以使用 <code>python.exe -m pip install --upgrade pip</code> 命令来更新 pip 。</p>
+<p><img src="./Snipaste_2022-06-30_14-45-45.jpg" alt=""></p>
+<p>Ⅱ）还有可能遇到下图显示的情况。</p>
+<p>别担心，这个只是因为网速原因引起的。可以反复执行命令，直至成功为止。<br>
+（玄学技巧：<strong>用电脑连接手机热点</strong>(。・ω・。)）</p>
+<p><img src="./QQ%E6%88%AA%E5%9B%BE20220630144926.png" alt=""></p>
+<h2 id="三、安装-Python-插件">三、安装 Python 插件</h2>
+<h4 id="-2"></h4>
+<h4 id="①-安装插件">① 安装插件</h4>
+<ol>
+<li>
+<p>打开 VScode ，按下快捷键 <code>Ctrl</code>+<code>Shift</code>+<code>X</code> ，进入插件管理页面。</p>
+</li>
+<li>
+<p>在搜索栏输入 python 。</p>
+</li>
+<li>
+<p>选择插件，点击安装。</p>
+</li>
+</ol>
+<p><img src="./Snipaste_2022-06-30_15-03-16.jpg" alt=""></p>
+<h4 id="②-配置插件">② 配置插件</h4>
+<ol>
+<li>
+<p>打开 VSCode 设置界面，打开用户配置的 settings.json 文件。</p>
+</li>
+<li>
+<p>参考下图添加如下代码（注意 json 的语法规范）：</p>
+</li>
+</ol>
+<pre class="line-numbers language-Json" data-language="Json"><code class="language-Json">&quot;python.linting.flake8Enabled&quot;: true,
+&quot;python.formatting.provider&quot;: &quot;yapf&quot;,
+&quot;python.linting.flake8Args&quot;: [&quot;--max-line-length&#x3D;248&quot;],
+&quot;python.linting.pylintEnabled&quot;: false ,<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="./Snipaste_2022-06-30_15-24-12.jpg" alt=""></p>
+<h4 id="③-检查测试">③ 检查测试</h4>
+<ol>
+<li>
+<p>新建一个 <strong>xxx.py</strong> 文件，然后用 VSCode 打开。</p>
+</li>
+<li>
+<p>代码输入 <code>print(&quot;Hello VSCode For Python!\n&quot;)</code> 。</p>
+</li>
+<li>
+<p>然后按下 <code>F5</code> 或者在右上角找到编译运行按钮，编译运行该文件。能正常输出 “Hello VSCode For Python” 字样即表示配置成功。</p>
+</li>
+</ol>
+<p><img src="./Snipaste_2022-06-30_15-36-30.jpg" alt=""></p>
 
                 
             </div>
@@ -573,7 +621,7 @@
                     </i>
                     </span>
                 <span class="reprint-info">
-                    <a href="https://seayj.cn/2022/03/29/jie-jue-win32-xi-tong-kong-jian-du-shi-lao-shi-de-wen-ti/">https://seayj.cn/2022/03/29/jie-jue-win32-xi-tong-kong-jian-du-shi-lao-shi-de-wen-ti/</a>
+                    <a href="https://seayj.cn/2022/06/30/vscode-for-python/">https://seayj.cn/2022/06/30/vscode-for-python/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -611,8 +659,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Win32/">
-                                    <span class="chip bg-color">Win32</span>
+                                <a href="/tags/VSCode/">
+                                    <span class="chip bg-color">VSCode</span>
+                                </a>
+                            
+                                <a href="/tags/Python/">
+                                    <span class="chip bg-color">Python</span>
                                 </a>
                             
                         </div>
@@ -1122,17 +1174,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/03/30/bo-ke-tian-jia-live2d-hexo-matery/">
+                <a href="/2022/06/30/vscode-for-python/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="博客添加 Live2D | Hexo-Matery">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="VSCode For Python">
                         
-                        <span class="card-title">博客添加 Live2D | Hexo-Matery</span>
+                        <span class="card-title">VSCode For Python</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1142,30 +1195,31 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-30
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-30
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Blog/" class="post-category">
-                                    Blog
+                            <a href="/categories/%E5%85%B6%E4%BB%96/" class="post-category">
+                                    其他
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Live2D/">
-                        <span class="chip bg-color">Live2D</span>
+                    <a href="/tags/VSCode/">
+                        <span class="chip bg-color">VSCode</span>
                     </a>
                     
-                    <a href="/tags/Hexo-Matery/">
-                        <span class="chip bg-color">Hexo-Matery</span>
+                    <a href="/tags/Python/">
+                        <span class="chip bg-color">Python</span>
                     </a>
                     
                 </div>
@@ -1179,13 +1233,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/03/29/kong-zhi-tai-cheng-xu-yun-xing-shi-bu-xian-shi-cmd-chuang-kou/">
+                <a href="/2022/06/29/vscode-for-java/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="控制台程序运行时不显示 CMD 窗口">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="VSCode For Java">
                         
-                        <span class="card-title">控制台程序运行时不显示 CMD 窗口</span>
+                        <span class="card-title">VSCode For Java</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1196,14 +1250,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-29
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C-C/" class="post-category">
-                                    C/C++
+                            <a href="/categories/%E5%85%B6%E4%BB%96/" class="post-category">
+                                    其他
                                 </a>
                             
                             
@@ -1213,12 +1267,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Console-Application/">
-                        <span class="chip bg-color">Console Application</span>
+                    <a href="/tags/VSCode/">
+                        <span class="chip bg-color">VSCode</span>
                     </a>
                     
-                    <a href="/tags/Win32/">
-                        <span class="chip bg-color">Win32</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
                 </div>
