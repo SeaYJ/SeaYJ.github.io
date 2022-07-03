@@ -4,6 +4,50 @@
   
     
     <entry>
+      <title>解决 hexo[Matery] 不算子统计失效问题</title>
+      <link href="/2022/07/03/jie-jue-hexo-matery-bu-suan-zi-tong-ji-shi-xiao-wen-ti-1/"/>
+      <url>/2022/07/03/jie-jue-hexo-matery-bu-suan-zi-tong-ji-shi-xiao-wen-ti-1/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>解决 hexo[Matery] 不算子统计失效问题</title>
+      <link href="/2022/07/03/jie-jue-hexo-matery-bu-suan-zi-tong-ji-shi-xiao-wen-ti/"/>
+      <url>/2022/07/03/jie-jue-hexo-matery-bu-suan-zi-tong-ji-shi-xiao-wen-ti/</url>
+      
+        <content type="html"><![CDATA[<p>最近在搞博客，结果突然发现 hexo-matery 主题提供的 busuanzi 统计失效了。具体表现为要么统计的数据异常大，不是真实访问数据；或者就是网页页底的统计信息展示无法显示，或者显示一会儿就消失了了。就下面图片展示的一样。</p><p><img src="./Snipaste_2022-07-03_22-27-14.jpg" alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Matery </tag>
+            
+            <tag> busuanzi </tag>
+            
+            <tag> live2D </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>VSCode For Python</title>
       <link href="/2022/06/30/vscode-for-python/"/>
       <url>/2022/06/30/vscode-for-python/</url>
