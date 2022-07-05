@@ -33,6 +33,9 @@ if exi">
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
+    <!--自定义添加的 Loading Page CSS 样式-->
+    <link rel="stylesheet" type="text/css" href="/./css/new-css/loading.css">
+
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
 <meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="SeaYJ" type="application/atom+xml">
@@ -52,6 +55,56 @@ if exi">
 
 
 <body>
+    <!--自定义的 Loading Page-->
+    
+    <!--<div id="loading-box">
+      <div class="loading-left-bg"></div>
+      <div class="loading-right-bg"></div>
+      <div class="spinner-box">
+        <div class="configure-border-1">
+          <div class="configure-core"></div>
+        </div>
+        <div class="configure-border-2">
+          <div class="configure-core"></div>
+        </div>
+        <div class="loading-word">加载中...</div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loading-box').classList.add("loaded")
+      })
+    </script>-->
+    <div id="loader-box">
+      <div class="loader-wrapper">
+        <div class="loader"><img src="/medias/logo.png" alt=""></div>
+        <div class="loader-text">
+            <div>L</div>
+            <div>O</div>
+            <div>A</div>
+            <div>D</div>
+            <div>I</div>
+            <div>N</div>
+            <div>G</div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+      </div>
+    </div>
+
+  <script>
+    var endLoading = function () {
+      document.body.style.overflow = 'auto';
+      document.getElementById('loader-box').classList.add("loaded");
+    }
+    window.addEventListener('load',endLoading);
+  </script>
+  
+  
+  
+
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">

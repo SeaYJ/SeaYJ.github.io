@@ -28,6 +28,9 @@
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
+    <!--自定义添加的 Loading Page CSS 样式-->
+    <link rel="stylesheet" type="text/css" href="/./css/new-css/loading.css">
+
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
 <meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="SeaYJ" type="application/atom+xml">
@@ -47,6 +50,56 @@
 
 
 <body>
+    <!--自定义的 Loading Page-->
+    
+    <!--<div id="loading-box">
+      <div class="loading-left-bg"></div>
+      <div class="loading-right-bg"></div>
+      <div class="spinner-box">
+        <div class="configure-border-1">
+          <div class="configure-core"></div>
+        </div>
+        <div class="configure-border-2">
+          <div class="configure-core"></div>
+        </div>
+        <div class="loading-word">加载中...</div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loading-box').classList.add("loaded")
+      })
+    </script>-->
+    <div id="loader-box">
+      <div class="loader-wrapper">
+        <div class="loader"><img src="/medias/logo.png" alt=""></div>
+        <div class="loader-text">
+            <div>L</div>
+            <div>O</div>
+            <div>A</div>
+            <div>D</div>
+            <div>I</div>
+            <div>N</div>
+            <div>G</div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+      </div>
+    </div>
+
+  <script>
+    var endLoading = function () {
+      document.body.style.overflow = 'auto';
+      document.getElementById('loader-box').classList.add("loaded");
+    }
+    window.addEventListener('load',endLoading);
+  </script>
+  
+  
+  
+
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
@@ -432,19 +485,10 @@
                 </a>
                 
                 
-                <a href="/tags/Python/" title="Python: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Python" style="background-color: #82E0AA;">Python
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/Java/" title="Java: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Java" style="background-color: #D7BDE2;">Java
+                            data-tagname="Java" style="background-color: #82E0AA;">Java
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -453,7 +497,7 @@
                 <a href="/tags/%E7%BE%8E%E5%8C%96%E4%BD%93%E9%AA%8C/" title="美化体验: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="美化体验" style="background-color: #A3E4D7;">美化体验
+                            data-tagname="美化体验" style="background-color: #D7BDE2;">美化体验
                         <span class="tag-length">2</span>
                     </span>
                 </a>
@@ -462,8 +506,17 @@
                 <a href="/tags/Visual-Studio/" title="Visual Studio: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Visual Studio" style="background-color: #85C1E9;">Visual Studio
+                            data-tagname="Visual Studio" style="background-color: #A3E4D7;">Visual Studio
                         <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Python/" title="Python: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Python" style="background-color: #85C1E9;">Python
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
@@ -522,15 +575,6 @@
                 </a>
                 
                 
-                <a href="/tags/Wallpaper-Engine/" title="Wallpaper Engine: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Wallpaper Engine" style="background-color: #F8F9F9;">Wallpaper Engine
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/" title="重装系统: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
@@ -544,6 +588,15 @@
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             data-tagname="系统优化" style="background-color: #85C1E9;">系统优化
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Wallpaper-Engine/" title="Wallpaper Engine: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Wallpaper Engine" style="background-color: #F8F9F9;">Wallpaper Engine
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -617,7 +670,7 @@
 <script type="text/javascript">
     
 
-    $('#tag-wordcloud').jQCloud([{"text":"Console Application","weight":2,"link":"/tags/Console-Application/"},{"text":"事件监听","weight":1,"link":"/tags/事件监听/"},{"text":"IDEA","weight":1,"link":"/tags/IDEA/"},{"text":"Visual C++","weight":1,"link":"/tags/Visual-C/"},{"text":"资源分享","weight":1,"link":"/tags/资源分享/"},{"text":"VSCode","weight":2,"link":"/tags/VSCode/"},{"text":"Python","weight":1,"link":"/tags/Python/"},{"text":"Java","weight":1,"link":"/tags/Java/"},{"text":"美化体验","weight":2,"link":"/tags/美化体验/"},{"text":"Visual Studio","weight":2,"link":"/tags/Visual-Studio/"},{"text":"CMD","weight":1,"link":"/tags/CMD/"},{"text":"Win32","weight":4,"link":"/tags/Win32/"},{"text":"UAC","weight":1,"link":"/tags/UAC/"},{"text":"Live2D","weight":1,"link":"/tags/Live2D/"},{"text":"Hexo-Matery","weight":2,"link":"/tags/Hexo-Matery/"},{"text":"开始","weight":1,"link":"/tags/开始/"},{"text":"Wallpaper Engine","weight":1,"link":"/tags/Wallpaper-Engine/"},{"text":"重装系统","weight":1,"link":"/tags/重装系统/"},{"text":"系统优化","weight":1,"link":"/tags/系统优化/"},{"text":"Hexo","weight":1,"link":"/tags/Hexo/"},{"text":"Matery","weight":1,"link":"/tags/Matery/"},{"text":"busuanzi","weight":1,"link":"/tags/busuanzi/"},{"text":"live2D","weight":1,"link":"/tags/live2D/"},{"text":"代码块高亮","weight":1,"link":"/tags/代码块高亮/"}], {
+    $('#tag-wordcloud').jQCloud([{"text":"Console Application","weight":2,"link":"/tags/Console-Application/"},{"text":"事件监听","weight":1,"link":"/tags/事件监听/"},{"text":"IDEA","weight":1,"link":"/tags/IDEA/"},{"text":"Visual C++","weight":1,"link":"/tags/Visual-C/"},{"text":"资源分享","weight":1,"link":"/tags/资源分享/"},{"text":"VSCode","weight":2,"link":"/tags/VSCode/"},{"text":"Java","weight":1,"link":"/tags/Java/"},{"text":"美化体验","weight":2,"link":"/tags/美化体验/"},{"text":"Visual Studio","weight":2,"link":"/tags/Visual-Studio/"},{"text":"Python","weight":1,"link":"/tags/Python/"},{"text":"CMD","weight":1,"link":"/tags/CMD/"},{"text":"Win32","weight":4,"link":"/tags/Win32/"},{"text":"UAC","weight":1,"link":"/tags/UAC/"},{"text":"Live2D","weight":1,"link":"/tags/Live2D/"},{"text":"Hexo-Matery","weight":2,"link":"/tags/Hexo-Matery/"},{"text":"开始","weight":1,"link":"/tags/开始/"},{"text":"重装系统","weight":1,"link":"/tags/重装系统/"},{"text":"系统优化","weight":1,"link":"/tags/系统优化/"},{"text":"Wallpaper Engine","weight":1,"link":"/tags/Wallpaper-Engine/"},{"text":"Hexo","weight":1,"link":"/tags/Hexo/"},{"text":"Matery","weight":1,"link":"/tags/Matery/"},{"text":"busuanzi","weight":1,"link":"/tags/busuanzi/"},{"text":"live2D","weight":1,"link":"/tags/live2D/"},{"text":"代码块高亮","weight":1,"link":"/tags/代码块高亮/"}], {
         autoResize: true
     });
 </script>
