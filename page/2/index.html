@@ -52,28 +52,12 @@
 <body>
     <!--自定义的 Loading Page-->
     
-    <!--<div id="loading-box">
-      <div class="loading-left-bg"></div>
-      <div class="loading-right-bg"></div>
-      <div class="spinner-box">
-        <div class="configure-border-1">
-          <div class="configure-core"></div>
-        </div>
-        <div class="configure-border-2">
-          <div class="configure-core"></div>
-        </div>
-        <div class="loading-word">加载中...</div>
-      </div>
-    </div>
-    <script>
-      $(document).ready(function () {
-        document.body.style.overflow = 'auto';
-        document.getElementById('loading-box').classList.add("loaded")
-      })
-    </script>-->
     <div id="loader-box">
       <div class="loader-wrapper">
-        <div class="loader"><img src="/medias/logo.png" alt=""></div>
+        <div class="loader">
+          
+        </div>
+        
         <div class="loader-text">
             <div>L</div>
             <div>O</div>
@@ -429,6 +413,58 @@
     <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
         <div class="row article-row">
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2022/03/29/jie-jue-win32-xi-tong-kong-jian-du-shi-lao-shi-de-wen-ti/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="解决 Win32 系统控件都是老式的问题">
+                            
+                            <span class="card-title">解决 Win32 系统控件都是老式的问题</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                在 Win32 编程时我们时常会遇到使用系统窗口类的情况。按理说我们使用的系统窗口类样式应该与我们正在使用的操作系统版本保持一致才是，但为什么往往都是老式的控件呢？
+其实解决办法很简单！
+将下列代码加入头文件顶部即可：
+#ifdef _UN
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-29
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/C-C/" class="post-category">
+                                    C/C++
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Win32/">
+                            <span class="chip bg-color">Win32</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
             
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
