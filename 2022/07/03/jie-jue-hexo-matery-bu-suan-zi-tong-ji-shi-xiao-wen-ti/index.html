@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <!--自定义添加的 Loading Page CSS 样式-->
-    <link rel="stylesheet" type="text/css" href="/./css/new-css/loading.css">
+    <link rel="stylesheet" type="text/css" href="/css/new-css/loading.css">
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
@@ -482,12 +482,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
-                            </a>
-                        
-                            <a href="/tags/Matery/">
-                                <span class="chip bg-color">Matery</span>
+                            <a href="/tags/Hexo-Matery/">
+                                <span class="chip bg-color">Hexo-Matery</span>
                             </a>
                         
                             <a href="/tags/busuanzi/">
@@ -526,14 +522,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-07-03
+                    2022-07-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    521
+                    517
                 </div>
                 
 
@@ -560,7 +556,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>最近在搞博客，结果突然发现 hexo-matery 主题提供的 busuanzi 统计失效了。具体表现为要么统计的数据异常大，不是真实访问数据，或者就是网页页底的统计信息展示无法显示，或者显示不正常。就下面图片展示的一样。</p>
-<p><img src="./Snipaste_2022-07-03_22-30-44.jpg" alt=""><br>
+<p><img src="./Snipaste_2022-07-03_22-27-14.jpg" alt=""><br>
 <img src="./Snipaste_2022-07-03_22-29-27.jpg" alt=""><br>
 <img src="./Snipaste_2022-07-03_22-31-42.jpg" alt=""></p>
 <p>后来我通过<a href="">不算子的官网</a>混进了不算子官Q群（<em>゜ー゜</em>），在群里大佬给出了关于“为什么 busuanzi 统计时访问数据太大不真实？”的答案(额，感觉自己有点没脑纸…)。</p>
@@ -574,7 +570,7 @@
 <p>最后，经过不懈努力，我终于找到了解决办法：</p>
 <ol>
 <li>
-<p>我们先找到 hexo-matery 主题的 busuanzi 配置 JS 文件（位置：<code>\themes\hexo-theme-matery\source\libs\others\busuanzi.pure.mini.js</code>）。</p>
+<p>我们先找到 hexo-matery 主题的 busuanzi 配置 JS 文件(位置:<code>\themes\hexo-theme-matery\source\libs\others\</code>)。</p>
 </li>
 <li>
 <p>用编辑器打开，然后搜索 <code>none</code> 字样，找到 “b.style.display=“none”” 的位置。</p>
@@ -651,12 +647,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
-                                </a>
-                            
-                                <a href="/tags/Matery/">
-                                    <span class="chip bg-color">Matery</span>
+                                <a href="/tags/Hexo-Matery/">
+                                    <span class="chip bg-color">Hexo-Matery</span>
                                 </a>
                             
                                 <a href="/tags/busuanzi/">
@@ -1199,11 +1191,27 @@
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            SeaYJ
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Blog/" class="post-category">
+                                    Blog
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hexo-Matery/">
+                        <span class="chip bg-color">Hexo-Matery</span>
+                    </a>
+                    
+                    <a href="/tags/Loading-Page/">
+                        <span class="chip bg-color">Loading Page</span>
+                    </a>
+                    
                 </div>
                 
             </div>

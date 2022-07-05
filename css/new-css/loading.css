@@ -1,3 +1,24 @@
+/*小屏幕下(手机类)的样式*/
+@media only screen and (max-width: 601px) {
+    .loader-text{
+        width: 200%;
+        left: 62%;
+    }
+}
+/*中等屏幕下(平板类)的样式*/
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+    .loader-text{
+        width: 100%;
+        left: 56%;
+    }
+}
+/*大屏幕下(桌面类)的样式*/
+@media only screen and (min-width: 993px) {
+    .loader-text{
+        width: 50%;
+        left: 53%;
+    }
+}
 *{
     /* 初始化 */
     margin: 0;
@@ -83,12 +104,10 @@ body{
     animation: spin 1.7s linear infinite reverse;
 }
 .loader-text{
-    width: 50%;
     height: 36px;
     /* 绝对定位 水平居中 */
     position: absolute;
     top: 72%;
-    left: 50%;
     transform: translateX(-50%);
     z-index: 3;
     /* 防止选取 */
