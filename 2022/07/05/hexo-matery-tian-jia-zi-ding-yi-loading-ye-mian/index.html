@@ -550,7 +550,7 @@
             <div id="articleContent">
                 <p>想法来自 Vino 大佬的博客，我觉得使用一个 Loading 页面来缓解博客渲染速度慢带来的尴尬是件酷酷的事情。自己捣鼓了一下如何把任何一个页面改成 Hexo 博客下的 Loading 页面，发现其实还是比较简单的。</p>
 <p>下面我来说一下我魔改的具体步骤。</p>
-<h2 id="制作-Loading-页面">制作 Loading 页面</h2>
+<h2 id="一、制作-Loading-页面">一、制作 Loading 页面</h2>
 <ol>
 <li>首先我们需要准备一个已经写好的 Loading 动画页面。<br>
 （这种动画页面网上有很多大佬提供了开源项目，咋就不重复造轮子了，嘿嘿~）</li>
@@ -826,7 +826,7 @@ body&#123;
 <pre class="line-numbers language-CSS" data-language="CSS"><code class="language-CSS">.loader-wrapper &#123;&#x2F;* 注意选择器要改成你的 Loading 页面 *&#x2F;
     z-index: 10000&#x2F;* 填写适合你自己博客的数字，确保 Loading 页面在所有页面最上面 *&#x2F;;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h2 id="引入自己的博客">引入自己的博客</h2>
+<h2 id="二、引入自己的博客">二、引入自己的博客</h2>
 <p>修改好了 Loading 动画页面后就可以引入自己的博客中了。</p>
 <ol>
 <li>首先，在主题文件夹中的 <code>\layout\_widget\</code> 文件夹里创建一个 <code>loading.ejs</code> 文件。</li>
@@ -865,7 +865,7 @@ preloader:
 <ol start="6">
 <li>接着在主题目录下的 <code>_config.yml</code> 找到 <code>libs</code> 的配置项，在 <code>css</code> 子项里添加自己的 loading.css 文件位置信息。参考代码如下。</li>
 </ol>
-  <pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">libs:
+<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">libs:
   css:
     loadingPage: &#x2F;css&#x2F;loading.css<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <ol start="7">
@@ -882,7 +882,7 @@ preloader:
 <span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%-</span><span class="token language-javascript"> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_widget/loading'</span><span class="token punctuation">)</span> </span><span class="token delimiter punctuation">%></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
 </ol>
-<h2 id="部署">部署</h2>
+<h2 id="三、部署">三、部署</h2>
 <p><code>hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</code> 一键三连即可。具体一些细节需要根据自己的需求自己修改解决，这里只提供一个自定义 Loading 页面的大体思路，希望大家能自己思考，做出自己风格的独特 Blog，嘿嘿(●ˇ∀ˇ●)~</p>
 <p>溜了~</p>
 
