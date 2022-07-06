@@ -195,3 +195,10 @@
     max-width: 100%;
     height: auto;
 }
+
+/* 图片按钮在手机上不显示左右滑动按钮 */
+@media only screen and (max-width: 601px) {
+    .lg-actions {
+        display: none;
+    }
+}
