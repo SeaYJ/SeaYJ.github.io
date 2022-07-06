@@ -871,12 +871,12 @@ preloader:
 <ol start="7">
 <li>紧接着我们就可以在页面中引用相关文件了。
 <ul>
-<li>打开 <code>layout\_partial\head.ejs</code> 文件，在 head 标签里添加代码：</li>
+<li>打开 <code>layout\_partial\head.ejs</code> 文件，在 <em><strong>&lt;head&gt;</strong></em> 标签里添加代码：</li>
 </ul>
  <pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs"><span class="token comment">&lt;!--自定义添加的 Loading Page CSS 样式--></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%-</span><span class="token language-javascript"> theme<span class="token punctuation">.</span>jsDelivr<span class="token punctuation">.</span>url </span><span class="token delimiter punctuation">%></span></span><span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%-</span><span class="token language-javascript"> theme<span class="token punctuation">.</span>libs<span class="token punctuation">.</span>css<span class="token punctuation">.</span>loadingPage </span><span class="token delimiter punctuation">%></span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <ul>
-<li>最后我们打开 <code>layout\layout.ejs</code> 文件，在 body 标签下添加代码：</li>
+<li>最后我们打开 <code>layout\layout.ejs</code> 文件，在 <em><strong>&lt;body&gt;</strong></em> 标签下添加代码：</li>
 </ul>
  <pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs"><span class="token comment">&lt;!--自定义的 Loading Page--></span>
 <span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%-</span><span class="token language-javascript"> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_widget/loading'</span><span class="token punctuation">)</span> </span><span class="token delimiter punctuation">%></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
