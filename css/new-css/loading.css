@@ -110,8 +110,6 @@ body{
     top: 72%;
     transform: translateX(-50%);
     z-index: 3;
-    /* 防止选取 */
-    user-select: none;
 }
 .loader-text div{
     width: 30px;
@@ -229,4 +227,9 @@ body{
 /* 加载完毕 */
 #loader-box.loaded {
     display: none;
+}
+
+/* 防止选取 */
+#loader-box {
+    user-select: none;
 }
