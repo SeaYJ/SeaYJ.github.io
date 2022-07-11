@@ -551,15 +551,15 @@
 <pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;&#x2F;定位函数
 void gotoxy(int x, int y)
 &#123;
-	COORD pos &#x3D; &#123; x,y &#125;;&#x2F;&#x2F; 是表示 pos 坐标位置为参数对应的(x，y)
-	HANDLE hOut &#x3D; GetStdHandle(STD_OUTPUT_HANDLE);&#x2F;&#x2F; 创建一个 hOut 句柄变量来接收标准输出句柄
-	SetConsoleCursorPosition(hOut, pos);&#x2F;&#x2F; 该函数设置控制台(cmd)光标位置
+\tCOORD pos &#x3D; &#123; x,y &#125;;&#x2F;&#x2F; 是表示 pos 坐标位置为参数对应的(x，y)
+\tHANDLE hOut &#x3D; GetStdHandle(STD_OUTPUT_HANDLE);&#x2F;&#x2F; 创建一个 hOut 句柄变量来接收标准输出句柄
+\tSetConsoleCursorPosition(hOut, pos);&#x2F;&#x2F; 该函数设置控制台(cmd)光标位置
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>注释：</strong><br>
   COORD是Windows API中定义的一种结构，表示一个字符在控制台屏幕上的坐标。其定义为：</p>
 <pre class="line-numbers language-C" data-language="C"><code class="language-C">typedef struct _COORD &#123;
-	SHORT X; &#x2F;&#x2F; horizontal coordinate
-	SHORT Y; &#x2F;&#x2F; vertical coordinate
+\tSHORT X; &#x2F;&#x2F; horizontal coordinate
+\tSHORT Y; &#x2F;&#x2F; vertical coordinate
 &#125; COORD;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="二、键盘事件监听">二、键盘事件监听</h4>
 <p>  输入事件中的键盘事件通常有字符事件和按键事件，这些事件的附带信息构成了键盘输入的信息，而想要读取这些信息，是要通过API函数 ReadConsoleInput来获取的，函数原型如下：</p>
@@ -632,7 +632,7 @@ int main()
     INPUT_RECORD keyrec;        &#x2F;&#x2F;定义输入事件结构体
     DWORD res;      &#x2F;&#x2F;定义返回记录
     
-	while (1)
+\twhile (1)
     &#123;
         ReadConsoleInput(handle_in, &amp;keyrec, 1, &amp;res);      &#x2F;&#x2F;读取输入事件
         if (keyrec.EventType &#x3D;&#x3D; KEY_EVENT)      &#x2F;&#x2F;如果当前事件是键盘事件
@@ -643,7 +643,7 @@ int main()
             &#125;
         &#125;
     &#125;
-	
+\t
     return 0;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>注意：</strong><br>
@@ -676,7 +676,7 @@ int main()
                     printf(&quot;Shift+&quot;);
                 &#125;
                 
-				if (keyrec.Event.KeyEvent.dwControlKeyState &amp; CAPSLOCK_ON)  &#x2F;&#x2F;大写锁定为打开状态
+\t\t\t\tif (keyrec.Event.KeyEvent.dwControlKeyState &amp; CAPSLOCK_ON)  &#x2F;&#x2F;大写锁定为打开状态
                 &#123;
                     printf(&quot;A &quot;);
                 &#125;
@@ -1660,6 +1660,10 @@ int main()
                         <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="IDEA 安装及汉化教程[2022]">
                         
                         <span class="card-title">IDEA 安装及汉化教程[2022]</span>
+                        <div class="box-content"> 
+                            <h3 class="title">阅读上篇</h3> 
+                            <span class="post" style="width: 200px;color: black;">IDEA 安装及汉化教程[2022]</span> 
+                        </div>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1709,6 +1713,10 @@ int main()
                         <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="解决 Wallpaper Engine 部分壁纸黑屏问题">
                         
                         <span class="card-title">解决 Wallpaper Engine 部分壁纸黑屏问题</span>
+                        <div class="box-content"> 
+                            <h3 class="title">阅读下篇</h3> 
+                            <span class="post" style="width: 200px;color: black;">解决 Wallpaper Engine 部分壁纸黑屏问题</span> 
+                        </div>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -2208,15 +2216,6 @@ $(function () {
 
     
 
-    
-        
-        <script type="text/javascript">
-            // 只在桌面版网页启用特效
-            var windowWidth = $(window).width();
-            if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/sakura.js"><\/script>');
-            }
-        </script>
     
 
     <!-- 雪花特效 -->

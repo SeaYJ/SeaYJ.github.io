@@ -2,7 +2,7 @@ $(function () {
     /**
      * 添加文章卡片hover效果.
      */
-    let articleCardHover = function () {
+    /*let articleCardHover = function () {
         let animateClass = 'animated pulse';
         $('article .article').hover(function () {
             $(this).addClass(animateClass);
@@ -10,7 +10,7 @@ $(function () {
             $(this).removeClass(animateClass);
         });
     };
-    articleCardHover();
+    articleCardHover();*/
 
     /*菜单切换*/
     $('.sidenav').sidenav();
