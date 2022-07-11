@@ -229,7 +229,7 @@ article .card-image:hover {
 
 article .card-image:after ,article .card-image:before {
     content: "";
-    background: radial-gradient(circle at 23% 70%,rgba(255,255,255,.6),#fff 30%);
+    background: radial-gradient(circle at 23% 70%,rgba(255,255,255,.8),#fff 30%);
     width: 150%;
     height: 150%;
     opacity: 0;
@@ -242,7 +242,7 @@ article .card-image:after ,article .card-image:before {
 }
 
 article .card-image:hover:before {
-    opacity: .8;
+    opacity: .9;
     right: -85%;
 }
 
@@ -327,4 +327,16 @@ article .card .card-content {
 
 #articles .article-row a {
     font-weight: lighter;
+}
+
+/* 返回顶部等按钮 */
+.btn-floating {
+    border-radius: 15%;
+    -webkit-transition: .3s ease-out;
+    transition: .3s ease-out;
+}
+
+.btn-floating:hover {
+    background: linear-gradient(to bottom right, #00b4db 0%, #0083b0 100%);
+    box-shadow: 2px 5px 10px #0083b0 !important;
 }
