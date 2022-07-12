@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>hexo[Matery] 添加自定义404页面</title>
+      <link href="/2022/07/12/hexo-matery-tian-jia-zi-ding-yi-404-ye-mian/"/>
+      <url>/2022/07/12/hexo-matery-tian-jia-zi-ding-yi-404-ye-mian/</url>
+      
+        <content type="html"><![CDATA[<p>虽然 <strong>Hexo-Matery</strong> 主题自带有一个 404 页面，但是不得不说这个页面真的不是很好看，而且在渲染的时候使用的和主题是几乎一模一样的样式，显得很单调而且没有新意。所以，自己研究了一下怎么添加一个自定义的 404 页面。</p><h2 id="一、编写-404-页面">一、编写 404 页面</h2><h2 id="二、">二、</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> Blog </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo-Matery </tag>
+            
+            <tag> 404 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo[Matery] 添加自定义 Loading 页面</title>
       <link href="/2022/07/05/hexo-matery-tian-jia-zi-ding-yi-loading-ye-mian/"/>
       <url>/2022/07/05/hexo-matery-tian-jia-zi-ding-yi-loading-ye-mian/</url>
