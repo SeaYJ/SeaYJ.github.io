@@ -259,11 +259,21 @@ article .card-image:hover .card-title {
 #prenext-posts .card-image:before, #prenext-posts .card-image:after {
     top: 50%;
 }
-
-#prenext-posts .card-image:hover:before {
-    top: 25%;
+@media only screen and (max-width: 601px) {
+    #prenext-posts .card-image:hover:before {
+        top: 5%;
+    }    
 }
-
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+    #prenext-posts .card-image:hover:before {
+        top: 10%;
+    }    
+}
+@media only screen and (min-width: 993px) {
+    #prenext-posts .card-image:hover:before {
+        top: 25%;
+    }
+}
 #prenext-posts .card-image:hover:after {
     top: -5%;
     left: 90%;
@@ -329,7 +339,7 @@ article .card .card-content {
     font-weight: lighter;
 }
 
-/* 返回顶部等按钮 */
+/* 返回顶部等按钮的样式 */
 .btn-floating {
     border-radius: 15%;
     -webkit-transition: .3s ease-out;
