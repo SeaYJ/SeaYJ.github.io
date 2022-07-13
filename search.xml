@@ -367,9 +367,9 @@
       
         <tags>
             
-            <tag> Win32 </tag>
-            
             <tag> UAC </tag>
+            
+            <tag> Win32 </tag>
             
         </tags>
       

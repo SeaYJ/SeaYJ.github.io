@@ -83,10 +83,14 @@
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
-                    
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
-                    
-                    <span class="logo-span">SeaYJ</span>
+                    <!-- 2022.7.13 处理安装图片懒加载插件后首页的 logo 点击会直接打开 logo 图，而不是跳到首页的 BUG ！ -->
+                    <!-- 所以，加上了一层 div -->
+                    <div>
+                        
+                        <img src="./medias/lazyload.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
+                        
+                        <span class="logo-span">SeaYJ</span>
+                    </div>
                 </a>
             </div>
             
@@ -183,7 +187,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="./medias/lazyload.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">SeaYJ</div>
         <div class="logo-desc">
@@ -546,17 +550,17 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>最近在搞博客，结果突然发现 hexo-matery 主题提供的 busuanzi 统计失效了。具体表现为要么统计的数据异常大，不是真实访问数据，或者就是网页页底的统计信息展示无法显示，或者显示不正常。就下面图片展示的一样。</p>
-<p><img src="./Snipaste_2022-07-03_22-27-14.jpg" alt=""><br>
-<img src="./Snipaste_2022-07-03_22-29-27.jpg" alt=""><br>
-<img src="./Snipaste_2022-07-03_22-31-42.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./Snipaste_2022-07-03_22-27-14.jpg" alt=""><br>
+<img src="./medias/lazyload.gif" data-original="./Snipaste_2022-07-03_22-29-27.jpg" alt=""><br>
+<img src="./medias/lazyload.gif" data-original="./Snipaste_2022-07-03_22-31-42.jpg" alt=""></p>
 <p>后来我通过<a href="">不算子的官网</a>混进了不算子官Q群（<em>゜ー゜</em>），在群里大佬给出了关于“为什么 busuanzi 统计时访问数据太大不真实？”的答案(额，感觉自己有点没脑纸…)。</p>
-<p><img src="./Snipaste_2022-07-03_22-35-50.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./Snipaste_2022-07-03_22-35-50.jpg" alt=""></p>
 <p>这个简单的问题解决后，部署到服务器后结果发现这个不算子统计还是无法正常显示，有时候网卡的时候居然还能显示一下，网速比较好的时候几乎看不到。</p>
 <p>这就勾起了我的好奇心，既然有那么一瞬间能显示出来，证明它应该是存在的啊！会不会只是被隐藏起来了？</p>
 <p>打开 EDGE 使用 F12 大法，我仔细核对了一下，发现不知道为什么不算子统计信息显示的相关标签总是被 dispaly-none …</p>
-<p><img src="./Snipaste_2022-07-03_22-51-44.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./Snipaste_2022-07-03_22-51-44.jpg" alt=""></p>
 <p>后来，我在官方群里也找到了相关的说明。官方给出的解释是，部分 live2D 设置会与之冲突。但是具体的解决办法并没有明确指出(文档里网页提供的方法我试了，没有)…需要我们自行查找、修正。</p>
-<p><img src="./Snipaste_2022-07-03_23-00-51.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./Snipaste_2022-07-03_23-00-51.jpg" alt=""></p>
 <p>最后，经过不懈努力，我终于找到了解决办法：</p>
 <ol>
 <li>
@@ -570,7 +574,7 @@
 </li>
 </ol>
 <p>具体可参考下图：</p>
-<p><img src="./Snipaste_2022-07-03_23-35-23.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./Snipaste_2022-07-03_23-35-23.jpg" alt=""></p>
 <h5 id="补充-3">补充</h5>
 <p>如果是其他主题没有对应的 JS 本地文件（以链接的形式引用的），那就把文件下载到本地，然后引用按照上述操作修改后的 JS 本地文件即可。</p>
 
@@ -776,10 +780,10 @@
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="./medias/lazyload.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="./medias/lazyload.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1164,7 +1168,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Hexo[Matery] 添加自定义 Loading 页面">
+                        <img src="./medias/lazyload.gif" data-original="/medias/featureimages/19.jpg" class="responsive-img" alt="Hexo[Matery] 添加自定义 Loading 页面">
                         
                         <span class="card-title">Hexo[Matery] 添加自定义 Loading 页面</span>
                         <div class="box-content"> 
@@ -1221,7 +1225,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="VSCode For Python">
+                        <img src="./medias/lazyload.gif" data-original="/medias/featureimages/17.jpg" class="responsive-img" alt="VSCode For Python">
                         
                         <span class="card-title">VSCode For Python</span>
                         <div class="box-content"> 
@@ -1805,6 +1809,12 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":16},"mobile":{"show":false,"scale":1},"react":{"opacityDefault":0.7},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":16},"mobile":{"show":false,"scale":1},"react":{"opacityDefault":0.7},"log":false});</script><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

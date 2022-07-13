@@ -93,10 +93,14 @@ ClaudiaIDE 扩展下载
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
-                    
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
-                    
-                    <span class="logo-span">SeaYJ</span>
+                    <!-- 2022.7.13 处理安装图片懒加载插件后首页的 logo 点击会直接打开 logo 图，而不是跳到首页的 BUG ！ -->
+                    <!-- 所以，加上了一层 div -->
+                    <div>
+                        
+                        <img src="./medias/lazyload.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
+                        
+                        <span class="logo-span">SeaYJ</span>
+                    </div>
                 </a>
             </div>
             
@@ -193,7 +197,7 @@ ClaudiaIDE 扩展下载
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="./medias/lazyload.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">SeaYJ</div>
         <div class="logo-desc">
@@ -553,7 +557,7 @@ ClaudiaIDE 扩展下载
             <div id="articleContent">
                 <p>你知道吗？Visual Studio 编辑器也能设置背景哦~</p>
 <p>效果预览：</p>
-<p><img src="./2573290-20211226102206472-1095159371.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./2573290-20211226102206472-1095159371.jpg" alt=""></p>
 <h2 id="目录">目录</h2>
 <hr>
 <ol>
@@ -567,29 +571,29 @@ ClaudiaIDE 扩展下载
 <h4 id="ClaudiaIDE-扩展下载">ClaudiaIDE 扩展下载</h4>
 <p>我们打开VS的扩展安装界面：【扩展】-&gt;【管理扩展】-&gt;【联机】，输入 “ClaudiaIDE”，可以看到搜索结果：“ClaudiaIDE”。如果你是 Visual Studio 2022 用户，强烈建议不要用最新版（当前时间为2021.12.26日，我发现这个当前最新版3.0.5有个bug）。你可以进入 ClaudiaIDE 的 GitHub 官网选择旧版，但是只支持 3.0.1+ 版本，所以还是要注意(具体的官网也有说明，记得仔细阅读)。<br>
 <a target="_blank" rel="noopener" href="https://github.com/buchizo/ClaudiaIDE/releases">ClaudiaIDE GitHub 历代版本下载传送门</a></p>
-<p><img src="./2573290-20211226093730373-223597750.jpg" alt=""></p>
-<p><img src="./2573290-20211226093427376-1359247982.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./2573290-20211226093730373-223597750.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./2573290-20211226093427376-1359247982.jpg" alt=""></p>
 <h4 id="主题背景编辑扩展下载">主题背景编辑扩展下载</h4>
 <h5 id="Visual-Studio-2022">Visual Studio 2022</h5>
 <p>我们打开VS的扩展安装界面：【扩展】-&gt;【管理扩展】-&gt;【联机】，输入 “Visual Studio Color Theme Designer 2022”，可以看到搜索结果：“Visual Studio Color Theme Designer 2022”。</p>
-<p><img src="./2573290-20211226093817971-1463883804.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./2573290-20211226093817971-1463883804.jpg" alt=""></p>
 <h5 id="Visual-Studio-2019-及旧版本">Visual Studio 2019 及旧版本</h5>
 <p>我们打开VS的扩展安装界面：【工具】-&gt;【扩展和更新】-&gt;【联机】，输入 “Color Theme Editor for Visual Studio 2019”(2019对于自己的版本号)，可以看到搜索结果：“Color Theme Editor for Visual Studio 2019”。具体其他操作可以参考这篇博客：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/stulzq/p/9393323.html">Visual Studio 2017 设置透明背景图</a>。</p>
 <p>因为操作方法略有小差异，我就只以 VS2022 版本为实例进行演示操作，旧版参考其他博客即可。</p>
 <h3 id="step2">图片背景设置</h3>
 <p>我们打开VS：【工具】-&gt;【选项】-&gt;【ClaudiaIDE】。</p>
-<p><img src="./2573290-20211226094940666-684800660.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./2573290-20211226094940666-684800660.jpg" alt=""></p>
 <p>然后添加自己的图片，按照我这个配置即可：</p>
-<p><img src="./2573290-20211226095114210-1939152974.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./2573290-20211226095114210-1939152974.jpg" alt=""></p>
 <h3 id="step3">主题透明并扩展到 IDE</h3>
 <h3 id="step3-1">操作流程</h3>
 <p>我们重新启动 VS2022 ，然后新建一个项目（中途遇到问题请<a href="#step3-2">点击此处跳转</a>）：</p>
-<p><img src="./2573290-20211226095313186-425493518.jpg" alt=""></p>
-<p><img src="./2573290-20211226095323670-1937743407.jpg" alt=""></p>
-<p><img src="./2573290-20211226095341453-1778583874.jpg" alt=""></p>
-<p><img src="./2573290-20211226095405831-1649223623.jpg" alt=""></p>
-<p><img src="./2573290-20211226095420829-38330897.jpg" alt=""></p>
-<p><img src="./2573290-20211226095442059-1263447836.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./2573290-20211226095313186-425493518.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./2573290-20211226095323670-1937743407.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./2573290-20211226095341453-1778583874.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./2573290-20211226095405831-1649223623.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./2573290-20211226095420829-38330897.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./2573290-20211226095442059-1263447836.jpg" alt=""></p>
 <p>根据下面的列表，修改指定控件的指定属性值为 <code>2A252526</code>:<br>
 (VS2022 有部分是两个属性，只要修改颜色最深的那个就行了！不然会有问题，不信你试试awa)</p>
 <p>TreeView -&gt; Background</p>
@@ -612,21 +616,21 @@ Environment -&gt; CommandBarGradientEnd<br>
 Environment -&gt; CommandBarGradientMiddle</p>
 <p>Environment -&gt; CommandBarToolBarBorder</p>
 <p><strong>注意这三个选项，只改颜色最深的那个</strong>：<br>
-<img src="./2573290-20211226095851621-1598812548.jpg" alt=""><br>
-<img src="./2573290-20211226095935682-2046765014.jpg" alt=""><br>
-<img src="./2573290-20211226095957457-1961508691.jpg" alt=""></p>
+<img src="./medias/lazyload.gif" data-original="./2573290-20211226095851621-1598812548.jpg" alt=""><br>
+<img src="./medias/lazyload.gif" data-original="./2573290-20211226095935682-2046765014.jpg" alt=""><br>
+<img src="./medias/lazyload.gif" data-original="./2573290-20211226095957457-1961508691.jpg" alt=""></p>
 <h3 id="step3-2">问题说明</h3>
 <p>遇到这个问题的话可以看下面的操作</p>
-<p><img src="./2573290-20211226100651552-908751673.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./2573290-20211226100651552-908751673.jpg" alt=""></p>
 <p><strong>操作</strong>：<br>
 打开 Visual Studio Installer ，然后选择【修改】，勾选对应的【.NET Framework 4.7.2 目标包】，最后【修改】即可。</p>
-<p><img src="./2573290-20211226100913956-983609967.jpg" alt=""></p>
-<p><img src="./2573290-20211226100938372-1036421929.jpg" alt=""></p>
-<p><img src="./2573290-20211226101017490-2084371103.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./2573290-20211226100913956-983609967.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./2573290-20211226100938372-1036421929.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./2573290-20211226101017490-2084371103.jpg" alt=""></p>
 <p><a href="#step3-1">点我返回【操作流程】</a></p>
 <h4 id="应用">应用</h4>
 <p>修改好了后直接点击【应用】就可以看到透明背景主题了awa…</p>
-<p><img src="./2573290-20211226102041470-451541752.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./2573290-20211226102041470-451541752.jpg" alt=""></p>
 
                 
             </div>
@@ -826,10 +830,10 @@ Environment -&gt; CommandBarGradientMiddle</p>
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="./medias/lazyload.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="./medias/lazyload.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1214,7 +1218,7 @@ Environment -&gt; CommandBarGradientMiddle</p>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="【Win32】 UAC用户账户控制 (提权)">
+                        <img src="./medias/lazyload.gif" data-original="/medias/featureimages/14.jpg" class="responsive-img" alt="【Win32】 UAC用户账户控制 (提权)">
                         
                         <span class="card-title">【Win32】 UAC用户账户控制 (提权)</span>
                         <div class="box-content"> 
@@ -1248,12 +1252,12 @@ Environment -&gt; CommandBarGradientMiddle</p>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Win32/">
-                        <span class="chip bg-color">Win32</span>
-                    </a>
-                    
                     <a href="/tags/UAC/">
                         <span class="chip bg-color">UAC</span>
+                    </a>
+                    
+                    <a href="/tags/Win32/">
+                        <span class="chip bg-color">Win32</span>
                     </a>
                     
                 </div>
@@ -1271,7 +1275,7 @@ Environment -&gt; CommandBarGradientMiddle</p>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Windows 10 如何在当前位置打开 CMD 命令窗口？">
+                        <img src="./medias/lazyload.gif" data-original="/medias/featureimages/1.jpg" class="responsive-img" alt="Windows 10 如何在当前位置打开 CMD 命令窗口？">
                         
                         <span class="card-title">Windows 10 如何在当前位置打开 CMD 命令窗口？</span>
                         <div class="box-content"> 
@@ -1851,6 +1855,12 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":16},"mobile":{"show":false,"scale":1},"react":{"opacityDefault":0.7},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":16},"mobile":{"show":false,"scale":1},"react":{"opacityDefault":0.7},"log":false});</script><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

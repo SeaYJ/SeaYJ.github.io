@@ -79,10 +79,14 @@
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
-                    
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
-                    
-                    <span class="logo-span">SeaYJ</span>
+                    <!-- 2022.7.13 处理安装图片懒加载插件后首页的 logo 点击会直接打开 logo 图，而不是跳到首页的 BUG ！ -->
+                    <!-- 所以，加上了一层 div -->
+                    <div>
+                        
+                        <img src="./medias/lazyload.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
+                        
+                        <span class="logo-span">SeaYJ</span>
+                    </div>
                 </a>
             </div>
             
@@ -179,7 +183,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="./medias/lazyload.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">SeaYJ</div>
         <div class="logo-desc">
@@ -411,7 +415,7 @@
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="博客添加 Live2D | Hexo-Matery">
+                            <img src="./medias/lazyload.gif" data-original="/medias/featureimages/18.jpg" class="responsive-img" alt="博客添加 Live2D | Hexo-Matery">
                             
                             <span class="card-title">博客添加 Live2D | Hexo-Matery</span>
                             <div class="box-content"> 
@@ -477,7 +481,7 @@ npm install --save
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="解决 Win32 系统控件都是老式的问题">
+                            <img src="./medias/lazyload.gif" data-original="/medias/featureimages/22.jpg" class="responsive-img" alt="解决 Win32 系统控件都是老式的问题">
                             
                             <span class="card-title">解决 Win32 系统控件都是老式的问题</span>
                             <div class="box-content"> 
@@ -533,7 +537,7 @@ npm install --save
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="控制台程序运行时不显示 CMD 窗口">
+                            <img src="./medias/lazyload.gif" data-original="/medias/featureimages/2.jpg" class="responsive-img" alt="控制台程序运行时不显示 CMD 窗口">
                             
                             <span class="card-title">控制台程序运行时不显示 CMD 窗口</span>
                             <div class="box-content"> 
@@ -593,7 +597,7 @@ npm install --save
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="【Win32】 UAC用户账户控制 (提权)">
+                            <img src="./medias/lazyload.gif" data-original="/medias/featureimages/14.jpg" class="responsive-img" alt="【Win32】 UAC用户账户控制 (提权)">
                             
                             <span class="card-title">【Win32】 UAC用户账户控制 (提权)</span>
                             <div class="box-content"> 
@@ -634,12 +638,12 @@ if exi
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/Win32/">
-                            <span class="chip bg-color">Win32</span>
-                        </a>
-                        
                         <a href="/tags/UAC/">
                             <span class="chip bg-color">UAC</span>
+                        </a>
+                        
+                        <a href="/tags/Win32/">
+                            <span class="chip bg-color">Win32</span>
                         </a>
                         
                     </div>
@@ -655,7 +659,7 @@ if exi
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Visual Studio 设置背景图片主题（所有版本设置方法）">
+                            <img src="./medias/lazyload.gif" data-original="/medias/featureimages/13.jpg" class="responsive-img" alt="Visual Studio 设置背景图片主题（所有版本设置方法）">
                             
                             <span class="card-title">Visual Studio 设置背景图片主题（所有版本设置方法）</span>
                             <div class="box-content"> 
@@ -726,7 +730,7 @@ ClaudiaIDE 扩展下载
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Windows 10 如何在当前位置打开 CMD 命令窗口？">
+                            <img src="./medias/lazyload.gif" data-original="/medias/featureimages/1.jpg" class="responsive-img" alt="Windows 10 如何在当前位置打开 CMD 命令窗口？">
                             
                             <span class="card-title">Windows 10 如何在当前位置打开 CMD 命令窗口？</span>
                             <div class="box-content"> 
@@ -784,7 +788,7 @@ Win + R 键召唤出运行窗口，然后输入 “CMD” 打开命令提示符�
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="VC 2010 Express 学生版(中文版)">
+                            <img src="./medias/lazyload.gif" data-original="/medias/featureimages/12.jpg" class="responsive-img" alt="VC 2010 Express 学生版(中文版)">
                             
                             <span class="card-title">VC 2010 Express 学生版(中文版)</span>
                             <div class="box-content"> 
@@ -844,7 +848,7 @@ Microsoft Visual C+
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="电脑重装系统后要做的那些事">
+                            <img src="./medias/lazyload.gif" data-original="/medias/featureimages/2.jpg" class="responsive-img" alt="电脑重装系统后要做的那些事">
                             
                             <span class="card-title">电脑重装系统后要做的那些事</span>
                             <div class="box-content"> 
@@ -920,7 +924,7 @@ Microsoft Visual C+
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="宝剑锋从磨砺出，梅花香自苦寒来">
+                            <img src="./medias/lazyload.gif" data-original="/medias/featureimages/7.jpg" class="responsive-img" alt="宝剑锋从磨砺出，梅花香自苦寒来">
                             
                             <span class="card-title">宝剑锋从磨砺出，梅花香自苦寒来</span>
                             <div class="box-content"> 
@@ -1390,6 +1394,12 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":16},"mobile":{"show":false,"scale":1},"react":{"opacityDefault":0.7},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":16},"mobile":{"show":false,"scale":1},"react":{"opacityDefault":0.7},"log":false});</script><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

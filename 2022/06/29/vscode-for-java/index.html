@@ -79,10 +79,14 @@
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
-                    
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
-                    
-                    <span class="logo-span">SeaYJ</span>
+                    <!-- 2022.7.13 处理安装图片懒加载插件后首页的 logo 点击会直接打开 logo 图，而不是跳到首页的 BUG ！ -->
+                    <!-- 所以，加上了一层 div -->
+                    <div>
+                        
+                        <img src="./medias/lazyload.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
+                        
+                        <span class="logo-span">SeaYJ</span>
+                    </div>
                 </a>
             </div>
             
@@ -179,7 +183,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="./medias/lazyload.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">SeaYJ</div>
         <div class="logo-desc">
@@ -549,25 +553,25 @@
 <ol>
 <li><a target="_blank" rel="noopener" href="https://profile.oracle.com/myprofile/account/create-account.jspx">注册 Oracle 账号</a>。这个是必须的，不然 Oracle 不让你下载他的东西(注册的信息可以随便填，只要账号邮箱和密码记得就行，不一定要填真实信息)。</li>
 </ol>
-<p><img src="./20220629200302.png" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./20220629200302.png" alt=""></p>
 <ol start="2">
 <li><a target="_blank" rel="noopener" href="https://www.oracle.com/cn/java/technologies/javase/jdk11-archive-downloads.html">下载 Java SE11</a>。这里我选用 jdk-11.0.14_windows-x64_bin.zip 做演示，jdk-11.0.14_windows-x64_bin.exe 安装方法类似。你也可以按照自己的喜好来安装你自己的 Java SE。</li>
 </ol>
-<p><img src="./Snipaste_2022-06-29_20-06-26.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./Snipaste_2022-06-29_20-06-26.jpg" alt=""></p>
 <ol start="3">
 <li>将下载好的 jdk-11.0.14_windows-x64_bin.zip 文件解压到你需要保存该 JDK 文件的位置。我这里解压到了 <code>E:\MySoftware\Java Development Kits\</code> 文件夹下。</li>
 </ol>
-<p><img src="./Snipaste_2022-06-29_20-21-13.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./Snipaste_2022-06-29_20-21-13.jpg" alt=""></p>
 <ol start="4">
 <li>右键<code>此电脑</code>，选择<code>属性</code>，然后选择<code>关于</code>中的<code>高级系统设置</code>，打开<code>环境变量</code>设置界面。</li>
 </ol>
-<p><img src="./Snipaste_2022-06-29_20-25-55.jpg" alt=""></p>
-<p><img src="./Snipaste_2022-06-29_20-28-19.jpg" alt=""></p>
-<p><img src="./Snipaste_2022-06-29_20-30-29.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./Snipaste_2022-06-29_20-25-55.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./Snipaste_2022-06-29_20-28-19.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./Snipaste_2022-06-29_20-30-29.jpg" alt=""></p>
 <ol start="5">
 <li>在<code>用户变量</code>中新建如下变量：</li>
 </ol>
-<p><img src="./Snipaste_2022-06-29_20-31-43.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./Snipaste_2022-06-29_20-31-43.jpg" alt=""></p>
 <ol start="6">
 <li>接着在<code>用户变量</code>中选择 Path 变量，增加两个值并确定：
 <ul>
@@ -576,21 +580,21 @@
 </ul>
 </li>
 </ol>
-<p><img src="./Snipaste_2022-06-29_20-33-45.jpg" alt=""></p>
-<p><img src="./Snipaste_2022-06-29_20-35-37.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./Snipaste_2022-06-29_20-33-45.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./Snipaste_2022-06-29_20-35-37.jpg" alt=""></p>
 <ol start="7">
 <li>配置完环境变量后就可以确定了。但是，细心的小伙伴可能会发现此时在 <code>%JAVA_HOME11%</code> 指引的目录下并没有对应的 jre 文件夹。这是怎么回事？是下载的时候文件丢失了吗？不！这个 jre 文件夹是要我们自己生成的。<br/><br/>首先，打开 CMD 窗口，进入 JDK 安装根目录；<br/><br/>然后，执行以下命令生成 jre 文件夹。<br/><code>bin\jlink.exe --module-path jmods --add-modules java.desktop --output jre</code></li>
 </ol>
-<p><img src="./Snipaste_2022-06-29_20-45-03.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./Snipaste_2022-06-29_20-45-03.jpg" alt=""></p>
 <ol start="8">
 <li>最后，我们输入 <code>java -version</code> 检查一下即可。出现下图内容即表示 Java SE11 安装成功。</li>
 </ol>
-<p><img src="./Snipaste_2022-06-29_20-50-00.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./Snipaste_2022-06-29_20-50-00.jpg" alt=""></p>
 <h2 id="三、安装-Extension-Pack-for-Java-插件">三、安装 Extension Pack for Java 插件</h2>
 <ol>
 <li>打开 VSCode 页面，打开插件安装页面，安装 <code>Extension Pack for Java</code> 即可。<br/>（这里解释一下为什么前面要求只能安装 Java SE11+ ，因为这个插件只支持 Java SE11+ 。对于低版本的 Java SE ，可能会报“很抱歉，激活面向 Java 的 IntelliCode 支持时遇到问题。有关详细信息，请查看“针对 Java 的语言支持”和 “VS IntelliCode” 输出窗口。”的错误！）</li>
 </ol>
-<p><img src="./Snipaste_2022-06-29_20-56-30.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./Snipaste_2022-06-29_20-56-30.jpg" alt=""></p>
 <ol start="2">
 <li>配置 VSCode 中的 Java.home：
 <ul>
@@ -601,11 +605,11 @@
 </ul>
 </li>
 </ol>
-<p><img src="./Snipaste_2022-06-29_21-13-45.jpg" alt=""></p>
-<p><img src="./Snipaste_2022-06-29_19-31-46.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./Snipaste_2022-06-29_21-13-45.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./Snipaste_2022-06-29_19-31-46.jpg" alt=""></p>
 <h2 id="四、检查">四、检查</h2>
 <p>到这里 VSCode For Java 基本搭建完毕，最后只需要新建一个项目检查一下是否可以正常运行即可！</p>
-<p><img src="./Snipaste_2022-06-29_19-35-41.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./Snipaste_2022-06-29_19-35-41.jpg" alt=""></p>
 
                 
             </div>
@@ -805,10 +809,10 @@
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="./medias/lazyload.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="./medias/lazyload.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1193,7 +1197,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="VSCode For Python">
+                        <img src="./medias/lazyload.gif" data-original="/medias/featureimages/17.jpg" class="responsive-img" alt="VSCode For Python">
                         
                         <span class="card-title">VSCode For Python</span>
                         <div class="box-content"> 
@@ -1250,7 +1254,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="IDEA 安装及汉化教程[2022]">
+                        <img src="./medias/lazyload.gif" data-original="/medias/featureimages/0.jpg" class="responsive-img" alt="IDEA 安装及汉化教程[2022]">
                         
                         <span class="card-title">IDEA 安装及汉化教程[2022]</span>
                         <div class="box-content"> 
@@ -1830,6 +1834,12 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":16},"mobile":{"show":false,"scale":1},"react":{"opacityDefault":0.7},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":16},"mobile":{"show":false,"scale":1},"react":{"opacityDefault":0.7},"log":false});</script><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

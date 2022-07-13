@@ -84,10 +84,14 @@
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
-                    
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
-                    
-                    <span class="logo-span">SeaYJ</span>
+                    <!-- 2022.7.13 处理安装图片懒加载插件后首页的 logo 点击会直接打开 logo 图，而不是跳到首页的 BUG ！ -->
+                    <!-- 所以，加上了一层 div -->
+                    <div>
+                        
+                        <img src="./medias/lazyload.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
+                        
+                        <span class="logo-span">SeaYJ</span>
+                    </div>
                 </a>
             </div>
             
@@ -184,7 +188,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="./medias/lazyload.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">SeaYJ</div>
         <div class="logo-desc">
@@ -544,7 +548,7 @@
             <div id="articleContent">
                 <p>  控制台程序编程中，如果主菜单总是需要输入数字选择，那显得很不直观，不像正常主菜单方向键可以上下移动选择按钮，所以这一次写代码的时候就直接改善此问题！</p>
 <h2 id="效果预览">效果预览</h2>
-<p><img src="./Snipaste_2022-05-16_14-40-18.jpg" alt="帮同学写的结课作业"></p>
+<p><img src="./medias/lazyload.gif" data-original="./Snipaste_2022-05-16_14-40-18.jpg" alt="帮同学写的结课作业"></p>
 <h2 id="原理详释">原理详释</h2>
 <h4 id="一、控制台窗口光标移动">一、控制台窗口光标移动</h4>
 <p>  原本控制台的光标是逐文本向后的，我们要想实现任意位置的文本重输出就需要将光标移动到指定位置，然后覆盖原文本。但是， Windows 系统并没有为我们提供相应的 API ，所以我们需要自己编写一个函数用来控制控制台光标的位置。</p>
@@ -1066,7 +1070,7 @@ int main()
 <p>  下面给出一个参考实例，仅供参考：</p>
 <pre class="line-numbers language-C" data-language="C"><code class="language-C">printf(&quot;\033[4;31;42m*测试文本*\033[0m&quot;);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><strong>效果图：</strong></p>
-<p><img src="./Snipaste_2022-05-16_18-18-28.jpg" alt=""></p>
+<p><img src="./medias/lazyload.gif" data-original="./Snipaste_2022-05-16_18-18-28.jpg" alt=""></p>
 <h2 id="结束语">结束语</h2>
 <p>  到这里，相关的核心知识点都已经总结完成。剩下的具体功能还需要自己自行开发和实现，过多的叙述往往会限制大家的创造能力。所以，相关的逻辑代码就由大家自己完成吧！<br>
   补充一下，那个按键选择实际上并不是真的有个按键，而是通过光标重新定位然后覆盖原输出，做出按键选择到了该位置的假象…好了，就说这么多吧！拜拜ヾ(•ω•`)o~</p>
@@ -1269,10 +1273,10 @@ int main()
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="./medias/lazyload.gif" data-original="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="./medias/lazyload.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1657,7 +1661,7 @@ int main()
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="IDEA 安装及汉化教程[2022]">
+                        <img src="./medias/lazyload.gif" data-original="/medias/featureimages/0.jpg" class="responsive-img" alt="IDEA 安装及汉化教程[2022]">
                         
                         <span class="card-title">IDEA 安装及汉化教程[2022]</span>
                         <div class="box-content"> 
@@ -1710,7 +1714,7 @@ int main()
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="解决 Wallpaper Engine 部分壁纸黑屏问题">
+                        <img src="./medias/lazyload.gif" data-original="/medias/featureimages/3.jpg" class="responsive-img" alt="解决 Wallpaper Engine 部分壁纸黑屏问题">
                         
                         <span class="card-title">解决 Wallpaper Engine 部分壁纸黑屏问题</span>
                         <div class="box-content"> 
@@ -2290,6 +2294,12 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":16},"mobile":{"show":false,"scale":1},"react":{"opacityDefault":0.7},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":16},"mobile":{"show":false,"scale":1},"react":{"opacityDefault":0.7},"log":false});</script><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>
