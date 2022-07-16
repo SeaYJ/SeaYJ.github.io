@@ -6,7 +6,7 @@
   <link href="https://seayj.cn/atom.xml" rel="self"/>
   
   <link href="https://seayj.cn/"/>
-  <updated>2022-07-15T06:36:13.546Z</updated>
+  <updated>2022-07-16T07:10:51.981Z</updated>
   <id>https://seayj.cn/</id>
   
   <author>
@@ -21,11 +21,31 @@
     <link href="https://seayj.cn/2022/07/15/hexo-matery-fang-wen-jia-su/"/>
     <id>https://seayj.cn/2022/07/15/hexo-matery-fang-wen-jia-su/</id>
     <published>2022-07-15T06:36:13.000Z</published>
-    <updated>2022-07-15T06:36:13.546Z</updated>
+    <updated>2022-07-16T07:10:51.981Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;这两个星期天天熬夜到一两点，去学习怎么提高博客的访问速度。最终小有成果，下面我总结一下这几十天的研究内容。&lt;/p&gt;
+&lt;h2 id=&quot;一、全站加速（按照推荐等级排列）&quot;&gt;一、全站加速（按照推荐等级排列）&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h4 id=&quot;-4&quot;&gt;&lt;/h4&gt;
+&lt;h4</summary>
+        
+      
     
     
     
+    <category term="Blog" scheme="https://seayj.cn/categories/Blog/"/>
     
+    
+    <category term="Hexo-Matery" scheme="https://seayj.cn/tags/Hexo-Matery/"/>
+    
+    <category term="访问加速" scheme="https://seayj.cn/tags/%E8%AE%BF%E9%97%AE%E5%8A%A0%E9%80%9F/"/>
+    
+    <category term="GitHub Page" scheme="https://seayj.cn/tags/GitHub-Page/"/>
     
   </entry>
   
@@ -384,7 +404,7 @@
         
         
     <summary type="html">&lt;p&gt;我们知道，控制台应用程序本身是没有窗口的。系统为了让我们能看到程序执行的结果，会在程序执行时借一个命令提示符窗口(CMD 窗口)。所以，就有了这个黑黑的窗口…&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
+&lt;p&gt;&lt;img src=&quot;https://seayj.cn/medias/lazyload.gif&quot;</summary>
         
       
     
@@ -442,8 +462,7 @@
         
     <summary type="html">&lt;p&gt;你知道吗？Visual Studio 编辑器也能设置背景哦~&lt;/p&gt;
 &lt;p&gt;效果预览：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;./2573290-20211226102206472-1095159371.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h2</summary>
+&lt;p&gt;&lt;img src=&quot;https://seayj.cn/medias/lazyload.gif&quot;</summary>
         
       
     
