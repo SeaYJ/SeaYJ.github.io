@@ -31,7 +31,7 @@ Win + R 键召唤出运行窗口，然后输入 “CMD” 打开命令提示符�
     <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
-    <!-- <link rel="stylesheet" type="text/css" href="/css/my.css"> -->
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <!--自定义添加的 Loading Page CSS 样式-->
     <link rel="stylesheet" type="text/css" href="/css/new-css/loading.css">
@@ -69,26 +69,11 @@ Win + R 键召唤出运行窗口，然后输入 “CMD” 打开命令提示符�
     </div>
 
   <script>
-    // var endLoading = function () {
-    //   document.body.style.overflow = 'auto';
-    //   document.getElementById('loader-box').classList.add("loaded");
-    // }
-    // window.addEventListener('load',endLoading);
-
-    // setTimeout(function(){//开启一个计时器，在这里面写所有页面渲染完成之后，要执行的代码
-    //   var xxxxx = window.xxxxx;//从页面中取值，这个值是由主页面传入过来的
-    //   $.ajax({
-    //     type:"get",    //请求方式
-    //     url:"/appFun?funId=xxxx&xxxxx="+xxxxx,
-    //     dataType:"json",
-    //     success: function(data) {
-          
-    //     },
-    //     error: function(e) {
-    //       console.log("ERROR: ", e);
-    //     }
-    //   });
-    // }, 0);
+    var endLoading = function () {
+      document.body.style.overflow = 'auto';
+      document.getElementById('loader-box').classList.add("loaded");
+    }
+    window.addEventListener('load',endLoading);
   </script>
   
   
@@ -1816,12 +1801,6 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
-
-    <script>
-        setTimeout(function(){
-            document.getElementById('loader-box').classList.add("loaded");
-        }, 0);
-    </script>
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":16},"mobile":{"show":false,"scale":1},"react":{"opacityDefault":0.7},"log":false});</script><script>
             window.imageLazyLoadSetting = {
