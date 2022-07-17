@@ -1919,7 +1919,7 @@ p.search-result-summary{
     display: none;
     position: fixed;
     right: 15px;
-    bottom: 15px;
+    bottom: 75px;
     padding-top: 15px;
     margin-bottom: 0;
     z-index: 998;
@@ -2312,7 +2312,7 @@ body.DarkMode .skillbar .skill-bar-percent {
     border-radius: 50%;
     position: fixed;
     right: 15px;
-    bottom: 195px;
+    bottom: 15px;
     margin-bottom: 0;
     z-index: 900;
 }
