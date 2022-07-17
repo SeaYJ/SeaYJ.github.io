@@ -32,7 +32,9 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <!--自定义添加的 Loading Page CSS 样式-->
-    <link rel="stylesheet" type="text/css" href="/css/new-css/loading.css">
+    
+        <link rel="stylesheet" type="text/css" href="/css/new-css/loading.css">
+    
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
@@ -45,6 +47,7 @@
 <body>
     <!--自定义的 Loading Page-->
     
+        
     <div id="loader-box">
       <div class="loader-wrapper">
         <div class="loader">
@@ -64,18 +67,18 @@
             <div></div>
         </div>
       </div>
-    </div>
 
-  <script>
-    var endLoading = function () {
-      document.body.style.overflow = 'auto';
-      document.getElementById('loader-box').classList.add("loaded");
-    }
-    window.addEventListener('load',endLoading);
-  </script>
+      <script>
+        var endLoading = function () {
+          document.body.style.overflow = 'auto';
+          document.getElementById('loader-box').remove();
+        }
+        window.addEventListener('load',endLoading);
+      </script>
+    </div>
   
   
-  
+    
 
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
@@ -1493,7 +1496,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">16.9k</span>
+                        class="white-color">16.8k</span>
             
             
             

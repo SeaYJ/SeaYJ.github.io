@@ -29,7 +29,9 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <!--自定义添加的 Loading Page CSS 样式-->
-    <link rel="stylesheet" type="text/css" href="/css/new-css/loading.css">
+    
+        <link rel="stylesheet" type="text/css" href="/css/new-css/loading.css">
+    
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
@@ -42,6 +44,7 @@
 <body>
     <!--自定义的 Loading Page-->
     
+        
     <div id="loader-box">
       <div class="loader-wrapper">
         <div class="loader">
@@ -61,18 +64,18 @@
             <div></div>
         </div>
       </div>
-    </div>
 
-  <script>
-    var endLoading = function () {
-      document.body.style.overflow = 'auto';
-      document.getElementById('loader-box').classList.add("loaded");
-    }
-    window.addEventListener('load',endLoading);
-  </script>
+      <script>
+        var endLoading = function () {
+          document.body.style.overflow = 'auto';
+          document.getElementById('loader-box').remove();
+        }
+        window.addEventListener('load',endLoading);
+      </script>
+    </div>
   
   
-  
+    
 
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
@@ -535,15 +538,6 @@
                 </a>
                 
                 
-                <a href="/tags/Win32/" title="Win32: 4">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Win32" style="background-color: #FEF9E7;">Win32
-                        <span class="tag-length">4</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/%E8%AE%BF%E9%97%AE%E5%8A%A0%E9%80%9F/" title="访问加速: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
@@ -562,11 +556,11 @@
                 </a>
                 
                 
-                <a href="/tags/Live2D/" title="Live2D: 1">
+                <a href="/tags/Win32/" title="Win32: 4">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Live2D" style="background-color: #F5EEF8;">Live2D
-                        <span class="tag-length">1</span>
+                            data-tagname="Win32" style="background-color: #FEF9E7;">Win32
+                        <span class="tag-length">4</span>
                     </span>
                 </a>
                 
@@ -575,6 +569,15 @@
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             data-tagname="UAC" style="background-color: #A3E4D7;">UAC
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Live2D/" title="Live2D: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Live2D" style="background-color: #F5EEF8;">Live2D
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -739,7 +742,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">16.9k</span>
+                        class="white-color">16.8k</span>
             
             
             
