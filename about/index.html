@@ -77,6 +77,47 @@
   
     
 
+    <!-- 夜间模式按钮 -->
+    <!-- 白天和黑夜主题 -->
+<div class="sum-moon-box">
+    <a class="btn-floating btn-large waves-effect waves-light" onclick="switchNightMode()" title="切换主题" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="width:48px; height:48px; font-size: 28px;"></i>
+    </a>
+  </div>
+  
+  <script>
+    function switchNightMode() {
+      $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+          $('body').hasClass('DarkMode') 
+          ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+          : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+          setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+              $(this).remove()
+            })
+          }, 2e3)
+        })
+    }
+  </script>
+
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+  </div>
+<script>
+    /* 模式判断 */
+    if (localStorage.getItem('isDark') === '1') {
+        document.body.classList.add('DarkMode');
+        $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
+    } else {
+        document.body.classList.remove('DarkMode');
+        $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
+    }
+</script>
+
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
@@ -645,7 +686,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"C/C++","value":5},{"name":"Blog","value":6},{"name":"其他","value":8},{"name":"成长之路","value":1}],
+                data: [{"name":"Blog","value":6},{"name":"C/C++","value":5},{"name":"其他","value":8},{"name":"成长之路","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -669,7 +710,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Hexo-Matery","Win32","Console Application","VSCode","美化体验","Visual Studio","事件监听","Loading Page","IDEA","Visual C++"]
+                data: ["Hexo-Matery","Win32","Console Application","VSCode","美化体验","Visual Studio","Loading Page","事件监听","Visual C++","资源分享"]
             }
         ],
         yAxis: [
@@ -852,18 +893,6 @@
         <div class="tag-chips center-align">
             
             
-            <a href="/tags/Console-Application/">
-                <span class="chip center-align waves-effect waves-light chip-default">Console Application</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC/">
-                <span class="chip center-align waves-effect waves-light chip-default">事件监听</span>
-            </a>
-            
-            
-            
             <a href="/tags/Hexo-Matery/">
                 <span class="chip center-align waves-effect waves-light chip-default">Hexo-Matery</span>
             </a>
@@ -876,8 +905,14 @@
             
             
             
-            <a href="/tags/IDEA/">
-                <span class="chip center-align waves-effect waves-light chip-default">IDEA</span>
+            <a href="/tags/Console-Application/">
+                <span class="chip center-align waves-effect waves-light chip-default">Console Application</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC/">
+                <span class="chip center-align waves-effect waves-light chip-default">事件监听</span>
             </a>
             
             
@@ -890,6 +925,12 @@
             
             <a href="/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/">
                 <span class="chip center-align waves-effect waves-light chip-default">资源分享</span>
+            </a>
+            
+            
+            
+            <a href="/tags/IDEA/">
+                <span class="chip center-align waves-effect waves-light chip-default">IDEA</span>
             </a>
             
             
