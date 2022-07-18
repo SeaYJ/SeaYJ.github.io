@@ -160,7 +160,7 @@
         
     <summary type="html">&lt;p&gt;最近打算用 VSCode 集成我电脑上的众多编辑器，毕竟谁不想拥有一个万能的 IDE 呢？&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;强调:&lt;/strong&gt; 本篇只注重对 Python 的配置，对于其他不相关内容不做赘述。&lt;/p&gt;
-&lt;h2 id=&quot;一、安装-VSCode&quot;&gt;一、安装</summary>
+&lt;h2</summary>
         
       
     
@@ -455,9 +455,9 @@
     <category term="C/C++" scheme="https://seayj.cn/categories/C-C/"/>
     
     
-    <category term="Win32" scheme="https://seayj.cn/tags/Win32/"/>
-    
     <category term="UAC" scheme="https://seayj.cn/tags/UAC/"/>
+    
+    <category term="Win32" scheme="https://seayj.cn/tags/Win32/"/>
     
   </entry>
   
