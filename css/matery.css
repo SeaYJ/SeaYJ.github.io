@@ -2194,7 +2194,8 @@ body.DarkMode header .side-nav .mobile-head .logo-desc,
 body.DarkMode header .side-nav .menu-list a,
 body.DarkMode .bg-cover .post-title,
 body.DarkMode.read .bg-cover .description,
-body.DarkMode input {
+body.DarkMode input,
+body.DarkMode #contact .form-inline .form-group {
     color: rgba(255, 255, 255, 0.6);
 }
 
@@ -2252,6 +2253,24 @@ body.DarkMode .v[data-class=v] .vcards .vcard .vcontent.expand::before {
 body.DarkMode .v[data-class=v] .vcards .vcard .vcontent.expand::after {
     border-radius: 0 0 5px 5px;
     background: rgba(61, 61, 61, 0.9);
+}
+
+/* 黑夜模式下 placeholder 颜色 */
+body.DarkMode input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color : rgba(223, 223, 223, 0.3);
+}
+body.DarkMode :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color : rgba(223, 223, 223, 0.3);
+}
+body.DarkMode ::-moz-placeholder { /* Mozilla Firefox 19+ */
+
+    color : rgba(223, 223, 223, 0.3);
+}
+body.DarkMode input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color : rgba(223, 223, 223, 0.3);
+}
+body.DarkMode input::-ms-input-placeholder { /* Microsoft Edge */
+    color : rgba(223, 223, 223, 0.3);
 }
 
 /* 黑夜模式动画 */
