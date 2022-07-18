@@ -120,8 +120,8 @@ Win + R 键召唤出运行窗口，然后输入 “CMD” 打开命令提示符�
   setTimeout(function () {
     if (localStorage.getItem('isDark') == null) {
       if ((new Date().getHours() >= 19 || new Date().getHours() < 7) && !$('body').hasClass('DarkMode')) {
-        // let toastHTML = '<span style="color:#97b8b2;border-radius: 10px;>' + '<i class="fa fa-bellaria-hidden="true"></i>晚上使用黑夜模式阅读能够减轻视觉疲劳。</span>'
-        // M.toast({ html: toastHTML })
+        let toastHTML = '<span style="color:#97b8b2;border-radius: 10px;>' + '<i class="fa fa-bellaria-hidden="true"></i>已自动为您开启夜间阅读模式</span>'
+        M.toast({ html: toastHTML })
         $('body').addClass('DarkMode');
         localStorage.setItem('isDark', '1');
         $('#day-btn-icon-sun').css('display', 'inherit');

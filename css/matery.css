@@ -344,7 +344,7 @@ header .side-nav .menu-list li {
 header .side-nav .menu-list a {
     height: 50px;
     line-height: 50px;
-    color: #34495e !important;
+    color: #34495e /* !important; */
 }
 
 .mobile-menu-list a i {
@@ -2219,7 +2219,7 @@ body.DarkMode .aplayer {
     background: #2f3742 !important;
 }
 
-body.DarkMode img,
+body.DarkMode main.content img,
 body.DarkMode strong {
     filter: brightness(0.7);
 }
@@ -2238,7 +2238,7 @@ body.DarkMode .skillbar .skill-bar-percent {
     color: #000;
 }
 
-/* 图片 hover 阴影颜色(.img-card) */
+/* 文章卡片的图片 hover 阴影颜色(.img-card) */
 body.DarkMode article .card-image:hover {
     box-shadow: 3px 3px 5px #1b1b1b;
 }
