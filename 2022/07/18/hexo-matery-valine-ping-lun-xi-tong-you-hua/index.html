@@ -592,7 +592,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    1.4k
                 </div>
                 
 
@@ -645,21 +645,21 @@
 </li>
 </ol>
 <p><img src="https://seayj.cn/medias/lazyload.gif" data-original="./Snipaste_2022-07-19_14-37-59.jpg" alt=""></p>
-<p>那么准备工作基本做完了！</p>
+<p>那么 Valine 的准备工作基本做完了！</p>
 <h2 id="二、注册-Valine-的管理员邮箱">二、注册 Valine 的管理员邮箱</h2>
 <p>是的，你没有听错。这里确实<strong>需要重新注册一个邮箱，专门用于管理 Valine 评论</strong>。</p>
 <p>如果不注册的话，后面会有个很难受的BUG（后面会细说）。</p>
 <p>所以，专门注册一个邮箱用于管理 Valine 评论的发件很有必要。而且<strong>建议这个邮箱的密码不要有任何规则</strong>（你一般用不到，他就是默认的发件邮箱，相当于别人评论后会通过这个邮箱发送过来），直接键盘乱敲，然后记录下来来提高安全性（这非常重要）。</p>
 <p>至于为什么 Outlook 会这么复杂，后面再说。</p>
 <p><strong>-&gt;</strong> <a target="_blank" rel="noopener" href="https://signup.live.com/">注册 Outlook 邮箱</a> <strong>&lt;-</strong></p>
-<p>记录下<strong>邮箱地址</strong>和<strong>登陆密码</strong>，后面会用到。</p>
+<p>记录下 <strong>邮箱地址(后面用</strong> <code>xxx@outlook.com</code> <strong>指代)</strong> 和 <strong>登陆密码</strong>，后面会用到。</p>
 <h2 id="三、部署-Valine-Admin">三、部署 Valine-Admin</h2>
 <ol>
 <li>
 <p>进入 <a target="_blank" rel="noopener" href="https://console.leancloud.cn/">LeanCloud 官网</a>，然后登录，打开之前配置 Valine 创建的应用。</p>
 </li>
 <li>
-<p>依次点击<code>云引擎</code>-&gt;<code>部署</code>-&gt;<code>项目部署</code>-&gt;<code>Git部署</code>-&gt;<code>配置Git</code>, 然后 Git 的地址填写： <a target="_blank" rel="noopener" href="https://github.com/DesertsP/Valine-Admin.git/">https://github.com/DesertsP/Valine-Admin.git/</a> ，接着再次点击<code>Git部署</code>-&gt;<code>部署即可</code>。</p>
+<p>依次点击<code>云引擎</code>-&gt;<code>部署</code>-&gt;<code>项目部署</code>-&gt;<code>Git部署</code>-&gt;<code>配置Git</code>, 然后 Git 的地址填写： <a target="_blank" rel="noopener" href="https://github.com/DesertsP/Valine-Admin.git/">https://github.com/DesertsP/Valine-Admin.git/</a> ，接着再次点击<code>Git部署</code>-&gt;<code>部署即可</code>（<strong>部署分支为 master</strong>）。</p>
 </li>
 <li>
 <p>设置环境变量，具体可参考下面的表格(表格只列出了部分，因为我是使用 Outlook 邮箱配置的，所以列出的内容针对 Outlook 邮箱的配置。具体可参考<a target="_blank" rel="noopener" href="https://deserts.io/valine-admin-document/">官网手册</a>)：</p>
@@ -696,7 +696,7 @@
 </tr>
 <tr>
 <td style="text-align:left"><strong>SMTP_SERVICE</strong></td>
-<td style="text-align:left"><strong>[新版支持]</strong> 邮件服务提供商,<a target="_blank" rel="noopener" href="https://nodemailer.com/smtp/well-known/#supported-services">查看所以支持</a></td>
+<td style="text-align:left"><strong>[新版支持]</strong> 邮件服务提供商,<a target="_blank" rel="noopener" href="https://nodemailer.com/smtp/well-known/#supported-services">查看所有支持</a></td>
 <td style="text-align:left">Outlook365</td>
 </tr>
 <tr>
@@ -746,7 +746,44 @@
 </tr>
 </tbody>
 </table>
+<p>大家可以参考我的配置（如下图）和上面的表格，然后要填写具体信息。</p>
 <p><img src="https://seayj.cn/medias/lazyload.gif" data-original="./Snipaste_2022-07-19_15-40-13.jpg" alt=""></p>
+<p><strong>补充：</strong><br>
+1&gt; 这里要解释一下, <code>yyy@outlook.com</code> 邮箱就是你要用来接收评论的邮箱;<br>
+2&gt; 微软的 SMTP 设置可以参考<a target="_blank" rel="noopener" href="https://support.microsoft.com/zh-cn/office/outlook-com-%E7%9A%84-pop-imap-%E5%92%8C-smtp-%E8%AE%BE%E7%BD%AE-d088b986-291d-42b8-9564-9c414e2aa040">官方的说明</a>;<br>
+3&gt; Akismet Key 可以在 <strong>Akismet 官网</strong><a target="_blank" rel="noopener" href="https://akismet.com/development/">免费申请一个</a>。</p>
+<p>最好图片列举的都要填写。</p>
+<ol start="4">
+<li>设置完环境变量再次部署即可让其生效。</li>
+</ol>
+<p>到此为止， Valine-Admin 已经部署完毕，目前体验还不错。</p>
+<h2 id="四、设置定时任务">四、设置定时任务</h2>
+<p>在 <code>云引擎</code>&gt;<code>定时任务</code> 里添加如下两个定时任务即可：</p>
+<p><img src="https://seayj.cn/medias/lazyload.gif" data-original="./Snipaste_2022-07-19_23-22-49.jpg" alt=""><br>
+<img src="https://seayj.cn/medias/lazyload.gif" data-original="./Snipaste_2022-07-19_23-24-32.jpg" alt=""></p>
+<p><strong>至此，你的  Valine-Admin 评论系统基本可以正常运作了。</strong></p>
+<h2 id="五、一些问题补充">五、一些问题补充</h2>
+<h4 id="-3"></h4>
+<h4 id="1-同时收到两份邮件">1. 同时收到两份邮件</h4>
+<h5 id="原因-1：">原因 1：</h5>
+<p>Leancloud 的密码重置邮件提醒，如果你曾经配置过 valine 自带的邮件提醒（1.4.0+ 不会出现该问题，因为该功能已被官方废弃），会出现两个邮件提醒。<br>
+将 Valine 自带的邮件回复提醒关掉即可 <code>notify: false</code> :</p>
+<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml"><span class="token key atrule">valine</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">appId</span><span class="token punctuation">:</span> leancloud application app id
+  <span class="token key atrule">appKey</span><span class="token punctuation">:</span> leancloud application app key
+  <span class="token key atrule">notify</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># valine mail notify (true/false) </span>
+  <span class="token key atrule">verify</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># valine verify code (true/false)</span>
+  <span class="token key atrule">pageSize</span><span class="token punctuation">:</span> <span class="token number">10</span> <span class="token comment"># comment list page size</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h5 id="原因-2：">原因 2：</h5>
+<p>博主回复收到两条邮件提醒，因为你为设置 <code>BLOGGER_EMAIL</code> 或设置为了自己的发件邮箱。<br>
+环境变量中配置 <code>BLOGGER_EMAIL</code> 为其他邮箱即可</p>
+<pre class="line-numbers language-none"><code class="language-none">BLOGGER_EMAIL  yyy@outlook.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://xiabor.com/valine-admin.html">Valine Admin 邮件回复提醒</a>;</li>
+<li><a target="_blank" rel="noopener" href="https://deserts.io/valine-admin-document/">Valine Admin 配置手册 - Deserts</a>。</li>
+</ol>
 
                 
             </div>
@@ -1617,7 +1654,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">17.8k</span>
+                        class="white-color">18.2k</span>
             
             
             
@@ -1763,7 +1800,7 @@
             
                 <span id="micp"><img src="/medias/micp.png"
                                     style="vertical-align: text-bottom;"/>
-                    <a href="https://icp.gov.moe/?keyword=20225920" target="_blank">萌ICP备20225920号</a>
+                    <a href="https://icp.gov.moe/?keyword=20225920" target="_blank">萌ICP备 20225920 号</a>
                 </span>
             
         </div>
