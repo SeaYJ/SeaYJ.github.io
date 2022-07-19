@@ -2255,6 +2255,10 @@ body.DarkMode .v[data-class=v] .vcards .vcard .vcontent.expand::after {
     border-radius: 0 0 5px 5px;
     background: rgba(40, 44, 52, 0.9);
 }
+/* Valine 评论区评论个数统计 */
+body.DarkMode .v[data-class=v] .vcount {
+    border-radius: 5px;
+}
 
 /* 黑夜模式下 placeholder 颜色 */
 body.DarkMode ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
