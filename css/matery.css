@@ -2248,12 +2248,12 @@ body.DarkMode article .card-image:hover {
 /* Valine 评论区的评论 - 加载更多蒙版样式 */
 body.DarkMode .v[data-class=v] .vcards .vcard .vcontent.expand::before {
     border-radius: 5px 5px 0 0;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(61, 61, 61, 0)), to(rgba(61, 61, 61, 0.9)));
-    background: linear-gradient(180deg, rgba(61, 61, 61, 0), rgba(61, 61, 61, 0.9));
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(40, 44, 52, 0)), to(rgba(40, 44, 52, 0.9)));
+    background: linear-gradient(180deg, rgba(40, 44, 52, 0), rgba(40, 44, 52, 0.9));
 }
 body.DarkMode .v[data-class=v] .vcards .vcard .vcontent.expand::after {
     border-radius: 0 0 5px 5px;
-    background: rgba(61, 61, 61, 0.9);
+    background: rgba(40, 44, 52, 0.9);
 }
 
 /* 黑夜模式下 placeholder 颜色 */
