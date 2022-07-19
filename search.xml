@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>hexo[Matery] 添加黑夜模式</title>
+      <link href="/2022/07/19/hexo-matery-tian-jia-hei-ye-mo-shi/"/>
+      <url>/2022/07/19/hexo-matery-tian-jia-hei-ye-mo-shi/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Blog </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo-Matery </tag>
+            
+            <tag> 黑夜模式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo[Matery] Valine评论系统优化</title>
       <link href="/2022/07/18/hexo-matery-valine-ping-lun-xi-tong-you-hua/"/>
       <url>/2022/07/18/hexo-matery-valine-ping-lun-xi-tong-you-hua/</url>
@@ -11,6 +38,24 @@
         <content type="html"><![CDATA[]]></content>
       
       
+      <categories>
+          
+          <category> Blog </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo-Matery </tag>
+            
+            <tag> Valine </tag>
+            
+            <tag> Valine-Admin </tag>
+            
+            <tag> LeanCloud </tag>
+            
+        </tags>
       
     </entry>
     
@@ -409,9 +454,9 @@
       
         <tags>
             
-            <tag> UAC </tag>
-            
             <tag> Win32 </tag>
+            
+            <tag> UAC </tag>
             
         </tags>
       
