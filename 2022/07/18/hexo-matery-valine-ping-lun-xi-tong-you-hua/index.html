@@ -5,7 +5,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="hexo[Matery] Valine评论系统优化, SeaYJ&#39;s Blog">
-    <meta name="description" content="">
+    <meta name="description" content="
+本篇文章内容主要依据DesertP的 Valine-Admin 项目和微软的 Outlook 邮箱展开。
+
+众所周知，Matery 主题自带的 Valine 评论系统是非常好用的，但是因为 Valine 的轻量特点，导致 Valine 的">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -589,7 +592,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    1k
                 </div>
                 
 
@@ -615,7 +618,136 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <blockquote>
+<p>本篇文章内容主要依据<a target="_blank" rel="noopener" href="https://github.com/DesertsP/">DesertP</a>的 <strong>Valine-Admin</strong> 项目和微软的 <a target="_blank" rel="noopener" href="https://outlook.live.com/">Outlook 邮箱</a>展开。</p>
+</blockquote>
+<p>众所周知，Matery 主题自带的 Valine 评论系统是非常好用的，但是因为 Valine 的轻量特点，导致 Valine 的邮箱提醒功能显得很鸡肋。<br>
+甚至到 Valine 1.4.0+ 版本后，直接放弃了这一功能，详情可在<a target="_blank" rel="noopener" href="https://valine.js.org/notify.html">官方文档</a>里看到说明。</p>
+<blockquote>
+<p>个人觉得，waline 虽然很优秀，但是对一般人来说很不友好。谁会为了给你个评论专门去注册一个自己不用的账户？</p>
+</blockquote>
+<p>但是， DesertP 大佬开发的 Valine-Admin 及时的弥补了这一缺点。下面来介绍 Valine-Admin 的部署。</p>
+<h2 id="一、部署-Valine">一、部署 Valine</h2>
+<p>要想使用 Valine-Admin，当然得确保 Valine 的部署是可用的啊！这一点本篇文章不做过多的介绍！大家可以去网上找教程部署 Valine。</p>
+<p>但是这里还是要说一下，推荐你使用较新版（<strong>版本为 1.4.0+ 的</strong>）的 <code>Valine.min.js</code>。</p>
+<ol>
+<li>在 Matery 主题的 <code>_config.yml</code> 文件中，找到如下代码并像我一样配置（大概在 500 多行位置）：</li>
+</ol>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">libs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">js</span><span class="token punctuation">:</span>
+    <span class="token key atrule">valine</span><span class="token punctuation">:</span> /libs/valine/Valine.min.js <span class="token comment"># 若想保持最新版，请替换为 https://unpkg.com/valine/dist/Valine.min.js  默认为 /libs/valine/Valine.min.js</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<ol start="2">
+<li>
+<p>然后来到 <code>.\themes\hexo-theme-matery\source\libs\valine\</code> 文件夹，把 <code>Valine.min.js</code> 手动替换成 <a target="_blank" rel="noopener" href="https://unpkg.com/valine@1.5.0/dist/Valine.min.js">1.5.0 版本</a>。</p>
+</li>
+<li>
+<p>最后把主题目录下的 <code>_config.yml</code> 文件里的 Valine 配置信息中的 <strong>notify</strong> 和 <strong>verify</strong> 设置成 <code>false</code>。</p>
+</li>
+</ol>
+<p><img src="https://seayj.cn/medias/lazyload.gif" data-original="./Snipaste_2022-07-19_14-37-59.jpg" alt=""></p>
+<p>那么准备工作基本做完了！</p>
+<h2 id="二、注册-Valine-的管理员邮箱">二、注册 Valine 的管理员邮箱</h2>
+<p>是的，你没有听错。这里确实<strong>需要重新注册一个邮箱，专门用于管理 Valine 评论</strong>。</p>
+<p>如果不注册的话，后面会有个很难受的BUG（后面会细说）。</p>
+<p>所以，专门注册一个邮箱用于管理 Valine 评论的发件很有必要。而且<strong>建议这个邮箱的密码不要有任何规则</strong>（你一般用不到，他就是默认的发件邮箱，相当于别人评论后会通过这个邮箱发送过来），直接键盘乱敲，然后记录下来来提高安全性（这非常重要）。</p>
+<p>至于为什么 Outlook 会这么复杂，后面再说。</p>
+<p><strong>-&gt;</strong> <a target="_blank" rel="noopener" href="https://signup.live.com/">注册 Outlook 邮箱</a> <strong>&lt;-</strong></p>
+<p>记录下<strong>邮箱地址</strong>和<strong>登陆密码</strong>，后面会用到。</p>
+<h2 id="三、部署-Valine-Admin">三、部署 Valine-Admin</h2>
+<ol>
+<li>
+<p>进入 <a target="_blank" rel="noopener" href="https://console.leancloud.cn/">LeanCloud 官网</a>，然后登录，打开之前配置 Valine 创建的应用。</p>
+</li>
+<li>
+<p>依次点击<code>云引擎</code>-&gt;<code>部署</code>-&gt;<code>项目部署</code>-&gt;<code>Git部署</code>-&gt;<code>配置Git</code>, 然后 Git 的地址填写： <a target="_blank" rel="noopener" href="https://github.com/DesertsP/Valine-Admin.git/">https://github.com/DesertsP/Valine-Admin.git/</a> ，接着再次点击<code>Git部署</code>-&gt;<code>部署即可</code>。</p>
+</li>
+<li>
+<p>设置环境变量，具体可参考下面的表格(表格只列出了部分，因为我是使用 Outlook 邮箱配置的，所以列出的内容针对 Outlook 邮箱的配置。具体可参考<a target="_blank" rel="noopener" href="https://deserts.io/valine-admin-document/">官网手册</a>)：</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">变量名</th>
+<th style="text-align:left">说明</th>
+<th style="text-align:left">示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>SITE_NAME</strong></td>
+<td style="text-align:left"><strong>[必填]</strong> 网站名称</td>
+<td style="text-align:left">SeaYJ’s Blog</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>SITE_URL</strong></td>
+<td style="text-align:left"><strong>[必填]</strong> 网站地址，最后不要加<code>/</code></td>
+<td style="text-align:left"><a href="https://seayj.cn">https://seayj.cn</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>SMTP_USER</strong></td>
+<td style="text-align:left"><strong>[必填]</strong> SMTP 服务用户名，一般为邮箱地址</td>
+<td style="text-align:left"><a href="mailto:xxx@outlook.com">xxx@outlook.com</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>SMTP_PASS</strong></td>
+<td style="text-align:left"><strong>[必填]</strong> SMTP 密码，一般为授权码，而不是邮箱的登陆密码，请自行查询对应邮件服务商的获取方式</td>
+<td style="text-align:left"><a href="mailto:xxx@outlook.com">xxx@outlook.com</a> 的登陆密码</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>SMTP_SERVICE</strong></td>
+<td style="text-align:left"><strong>[新版支持]</strong> 邮件服务提供商,<a target="_blank" rel="noopener" href="https://nodemailer.com/smtp/well-known/#supported-services">查看所以支持</a></td>
+<td style="text-align:left">Outlook365</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>SMTP_HOST</strong></td>
+<td style="text-align:left"><strong>[选填]</strong> <code>SMTP_SERVICE</code> 留空时，自定义 SMTP 服务器地址</td>
+<td style="text-align:left"><a target="_blank" rel="noopener" href="http://smtp-mail.outlook.com">smtp-mail.outlook.com</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>SMTP_PORT</strong></td>
+<td style="text-align:left"><strong>[选填]</strong> <code>SMTP_SERVICE</code> 留空时，自定义 SMTP 端口</td>
+<td style="text-align:left">587</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>SMTP_SECURE</strong></td>
+<td style="text-align:left"><strong>[选填]</strong> 使用 TLS</td>
+<td style="text-align:left">true</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>SENDER_NAME</strong></td>
+<td style="text-align:left"><strong>[必填]</strong> 发件人名称</td>
+<td style="text-align:left">Valine评论管理系统</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>SENDER_EMAIL</strong></td>
+<td style="text-align:left"><strong>[必填]</strong> 发件人邮箱</td>
+<td style="text-align:left"><a href="mailto:xxx@outlook.com">xxx@outlook.com</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>BLOGGER_EMAIL</strong></td>
+<td style="text-align:left"><strong>[建议]</strong> 博主通知收件邮箱，默认使用 <code>SENDER_EMAIL</code></td>
+<td style="text-align:left"><a href="mailto:yyy@outlook.com">yyy@outlook.com</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>TEMPLATE_NAME</strong></td>
+<td style="text-align:left"><strong>[选填]</strong> 设置提醒邮件的主题</td>
+<td style="text-align:left">custom2</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>AKISMET_KEY</strong></td>
+<td style="text-align:left"><strong>[选填]</strong> Akismet Key 用于垃圾评论检测，设为 <code>MANUAL_REVIEW</code> 开启人工审核，留空不使用反垃圾</td>
+<td style="text-align:left">xxxxxx</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>ADMIN_URL</strong></td>
+<td style="text-align:left"><strong>[建议]</strong> Web 主机二级域名（云引擎域名），用于自动唤醒</td>
+<td style="text-align:left"><a target="_blank" rel="noopener" href="https://xxx.leanapp.cn/">https://xxx.leanapp.cn/</a></td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://seayj.cn/medias/lazyload.gif" data-original="./Snipaste_2022-07-19_15-40-13.jpg" alt=""></p>
+
                 
             </div>
             <hr/>
@@ -1105,7 +1237,7 @@
         el: '#vcomments',
         appId: 'JGk53K1TteQB5JxzOeWlAHuG-gzGzoHsz',
         appKey: 'aO43npXKcTL3bxzdOUdWm1H0',
-        notify: 'true' === 'true',
+        notify: 'false' === 'true',
         verify: 'false' === 'true',
         visitor: 'false' === 'true',
         avatar: 'mp',
@@ -1118,7 +1250,7 @@
         el: '#vcomments',
         appId: 'JGk53K1TteQB5JxzOeWlAHuG-gzGzoHsz',
         appKey: 'aO43npXKcTL3bxzdOUdWm1H0',
-        notify: 'true' === 'true',
+        notify: 'false' === 'true',
         verify: 'false' === 'true',
         visitor: 'false' === 'true',
         avatar: 'mp',
@@ -1485,7 +1617,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">16.8k</span>
+                        class="white-color">17.8k</span>
             
             
             
@@ -1624,8 +1756,15 @@
             
                 <span id="icp"><img src="/medias/icp.png"
                                     style="vertical-align: text-bottom;"/>
-                <a href="/404" target="_blank">正在办理中...</a>
-            </span>
+                    <a href="/404" target="_blank">正在办理中...</a>
+                </span>
+            
+             &nbsp;|&nbsp; 
+            
+                <span id="micp"><img src="/medias/micp.png"
+                                    style="vertical-align: text-bottom;"/>
+                    <a href="https://icp.gov.moe/?keyword=20225920" target="_blank">萌ICP备20225920号</a>
+                </span>
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
