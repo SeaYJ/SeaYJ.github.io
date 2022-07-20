@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="/css/day-night.css">
     
 
-    <script src="https://seayj.gitee.io/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="SeaYJ's Blog" type="application/atom+xml">
 </head>
@@ -583,7 +583,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    739
+                    742
                 </div>
                 
 
@@ -624,7 +624,7 @@
 <strong>详情请见补充！</strong></p>
 <h2 id="二、排除-404-页面的渲染">二、排除 404 页面的渲染</h2>
 <p>排除 404 页面的渲染有两种方法：</p>
-<h4 id="-4"></h4>
+<h4 id="-3"></h4>
 <h4 id="1）全局配置">1）全局配置</h4>
 <p>这个比较适合排除大量文件的渲染，一般用于文件较多的时候。但是啊，我是一个有一丢丢强迫症的孩子啊，所我果断选择把所有的需要排除渲染的文件都在全局配置里声明，哪怕目前只有一个这样的文件。</p>
 <ol>
@@ -637,11 +637,11 @@
 </ol>
 <h5 id="注意">注意</h5>
 <p>Hexo 会渲染所有在 <code>source</code> 文件夹里的文件，在<strong>根目录</strong>下的 <code>_config.yml</code> 文件里的 <code>skip_render</code> 配置项可指定跳过渲染的文件。并且，该配置项支持正则表达式。详情见以下代码。</p>
-<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml"><span class="token key atrule">skip_render</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
-  demo/*<span class="token punctuation">,</span>     <span class="token comment"># 不渲染 demo 文件夹下所有文件（不包括子文件夹中的文件）</span>
-  demo/<span class="token important">**</span><span class="token punctuation">,</span>    <span class="token comment"># 不渲染 demo 文件夹下所有文件及子文件夹中文件</span>
-  demo/<span class="token important">*.html</span> <span class="token comment"># 不渲染 demo 文件夹下所有 html 文件</span>
-<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">skip_render: [
+  demo&#x2F;*,     # 不渲染 demo 文件夹下所有文件（不包括子文件夹中的文件）
+  demo&#x2F;**,    # 不渲染 demo 文件夹下所有文件及子文件夹中文件
+  demo&#x2F;*.html # 不渲染 demo 文件夹下所有 html 文件
+]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>还有一点也非常重要</strong>：如果你选择用全局配置来忽略某些文件的渲染的话，请务必在本地预览前执行 <code>hexo cl &amp;&amp; hexo g</code> 重新生成静态文件，以保证你的修改生效。</p>
 <h4 id="2）单页面配置">2）单页面配置</h4>
 <ol>
