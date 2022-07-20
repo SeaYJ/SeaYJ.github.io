@@ -454,9 +454,9 @@
       
         <tags>
             
-            <tag> UAC </tag>
-            
             <tag> Win32 </tag>
+            
+            <tag> UAC </tag>
             
         </tags>
       
