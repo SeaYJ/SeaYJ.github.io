@@ -34,7 +34,7 @@
     
 
     <!-- 黑夜模式样式 css -->
-    <link rel="stylesheet" type="text/css" href="/css/day-night.css">
+    <link rel="stylesheet" type="text/css" href="/css/new-css/day-night.css">
     
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
@@ -197,11 +197,52 @@
   <li class="hide-on-med-and-down nav-item">
     
     <a href="/download" class="waves-effect waves-light">
+
       
       <i class="fas fa-cloud-download" style="zoom: 0.6;"></i>
       
       <span>下载</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
     </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>a</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Movies</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Books</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/galleries">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Galleries</span>
+        </a>
+      </li>
+      
+    </ul>
     
   </li>
   
@@ -297,12 +338,56 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/download" class="waves-effect waves-light">
+		<a href="javascript:;">
 			
-			    <i class="fa-fw fas fa-cloud-download"></i>
+				<i class="fa-fw fas fa-cloud-download"></i>
 			
 			下载
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>a</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/movies " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Movies</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/books " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Books</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/galleries " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Galleries</span>
+                  </a>
+                </li>
+              
+            </ul>
           
         </li>
         
@@ -664,16 +749,21 @@
                     <div class="row tags-posts friend-all">
                         
                         
-                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-                            <div class="card frind-card1">
-                                <div class="frind-ship">
-                                    <div class="title">
+
+                        <div class="col s12 m6 l4 friend-div">
+                            <div class="frind-card1 fcard-front">
+                                <div class="contents frind-ship">
+                                    <div class="title" style="margin: 10%;">
                                         <img src="http://image.luokangyuan.com/1_qq_27922023.jpg" alt="img">
                                         <div>
                                             <h1 class="friend-name">码酱</h1>
                                             <p style="position: relative;top: -35px;">我不是大佬，只是在追寻大佬的脚步</p>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="frind-card1 fcard-back">
+                                <div class="contents frind-ship">
                                     <div class="friend-button">
                                         <a href="http://luokangyuan.com/" target="_blank"
                                             class="button button-glow button-rounded button-caution">
@@ -683,18 +773,25 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!--  -->
                         
                         
-                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-                            <div class="card frind-card2">
-                                <div class="frind-ship">
-                                    <div class="title">
+
+                        <div class="col s12 m6 l4 friend-div">
+                            <div class="frind-card2 fcard-front">
+                                <div class="contents frind-ship">
+                                    <div class="title" style="margin: 10%;">
                                         <img src="http://image.luokangyuan.com/4027734.jpeg" alt="img">
                                         <div>
                                             <h1 class="friend-name">闪烁之狐</h1>
                                             <p style="position: relative;top: -35px;">编程界大佬，技术牛，人还特别好，不懂的都可以请教大佬</p>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="frind-card2 fcard-back">
+                                <div class="contents frind-ship">
                                     <div class="friend-button">
                                         <a href="https://blinkfox.github.io/" target="_blank"
                                             class="button button-glow button-rounded button-caution">
@@ -704,18 +801,25 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!--  -->
                         
                         
-                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-                            <div class="card frind-card3">
-                                <div class="frind-ship">
-                                    <div class="title">
+
+                        <div class="col s12 m6 l4 friend-div">
+                            <div class="frind-card3 fcard-front">
+                                <div class="contents frind-ship">
+                                    <div class="title" style="margin: 10%;">
                                         <img src="http://image.luokangyuan.com/avatar.jpg" alt="img">
                                         <div>
                                             <h1 class="friend-name">ja_rome</h1>
                                             <p style="position: relative;top: -35px;">平凡的脚步也可以走出伟大的行程</p>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="frind-card3 fcard-back">
+                                <div class="contents frind-ship">
                                     <div class="friend-button">
                                         <a href="https://me.csdn.net/jlh912008548" target="_blank"
                                             class="button button-glow button-rounded button-caution">
@@ -725,18 +829,25 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!--  -->
                         
                         
-                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-                            <div class="card frind-card4">
-                                <div class="frind-ship">
-                                    <div class="title">
+
+                        <div class="col s12 m6 l4 friend-div">
+                            <div class="frind-card4 fcard-front">
+                                <div class="contents frind-ship">
+                                    <div class="title" style="margin: 10%;">
                                         <img src="https://cdn.vino.run/V_5zvf0qpw.png" alt="img">
                                         <div>
                                             <h1 class="friend-name">Vino</h1>
                                             <p style="position: relative;top: -35px;">问渠那得清如许，为有源头活水来</p>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="frind-card4 fcard-back">
+                                <div class="contents frind-ship">
                                     <div class="friend-button">
                                         <a href="https://vino.run" target="_blank"
                                             class="button button-glow button-rounded button-caution">
@@ -746,18 +857,25 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!--  -->
                         
                         
-                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-                            <div class="card frind-card5">
-                                <div class="frind-ship">
-                                    <div class="title">
+
+                        <div class="col s12 m6 l4 friend-div">
+                            <div class="frind-card5 fcard-front">
+                                <div class="contents frind-ship">
+                                    <div class="title" style="margin: 10%;">
                                         <img src="https://www.imlete.cn/img/avatar.png" alt="img">
                                         <div>
                                             <h1 class="friend-name">Lete乐特</h1>
                                             <p style="position: relative;top: -35px;">人生只有一次，大胆的生活！</p>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="frind-card5 fcard-back">
+                                <div class="contents frind-ship">
                                     <div class="friend-button">
                                         <a href="https://butterfly.lete114.top" target="_blank"
                                             class="button button-glow button-rounded button-caution">
@@ -767,18 +885,25 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!--  -->
                         
                         
-                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-                            <div class="card frind-card6">
-                                <div class="frind-ship">
-                                    <div class="title">
+
+                        <div class="col s12 m6 l4 friend-div">
+                            <div class="frind-card6 fcard-front">
+                                <div class="contents frind-ship">
+                                    <div class="title" style="margin: 10%;">
                                         <img src="https://hzy2003628.top/images/avatar.png" alt="img">
                                         <div>
                                             <h1 class="friend-name">风尘孤狼</h1>
                                             <p style="position: relative;top: -35px;">没有所谓失败，除非你不再尝试!</p>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="frind-card6 fcard-back">
+                                <div class="contents frind-ship">
                                     <div class="friend-button">
                                         <a href="https://hzy2003628.top" target="_blank"
                                             class="button button-glow button-rounded button-caution">
@@ -788,18 +913,25 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!--  -->
                         
                         
-                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-                            <div class="card frind-card7">
-                                <div class="frind-ship">
-                                    <div class="title">
+
+                        <div class="col s12 m6 l4 friend-div">
+                            <div class="frind-card7 fcard-front">
+                                <div class="contents frind-ship">
+                                    <div class="title" style="margin: 10%;">
                                         <img src="https://s2.loli.net/2022/06/12/RpGChkMjcwIOAaJ.jpg" alt="img">
                                         <div>
                                             <h1 class="friend-name">Big_Cake</h1>
                                             <p style="position: relative;top: -35px;">一个屑初二学生的小窝</p>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="frind-card7 fcard-back">
+                                <div class="contents frind-ship">
                                     <div class="friend-button">
                                         <a href="https://bigcake.cakemc.top" target="_blank"
                                             class="button button-glow button-rounded button-caution">
@@ -809,6 +941,8 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!--  -->
                         
                     </div>
                     
@@ -1181,7 +1315,25 @@
         });
     });
 </script>
-
+<!-- <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card8">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://s2.loli.net/2022/06/12/RpGChkMjcwIOAaJ.jpg" alt="img">
+                                        <div>
+                                            <h1 class="friend-name">Big_Cake</h1>
+                                            <p style="position: relative;top: -35px;">一个屑初二学生的小窝</p>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://bigcake.cakemc.top" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去学习
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
 
     <footer class="page-footer bg-color">
     
@@ -1199,7 +1351,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">19.7k</span>
+                        class="white-color">20k</span>
             
             
             

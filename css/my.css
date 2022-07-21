@@ -350,3 +350,78 @@ article .card .card-content {
     background: linear-gradient(to bottom right, #00b4db 0%, #0083b0 100%);
     box-shadow: 2px 5px 10px #0083b0 !important;
 }
+
+/* 关于页面头像 avatar */
+.profile .avatar-img {
+    border-radius: 30%;
+}
+
+/* 下载页面 */
+.card-content .card-list-download {
+    border: 2px dashed #d1d1d1;
+    width: 100%;
+    height: 90px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+/* 友链卡片3D旋转特效 */
+.friend-div {
+    position: relative;
+    height: 400px;
+    width: 290px;
+    /* 开启3d */
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.fcard-front, .fcard-back {
+    position: absolute;
+    /* 设置大小并居中显示 */
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+    border-radius: 20px;
+    /* background-color: #0984e3; */
+    /* 背景居中 */
+    background-size: cover;
+    background-position: center;
+    /* 内容居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 开启3d */
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    /* 3D模式下隐藏所有翻转的信息 */
+    backface-visibility: hidden;
+    /* 临时 */
+    /* transform: rotateY(60deg); */
+    transition: transform .7s ease-in-out;
+}
+
+.fcard-front {
+    /* 增加一个渐变背景，暗化背景图，让文字更加清晰 */
+    background-image: linear-gradient(to right, #00000070,#00000070), url(../medias/avatar.png);
+}
+
+.fcard-back {
+    background-image: linear-gradient(to right, #00000070,#00000070), url(bg2.jpg);
+    /* 翻转 翻转后，默认隐藏 */
+    transform: rotateY(180deg);
+}
+
+.contents{
+    /* 形成文字与背景分离 */
+    transform: translateZ(60px);
+}
+
+.friend-div:hover .fcard-front{
+    /* 前面的翻转到后面，并且隐藏掉 */
+    transform: rotateY(-180deg);
+}
+.friend-div:hover .fcard-back{
+    /* 后面的图层翻转到前端 */
+    transform: rotateY(0deg);
+}
