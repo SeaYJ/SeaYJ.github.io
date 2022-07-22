@@ -224,7 +224,7 @@ body{
     }
 }
 
-/* 防止选取 */
+/* 防止选中 */
 #loader-box {
     -moz-user-select: none;
     -o-user-select: none;
