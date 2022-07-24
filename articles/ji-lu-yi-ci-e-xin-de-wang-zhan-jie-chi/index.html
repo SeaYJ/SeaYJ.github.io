@@ -4,15 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="【VS】如何获取应用程序所在路径？, SeaYJ&#39;s Blog">
-    <meta name="description" content="众所周知程序当前所在目录在我们的编程中有着重要的作用，所以如何获取该变量显得很重要！
-下面我说说我的思路，并保持更新！以便使用更优质的办法！
-实现思路
-
-GetModuleFileName + _splitpath + sprintf
-
-
-">
+    <meta name="keywords" content="记录一次恶心的网站劫持, SeaYJ&#39;s Blog">
+    <meta name="description" content="【2022.07.24】
+额，是的，不知道什么原因，我的博客被劫持了。
+黑夜到来
+事情发生在今晚 23:00 左右，我和往常一样准备开始完善自己的博客。但是，当我开始 hexo s 进行本地调试时，网站自动被转到了一个奇怪的网站 开地网诗词">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -24,7 +20,7 @@ GetModuleFileName + _splitpath + sprintf
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>【VS】如何获取应用程序所在路径？ | SeaYJ&#39;s Blog</title>
+    <title>记录一次恶心的网站劫持 | SeaYJ&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -509,12 +505,12 @@ GetModuleFileName + _splitpath + sprintf
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">【VS】如何获取应用程序所在路径？</h1>
+                    <h1 class="description center-align post-title">记录一次恶心的网站劫持</h1>
                 </div>
             </div>
         </div>
@@ -630,12 +626,12 @@ GetModuleFileName + _splitpath + sprintf
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Visual-Studio/">
-                                <span class="chip bg-color">Visual Studio</span>
+                            <a href="/tags/%E7%BD%91%E7%AB%99%E5%8A%AB%E6%8C%81/">
+                                <span class="chip bg-color">网站劫持</span>
                             </a>
                         
-                            <a href="/tags/Win32/">
-                                <span class="chip bg-color">Win32</span>
+                            <a href="/tags/Hexo-%E6%8F%92%E4%BB%B6/">
+                                <span class="chip bg-color">Hexo 插件</span>
                             </a>
                         
                     </div>
@@ -646,8 +642,8 @@ GetModuleFileName + _splitpath + sprintf
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/C-C/" class="post-category">
-                                C/C++
+                            <a href="/categories/%E6%88%90%E9%95%BF%E4%B9%8B%E8%B7%AF/" class="post-category">
+                                成长之路
                             </a>
                         
                     </div>
@@ -659,21 +655,21 @@ GetModuleFileName + _splitpath + sprintf
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-04
+                    2022-07-24
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-06-28
+                    2022-07-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    761
                 </div>
                 
 
@@ -699,317 +695,130 @@ GetModuleFileName + _splitpath + sprintf
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>众所周知程序当前所在目录在我们的编程中有着重要的作用，所以如何获取该变量显得很重要！</p>
-<p>下面我说说我的思路，并保持更新！以便使用更优质的办法！</p>
-<h2 id="实现思路">实现思路</h2>
-<hr>
-<h3 id="GetModuleFileName-splitpath-sprintf">GetModuleFileName + _splitpath + sprintf</h3>
-<hr>
-<blockquote>
-<p>假设我的 Demo.exe 现在的路径信息是： C:\Test\Room\Demo.exe</p>
-</blockquote>
+                <h2 id="【2022-07-24】">【2022.07.24】</h2>
+<p>额，是的，不知道什么原因，我的博客被劫持了。</p>
+<h3 id="黑夜到来">黑夜到来</h3>
+<p>事情发生在今晚 23:00 左右，我和往常一样准备开始完善自己的博客。但是，当我开始 <code>hexo s</code> 进行本地调试时，网站自动被转到了一个奇怪的网站 <strong><a target="_blank" rel="noopener" href="http://xfbbs.com/">开地网诗词</a></strong>。(别问我为什么记录这个网站链接，总有一天我要搞死它!)</p>
+<p>最开始我以为是某个软件搞得鬼，吓得我感觉打开本地 <strong>host</strong> 文件，结果是一切正常。</p>
+<p>这下我就更慌了，害怕是某种更高级的手段（我太菜了，高级的我怕应付不了T-T）。</p>
+<h3 id="沉着冷静">沉着冷静</h3>
+<p>我急忙打开<a href="https://seayj.cn/">我的博客</a>，我害怕我部署的博客也被劫持了。庆幸的是——<strong>博客一切正常！</strong></p>
+<p>这下，我安定了一些，开始冷静分析。既然没通过 <strong>host</strong>，也没劫持我的博客，只是在我使用 <strong>localhost:4000</strong> 调试博客时出问题，那么至少问题出现时间可以锁定为<strong>最后一次部署（2022/7/24 02:15）到今天晚上（2022/7/24 22:40）</strong>，问题出现的可能操作为<strong>Hexo 插件安装</strong>（至少我不会自己手动劫持我自己吧）。</p>
+<h3 id="曙光初现">曙光初现</h3>
+<p><img src="https://seayj.cn/medias/lazyload.gif" data-original="./08df03d54b1d42ecaccf02f8504fec6a.jpeg" alt=""></p>
+<p>所以，我有理由怀疑它只是在我还未部署的博客源码中加入了自动跳转相关的代码。</p>
+<p>于是我果断 F12 大法。</p>
+<p>我先提前中断网页加载，然后来到源码 <strong>index.html</strong> 文件里搜索和其网址相关的字符串。</p>
+<p>果不其然，攻击者在我生成 <strong>index.html</strong> 文件里加入了 <code>&lt;meta http-equiv=&quot;refresh&quot; content=&quot;10;url= http://xfbbs.com/ &quot;&gt;</code> 标签，然后实现了网站的跳转。</p>
+<p>很好，现在目标已经浮现，干他就完了！</p>
+<h3 id="黎明将至">黎明将至</h3>
+<p>简单分析一下，这大概有两种可能性：</p>
 <ol>
-<li>
-<p>首先我们可以使用 <code>GetModuleFileName</code> 函数获取程序的绝对路径！也就是： <code>C:\Test\Room\Demo.exe</code> ！</p>
-</li>
-<li>
-<p>然后使用 <code>_splitpath</code> 函数分割该路径的个个部分，得到该路径的 “驱动器号(<code>C:</code>)”、“目录路径(<code>\Test\Room\</code>)”、“基文件名(<code>Demo</code>)”和“文件扩展名(<code>.exe</code>)”。</p>
-</li>
-<li>
-<p>最后用 <code>sprintf</code> 函数组装出我们需要的信息。</p>
-</li>
+<li>要么攻击者在我 <code>hexo g</code> 生成静态文件时加入字符串；</li>
+<li>要么攻击者在我源代码中已经加入了字符串。</li>
 </ol>
-<p>下面讲解一下用到的这三个函数，方便大家在今后的编程中灵活运用它们！</p>
-<h2 id="函数讲解">函数讲解</h2>
-<hr>
-<blockquote>
-<p>详情请参考 Microsoft 的 MSDN 文档</p>
-</blockquote>
-<h3 id="一、GetModuleFileName">一、GetModuleFileName</h3>
-<h4 id="函数声明">函数声明</h4>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c">DWORD <span class="token function">GetModuleFileNameA</span><span class="token punctuation">(</span>
-  <span class="token punctuation">[</span>in<span class="token punctuation">,</span> optional<span class="token punctuation">]</span> HMODULE hModule<span class="token punctuation">,</span>
-  <span class="token punctuation">[</span>out<span class="token punctuation">]</span>          LPSTR   lpFilename<span class="token punctuation">,</span>
-  <span class="token punctuation">[</span>in<span class="token punctuation">]</span>           DWORD   nSize
-<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<ol>
-<li><strong>参数 <code>hModule</code></strong></li>
-</ol>
-<p> 正在请求其路径程序的句柄。</p>
-<p> 如果此参数为 <code>NULL</code>，则 <code>GetModuleFileName</code> 将检索当前进程的可执行文件的路径。</p>
-<p> 因为我们需要获取的是当前程序的路径，所以我们需要检索路径的程序就是当前进程对应的可执行文件。所以这一项我们可以填<code>NULL</code>。</p>
-<ol start="2">
-<li><strong>参数 <code>lpFilename</code></strong></li>
-</ol>
-<p> 指向接收模块的完全限定路径的缓冲区的指针。如果路径的长度小于 <code>nSize</code> 参数指定的大小，则函数将成功，并且路径将作为 <code>NULL</code> 终止的字符串返回。</p>
-<p> 如果路径的长度超过 <code>nSize</code> 参数指定的大小，则函数将成功，并且字符串将被截断为 <code>nSize</code> 字符，包括终止空字符。</p>
-<ol start="3">
-<li><strong>参数 <code>nSize</code></strong></li>
-</ol>
-<p> <code>lpFilename</code> 缓冲区的大小。</p>
-<h4 id="返回值">返回值</h4>
-<p>如果函数成功，则返回值是复制到缓冲区的字符串的长度（以字符为单位），不包括终止空字符。如果缓冲区太小而无法容纳模块名称，则字符串将被截断为 <code>nSize</code> 字符（包括终止空字符），函数返回 <code>nSize</code>，并且函数将最后一个错误设置为<code>ERROR_INSUFFICIENT_BUFFER</code>。</p>
-<p><strong>Windows XP：</strong> 如果缓冲区太小而无法保存模块名称，则该函数将返回 <code>nSize</code>。最后一个错误代码将保留<code>ERROR_SUCCESS</code>。如果 <code>nSize</code> 为零，则返回值为零，最后一个错误代码<code>ERROR_SUCCESS</code>。</p>
-<p>如果函数失败，则返回值为 0（零）。</p>
-<h4 id="要求">要求</h4>
-<p>记得使用该函数需要头文件 <code>&lt;Windows.h&gt;</code></p>
-<blockquote>
-<p>详情请参考 Microsoft 的 MSDN 文档: <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamea">GetModuleFileName</a></p>
-</blockquote>
-<h3 id="二、-splitpath">二、_splitpath</h3>
-<h4 id="函数声明-2">函数声明</h4>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">_splitpath</span><span class="token punctuation">(</span>
-   <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span>path<span class="token punctuation">,</span>
-   <span class="token keyword">char</span> <span class="token operator">*</span>drive<span class="token punctuation">,</span>
-   <span class="token keyword">char</span> <span class="token operator">*</span>dir<span class="token punctuation">,</span>
-   <span class="token keyword">char</span> <span class="token operator">*</span>fname<span class="token punctuation">,</span>
-   <span class="token keyword">char</span> <span class="token operator">*</span>ext
-<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<ol>
-<li><strong>参数 <code>path</code></strong></li>
-</ol>
-<p> 此参数用于向函数传递需要分解的原路径。</p>
-<ol start="2">
-<li><strong>参数 <code>drive</code></strong></li>
-</ol>
-<p> 接收分割得到的“驱动器号”。</p>
-<ol start="3">
-<li><strong>参数 <code>dir</code></strong></li>
-</ol>
-<p> 接收分割得到的“目录路径”。</p>
-<ol start="4">
-<li><strong>参数 <code>fname</code></strong></li>
-</ol>
-<p> 接收分割得到的“基文件名”。</p>
-<ol start="5">
-<li><strong>参数 <code>ext</code></strong></li>
-</ol>
-<p> 接收分割得到的“文件扩展名”（带符号 ‘.’）。</p>
-<h4 id="返回值-2">返回值</h4>
-<p>该函数没有返回值，通过参数 <code>drive</code>、<code>dir</code>、<code>name</code> 和 <code>ext</code> 返回分解之后的各个部分。</p>
-<h4 id="要求-2">要求</h4>
-<p>记得使用该函数需要头文件 <code>&lt;stdlib.h&gt;</code></p>
-<blockquote>
-<p>详情请参考 Microsoft 的 MSDN 文档: <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/cpp/c-runtime-library/reference/splitpath-wsplitpath?view=msvc-170">_splitpath</a></p>
-</blockquote>
-<h3 id="三、-sprintf">三、 sprintf</h3>
-<h4 id="函数声明如下：">函数声明如下：</h4>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">sprintf</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span>str<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span>format<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ol>
-<li><strong>参数 <code>str</code></strong></li>
-</ol>
-<p> 这是指向一个字符数组的指针，该数组存储了 C 字符串。</p>
-<ol start="2">
-<li><strong>参数 <code>format</code></strong></li>
-</ol>
-<p> 这是字符串，包含了要被写入到字符串 <code>str</code> 的文本。它可以包含嵌入的 <code>format</code> 标签，<code>format</code> 标签可被随后的附加参数中指定的值替换，并按需求进行格式化。<code>format</code> 标签属性是 <strong>%[flags][width][.precision][length]specifier</strong>，具体讲解如下：</p>
+<p>先考虑第一种情况，我卸载了所有从昨天到今天安装的插件，然后再次 <code>hexo cl &amp;&amp; hexo g</code> 。</p>
+<p>结果是，没用，攻击字符串还是存在。</p>
+<p>那就暂时排除第一种可能，剩下就是在未部署的源代码里找了。</p>
+<h3 id="日出云开">日出云开</h3>
+<p>最后，几经查找，只在博客主题文件夹里的 <code>layout.ejs</code> 中找到了其定义。</p>
+<p>好家伙，这么狂的吗？直接改了我的源码文件。<br>
+<img src="https://seayj.cn/medias/lazyload.gif" data-original="./Snipaste_2022-07-24_00-38-17.jpg" alt=""></p>
+<p>好了，问题大致是解决了，剩下的就是寻找问题的原因了。</p>
+<h3 id="乘胜追击">乘胜追击</h3>
+<p>目前可以确定的是一定是一下几个插件的问题：</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">specifier（说明符）</th>
-<th style="text-align:left">输出</th>
+<th style="text-align:center">插件名称</th>
+<th style="text-align:center">是否有问题</th>
+<th style="text-align:center">审查日期</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">c</td>
-<td style="text-align:left">字符</td>
-</tr>
-<tr>
-<td style="text-align:center">d 或 i</td>
-<td style="text-align:left">有符号十进制整数</td>
-</tr>
-<tr>
-<td style="text-align:center">e</td>
-<td style="text-align:left">使用 e 字符的科学科学记数法（尾数和指数）</td>
-</tr>
-<tr>
-<td style="text-align:center">E</td>
-<td style="text-align:left">使用 E 字符的科学科学记数法（尾数和指数）</td>
-</tr>
-<tr>
-<td style="text-align:center">f</td>
-<td style="text-align:left">十进制浮点数</td>
-</tr>
-<tr>
-<td style="text-align:center">g</td>
-<td style="text-align:left">自动选择 %e 或 %f 中合适的表示法</td>
-</tr>
-<tr>
-<td style="text-align:center">G</td>
-<td style="text-align:left">自动选择 %E 或 %f 中合适的表示法</td>
-</tr>
-<tr>
-<td style="text-align:center">o</td>
-<td style="text-align:left">有符号八进制</td>
-</tr>
-<tr>
-<td style="text-align:center">s</td>
-<td style="text-align:left">字符的字符串</td>
-</tr>
-<tr>
-<td style="text-align:center">u</td>
-<td style="text-align:left">无符号十进制整数</td>
-</tr>
-<tr>
-<td style="text-align:center">x</td>
-<td style="text-align:left">无符号十六进制整数</td>
-</tr>
-<tr>
-<td style="text-align:center">X</td>
-<td style="text-align:left">无符号十六进制整数（大写字母）</td>
-</tr>
-<tr>
-<td style="text-align:center">p</td>
-<td style="text-align:left">指针地址</td>
-</tr>
-<tr>
-<td style="text-align:center">n</td>
-<td style="text-align:left">无输出</td>
-</tr>
-<tr>
-<td style="text-align:center">%</td>
-<td style="text-align:left">字符</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">flags（标识）</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
+<td style="text-align:center">hexo-neat</td>
+<td style="text-align:center">非常可疑</td>
 <td style="text-align:center">-</td>
-<td style="text-align:left">在给定的字段宽度内左对齐，默认是右对齐（参见 width 子说明符）。</td>
 </tr>
 <tr>
-<td style="text-align:center">+</td>
-<td style="text-align:left">强制在结果之前显示加号或减号（+ 或 -），即正数前面会显示 + 号。默认情况下，只有负数前面会显示一个 - 号。</td>
+<td style="text-align:center">gulp</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
 </tr>
 <tr>
-<td style="text-align:center">(space)</td>
-<td style="text-align:left">如果没有写入任何符号，则在该值前面插入一个空格。</td>
+<td style="text-align:center">gulp-htmlclean</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
 </tr>
 <tr>
-<td style="text-align:center">#</td>
-<td style="text-align:left">与 o、x 或 X 说明符一起使用时，非零值前面会分别显示 0、0x 或 0X。<br/>与 e、E 和 f 一起使用时，会强制输出包含一个小数点，即使后边没有数字时也会显示小数点。默认情况下，如果后边没有数字时候，不会显示显示小数点。<br/>与 g 或 G 一起使用时，结果与使用 e 或 E 时相同，但是尾部的零不会被移除。</td>
+<td style="text-align:center">gulp-htmlmin</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
 </tr>
 <tr>
-<td style="text-align:center">0</td>
-<td style="text-align:left">在指定填充 padding 的数字左边放置零（0），而不是空格（参见 width 子说明符）。</td>
+<td style="text-align:center">gulp-minify-css</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">gulp-uglify</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">gulp-imagemin</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">gulp-debug</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">gulp-clean-css</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">gulp-changed</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">gulp-if</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">gulp-plumber</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">gulp-babel</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">babel-preset-es2015</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">del</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">@babel/core</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
 </tr>
 </tbody>
 </table>
-<hr>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">width（宽度）</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">(number)</td>
-<td style="text-align:left">要输出的字符的最小数目。如果输出的值短于该数，结果会用空格填充。如果输出的值长于该数，结果不会被截断。</td>
-</tr>
-<tr>
-<td style="text-align:center">*</td>
-<td style="text-align:left">宽度在 format 字符串中未指定，但是会作为附加整数值参数放置于要被格式化的参数之前。</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">.precision（精度）</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">.number</td>
-<td style="text-align:left">对于整数说明符（d、i、o、u、x、X）：precision 指定了要写入的数字的最小位数。如果写入的值短于该数，结果会用前导零来填充。如果写入的值长于该数，结果不会被截断。精度为 0 意味着不写入任何字符。<br/>对于 e、E 和 f 说明符：要在小数点后输出的小数位数。<br/>对于 g 和 G 说明符：要输出的最大有效位数。<br/>对于 s: 要输出的最大字符数。默认情况下，所有字符都会被输出，直到遇到末尾的空字符。<br/>对于 c 类型：没有任何影响。<br/>当未指定任何精度时，默认为 1。如果指定时不带有一个显式值，则假定为 0。</td>
-</tr>
-<tr>
-<td style="text-align:center">.*</td>
-<td style="text-align:left">精度在 format 字符串中未指定，但是会作为附加整数值参数放置于要被格式化的参数之前。</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">length（长度）</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">h</td>
-<td style="text-align:left">参数被解释为短整型或无符号短整型（仅适用于整数说明符：i、d、o、u、x 和 X）。</td>
-</tr>
-<tr>
-<td style="text-align:center">l</td>
-<td style="text-align:left">参数被解释为长整型或无符号长整型，适用于整数说明符（i、d、o、u、x 和 X）及说明符 c（表示一个宽字符）和 s（表示宽字符字符串）。</td>
-</tr>
-<tr>
-<td style="text-align:center">L</td>
-<td style="text-align:left">参数被解释为长双精度型（仅适用于浮点数说明符：e、E、f、g 和 G）。</td>
-</tr>
-</tbody>
-</table>
-<ol start="3">
-<li><strong>附加参数</strong></li>
-</ol>
-<p> 根据不同的 <code>format</code> 字符串，函数可能需要一系列的附加参数，每个参数包含了一个要被插入的值，替换了 <code>format</code> 参数中指定的每个 % 标签。参数的个数应与 % 标签的个数相同。</p>
-<h4 id="返回值-3">返回值</h4>
-<p>如果成功，则返回写入的字符总数，不包括字符串追加在字符串末尾的空字符。如果失败，则返回一个负数。</p>
-<h4 id="要求-3">要求</h4>
-<p>记得使用该函数需要头文件 <code>&lt;stdio.h&gt;</code></p>
-<h2 id="具体实例">具体实例</h2>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c">TCHAR proPath_m<span class="token punctuation">[</span>_MAX_PATH<span class="token punctuation">]</span><span class="token punctuation">,</span> 
-Drive_m<span class="token punctuation">[</span>_MAX_DRIVE<span class="token punctuation">]</span><span class="token punctuation">,</span> 
-Dir_m<span class="token punctuation">[</span>_MAX_DIR<span class="token punctuation">]</span><span class="token punctuation">,</span> 
-FName_m<span class="token punctuation">[</span>_MAX_FNAME<span class="token punctuation">]</span><span class="token punctuation">,</span> 
-Ext_m<span class="token punctuation">[</span>_MAX_EXT<span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-<span class="token function">GetModuleFileName</span><span class="token punctuation">(</span><span class="token constant">NULL</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>LPSTR<span class="token punctuation">)</span>proPath_m<span class="token punctuation">,</span> MAX_PATH<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">_splitpath</span><span class="token punctuation">(</span>proPath_m<span class="token punctuation">,</span> Drive_m<span class="token punctuation">,</span> Dir_m<span class="token punctuation">,</span> FName_m<span class="token punctuation">,</span> Ext_m<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">sprintf</span><span class="token punctuation">(</span>workDir<span class="token punctuation">,</span> <span class="token function">__TEXT</span><span class="token punctuation">(</span><span class="token string">"%s%s"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> Drive_m<span class="token punctuation">,</span> Dir_m<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 得到 C:\Test\Room\</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="补充-2">补充</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">属性</th>
-<th style="text-align:center">值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>_MAX_DRIVE</code></td>
-<td style="text-align:center"><code>3</code></td>
-</tr>
-<tr>
-<td style="text-align:center"><code>_MAX_DIR</code></td>
-<td style="text-align:center"><code>256</code></td>
-</tr>
-<tr>
-<td style="text-align:center"><code>_MAX_FNAME</code></td>
-<td style="text-align:center"><code>256</code></td>
-</tr>
-<tr>
-<td style="text-align:center"><code>_MAX_EXT</code></td>
-<td style="text-align:center"><code>256</code></td>
-</tr>
-</tbody>
-</table>
+<p>不早了，我先睡了，以后慢慢查，然后盘它。</p>
 
                 
             </div>
@@ -1036,7 +845,7 @@ Ext_m<span class="token punctuation">[</span>_MAX_EXT<span class="token punctuat
                     </i>
                     </span>
                 <span class="reprint-info">
-                    <a href="https://seayj.cn/articles/vs-ru-he-huo-qu-ying-yong-cheng-xu-suo-zai-lu-jing/">https://seayj.cn/articles/vs-ru-he-huo-qu-ying-yong-cheng-xu-suo-zai-lu-jing/</a>
+                    <a href="https://seayj.cn/articles/ji-lu-yi-ci-e-xin-de-wang-zhan-jie-chi/">https://seayj.cn/articles/ji-lu-yi-ci-e-xin-de-wang-zhan-jie-chi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1074,12 +883,12 @@ Ext_m<span class="token punctuation">[</span>_MAX_EXT<span class="token punctuat
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Visual-Studio/">
-                                    <span class="chip bg-color">Visual Studio</span>
+                                <a href="/tags/%E7%BD%91%E7%AB%99%E5%8A%AB%E6%8C%81/">
+                                    <span class="chip bg-color">网站劫持</span>
                                 </a>
                             
-                                <a href="/tags/Win32/">
-                                    <span class="chip bg-color">Win32</span>
+                                <a href="/tags/Hexo-%E6%8F%92%E4%BB%B6/">
+                                    <span class="chip bg-color">Hexo 插件</span>
                                 </a>
                             
                         </div>
@@ -1589,20 +1398,21 @@ Ext_m<span class="token punctuation">[</span>_MAX_EXT<span class="token punctuat
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/articles/jie-jue-wallpaper-engine-bu-fen-bi-zhi-hei-ping-wen-ti/">
+                <a href="/articles/ji-lu-yi-ci-e-xin-de-wang-zhan-jie-chi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="解决 Wallpaper Engine 部分壁纸黑屏问题">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="记录一次恶心的网站劫持">
                         
-                        <span class="card-title">解决 Wallpaper Engine 部分壁纸黑屏问题</span>
+                        <span class="card-title">记录一次恶心的网站劫持</span>
                         <div class="box-content"> 
-                            <h3 class="title">阅读上篇</h3> 
-                            <span class="post" style="width: 200px;color: black;">解决 Wallpaper Engine 部分壁纸黑屏问题</span> 
+                            <h3 class="title">阅读本篇</h3> 
+                            <span class="post" style="width: 200px;color: black;">记录一次恶心的网站劫持</span> 
                         </div>
                     </div>
                 </a>
@@ -1613,26 +1423,31 @@ Ext_m<span class="token punctuation">[</span>_MAX_EXT<span class="token punctuat
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%85%B6%E4%BB%96/" class="post-category">
-                                    其他
+                            <a href="/categories/%E6%88%90%E9%95%BF%E4%B9%8B%E8%B7%AF/" class="post-category">
+                                    成长之路
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Wallpaper-Engine/">
-                        <span class="chip bg-color">Wallpaper Engine</span>
+                    <a href="/tags/%E7%BD%91%E7%AB%99%E5%8A%AB%E6%8C%81/">
+                        <span class="chip bg-color">网站劫持</span>
+                    </a>
+                    
+                    <a href="/tags/Hexo-%E6%8F%92%E4%BB%B6/">
+                        <span class="chip bg-color">Hexo 插件</span>
                     </a>
                     
                 </div>
@@ -1646,16 +1461,16 @@ Ext_m<span class="token punctuation">[</span>_MAX_EXT<span class="token punctuat
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/articles/she-zhi-dai-ma-gao-liang-hexo-matery/">
+                <a href="/articles/c-yu-yan-bian-yi-lian-jie-ji-zhi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="设置代码高亮 | Hexo-Matery">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="C语言编译链接机制">
                         
-                        <span class="card-title">设置代码高亮 | Hexo-Matery</span>
+                        <span class="card-title">C语言编译链接机制</span>
                         <div class="box-content"> 
                             <h3 class="title">阅读下篇</h3> 
-                            <span class="post" style="width: 200px;color: black;">设置代码高亮 | Hexo-Matery</span> 
+                            <span class="post" style="width: 200px;color: black;">C语言编译链接机制</span> 
                         </div>
                     </div>
                 </a>
@@ -1667,14 +1482,14 @@ Ext_m<span class="token punctuation">[</span>_MAX_EXT<span class="token punctuat
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-30
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-21
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Blog/" class="post-category">
-                                    Blog
+                            <a href="/categories/C-C/" class="post-category">
+                                    C/C++
                                 </a>
                             
                             
@@ -1684,12 +1499,16 @@ Ext_m<span class="token punctuation">[</span>_MAX_EXT<span class="token punctuat
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo-Matery/">
-                        <span class="chip bg-color">Hexo-Matery</span>
+                    <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                        <span class="chip bg-color">C语言</span>
                     </a>
                     
-                    <a href="/tags/%E4%BB%A3%E7%A0%81%E5%9D%97%E9%AB%98%E4%BA%AE/">
-                        <span class="chip bg-color">代码块高亮</span>
+                    <a href="/tags/%E7%BC%96%E8%AF%91/">
+                        <span class="chip bg-color">编译</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%93%BE%E6%8E%A5/">
+                        <span class="chip bg-color">链接</span>
                     </a>
                     
                 </div>

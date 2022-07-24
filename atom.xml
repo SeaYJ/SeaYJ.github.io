@@ -6,7 +6,7 @@
   <link href="https://seayj.cn/atom.xml" rel="self"/>
   
   <link href="https://seayj.cn/"/>
-  <updated>2022-07-21T06:31:14.708Z</updated>
+  <updated>2022-07-24T05:59:56.494Z</updated>
   <id>https://seayj.cn/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记录一次恶心的网站劫持</title>
+    <link href="https://seayj.cn/articles/ji-lu-yi-ci-e-xin-de-wang-zhan-jie-chi/"/>
+    <id>https://seayj.cn/articles/ji-lu-yi-ci-e-xin-de-wang-zhan-jie-chi/</id>
+    <published>2022-07-23T16:02:37.000Z</published>
+    <updated>2022-07-24T05:59:56.494Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;【2022-07-24】&quot;&gt;【2022.07.24】&lt;/h2&gt;
+&lt;p&gt;额，是的，不知道什么原因，我的博客被劫持了。&lt;/p&gt;
+&lt;h3 id=&quot;黑夜到来&quot;&gt;黑夜到来&lt;/h3&gt;
+&lt;p&gt;事情发生在今晚 23:00 左右，我和往常一样准备开始完善自己的博客。但是，当我开始</summary>
+        
+      
+    
+    
+    
+    <category term="成长之路" scheme="https://seayj.cn/categories/%E6%88%90%E9%95%BF%E4%B9%8B%E8%B7%AF/"/>
+    
+    
+    <category term="网站劫持" scheme="https://seayj.cn/tags/%E7%BD%91%E7%AB%99%E5%8A%AB%E6%8C%81/"/>
+    
+    <category term="Hexo 插件" scheme="https://seayj.cn/tags/Hexo-%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>C语言编译链接机制</title>
@@ -564,35 +594,6 @@
     <category term="美化体验" scheme="https://seayj.cn/tags/%E7%BE%8E%E5%8C%96%E4%BD%93%E9%AA%8C/"/>
     
     <category term="Visual Studio" scheme="https://seayj.cn/tags/Visual-Studio/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows 10 如何在当前位置打开 CMD 命令窗口？</title>
-    <link href="https://seayj.cn/articles/windows-10-ru-he-zai-dang-qian-wei-zhi-da-kai-cmd-ming-ling-chuang-kou/"/>
-    <id>https://seayj.cn/articles/windows-10-ru-he-zai-dang-qian-wei-zhi-da-kai-cmd-ming-ling-chuang-kou/</id>
-    <published>2022-03-29T02:53:26.000Z</published>
-    <updated>2022-06-28T03:27:13.912Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;打开 CMD 后还要 CD 配置运行环境？太麻烦了！&lt;/p&gt;
-&lt;p&gt;来看看我是怎么在当前位置一键打开 CMD 命令窗口的吧！&lt;/p&gt;
-&lt;h2 id=&quot;方法一&quot;&gt;方法一&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Win + R 键召唤出运行窗口，然后输入 “CMD”</summary>
-        
-      
-    
-    
-    
-    <category term="其他" scheme="https://seayj.cn/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    
-    <category term="CMD" scheme="https://seayj.cn/tags/CMD/"/>
     
   </entry>
   

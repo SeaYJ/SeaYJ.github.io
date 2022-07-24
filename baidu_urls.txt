@@ -1,3 +1,4 @@
+https://seayj.cn/articles/ji-lu-yi-ci-e-xin-de-wang-zhan-jie-chi/
 https://seayj.cn/articles/c-yu-yan-bian-yi-lian-jie-ji-zhi/
 https://seayj.cn/articles/hexo-matery-tian-jia-hei-ye-mo-shi/
 https://seayj.cn/articles/hexo-matery-valine-ping-lun-xi-tong-you-hua/
@@ -7,4 +8,3 @@ https://seayj.cn/articles/hexo-matery-tian-jia-zi-ding-yi-loading-ye-mian/
 https://seayj.cn/articles/jie-jue-hexo-matery-bu-suan-zi-tong-ji-shi-xiao-wen-ti/
 https://seayj.cn/articles/vscode-for-python/
 https://seayj.cn/articles/vscode-for-java/
-https://seayj.cn/articles/idea-an-zhuang-ji-han-hua-jiao-cheng-2022/

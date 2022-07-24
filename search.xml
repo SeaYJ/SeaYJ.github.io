@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>记录一次恶心的网站劫持</title>
+      <link href="/articles/ji-lu-yi-ci-e-xin-de-wang-zhan-jie-chi/"/>
+      <url>/articles/ji-lu-yi-ci-e-xin-de-wang-zhan-jie-chi/</url>
+      
+        <content type="html"><![CDATA[<h2 id="【2022-07-24】">【2022.07.24】</h2><p>额，是的，不知道什么原因，我的博客被劫持了。</p><h3 id="黑夜到来">黑夜到来</h3><p>事情发生在今晚 23:00 左右，我和往常一样准备开始完善自己的博客。但是，当我开始 <code>hexo s</code> 进行本地调试时，网站自动被转到了一个奇怪的网站 <strong><a href="http://xfbbs.com/">开地网诗词</a></strong>。(别问我为什么记录这个网站链接，总有一天我要搞死它!)</p><p>最开始我以为是某个软件搞得鬼，吓得我感觉打开本地 <strong>host</strong> 文件，结果是一切正常。</p><p>这下我就更慌了，害怕是某种更高级的手段（我太菜了，高级的我怕应付不了T-T）。</p><h3 id="沉着冷静">沉着冷静</h3><p>我急忙打开<a href="https://seayj.cn/">我的博客</a>，我害怕我部署的博客也被劫持了。庆幸的是——<strong>博客一切正常！</strong></p><p>这下，我安定了一些，开始冷静分析。既然没通过 <strong>host</strong>，也没劫持我的博客，只是在我使用 <strong>localhost:4000</strong> 调试博客时出问题，那么至少问题出现时间可以锁定为<strong>最后一次部署（2022/7/24 02:15）到今天晚上（2022/7/24 22:40）</strong>，问题出现的可能操作为<strong>Hexo 插件安装</strong>（至少我不会自己手动劫持我自己吧）。</p><h3 id="曙光初现">曙光初现</h3><p><img src="https://seayj.cn/medias/lazyload.gif" data-original="./08df03d54b1d42ecaccf02f8504fec6a.jpeg" alt=""></p><p>所以，我有理由怀疑它只是在我还未部署的博客源码中加入了自动跳转相关的代码。</p><p>于是我果断 F12 大法。</p><p>我先提前中断网页加载，然后来到源码 <strong>index.html</strong> 文件里搜索和其网址相关的字符串。</p><p>果不其然，攻击者在我生成 <strong>index.html</strong> 文件里加入了 <code>&lt;meta http-equiv=&quot;refresh&quot; content=&quot;10;url= http://xfbbs.com/ &quot;&gt;</code> 标签，然后实现了网站的跳转。</p><p>很好，现在目标已经浮现，干他就完了！</p><h3 id="黎明将至">黎明将至</h3><p>简单分析一下，这大概有两种可能性：</p><ol><li>要么攻击者在我 <code>hexo g</code> 生成静态文件时加入字符串；</li><li>要么攻击者在我源代码中已经加入了字符串。</li></ol><p>先考虑第一种情况，我卸载了所有从昨天到今天安装的插件，然后再次 <code>hexo cl &amp;&amp; hexo g</code> 。</p><p>结果是，没用，攻击字符串还是存在。</p><p>那就暂时排除第一种可能，剩下就是在未部署的源代码里找了。</p><h3 id="日出云开">日出云开</h3><p>最后，几经查找，只在博客主题文件夹里的 <code>layout.ejs</code> 中找到了其定义。</p><p>好家伙，这么狂的吗？直接改了我的源码文件。<br><img src="https://seayj.cn/medias/lazyload.gif" data-original="./Snipaste_2022-07-24_00-38-17.jpg" alt=""></p><p>好了，问题大致是解决了，剩下的就是寻找问题的原因了。</p><h3 id="乘胜追击">乘胜追击</h3><p>目前可以确定的是一定是一下几个插件的问题：</p><table><thead><tr><th style="text-align:center">插件名称</th><th style="text-align:center">是否有问题</th><th style="text-align:center">审查日期</th></tr></thead><tbody><tr><td style="text-align:center">hexo-neat</td><td style="text-align:center">非常可疑</td><td style="text-align:center">-</td></tr><tr><td style="text-align:center">gulp</td><td style="text-align:center">-</td><td style="text-align:center">-</td></tr><tr><td style="text-align:center">gulp-htmlclean</td><td style="text-align:center">-</td><td style="text-align:center">-</td></tr><tr><td style="text-align:center">gulp-htmlmin</td><td style="text-align:center">-</td><td style="text-align:center">-</td></tr><tr><td style="text-align:center">gulp-minify-css</td><td style="text-align:center">-</td><td style="text-align:center">-</td></tr><tr><td style="text-align:center">gulp-uglify</td><td style="text-align:center">-</td><td style="text-align:center">-</td></tr><tr><td style="text-align:center">gulp-imagemin</td><td style="text-align:center">-</td><td style="text-align:center">-</td></tr><tr><td style="text-align:center">gulp-debug</td><td style="text-align:center">-</td><td style="text-align:center">-</td></tr><tr><td style="text-align:center">gulp-clean-css</td><td style="text-align:center">-</td><td style="text-align:center">-</td></tr><tr><td style="text-align:center">gulp-changed</td><td style="text-align:center">-</td><td style="text-align:center">-</td></tr><tr><td style="text-align:center">gulp-if</td><td style="text-align:center">-</td><td style="text-align:center">-</td></tr><tr><td style="text-align:center">gulp-plumber</td><td style="text-align:center">-</td><td style="text-align:center">-</td></tr><tr><td style="text-align:center">gulp-babel</td><td style="text-align:center">-</td><td style="text-align:center">-</td></tr><tr><td style="text-align:center">babel-preset-es2015</td><td style="text-align:center">-</td><td style="text-align:center">-</td></tr><tr><td style="text-align:center">del</td><td style="text-align:center">-</td><td style="text-align:center">-</td></tr><tr><td style="text-align:center">@babel/core</td><td style="text-align:center">-</td><td style="text-align:center">-</td></tr></tbody></table><p>不早了，我先睡了，以后慢慢查，然后盘它。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 成长之路 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网站劫持 </tag>
+            
+            <tag> Hexo 插件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C语言编译链接机制</title>
       <link href="/articles/c-yu-yan-bian-yi-lian-jie-ji-zhi/"/>
       <url>/articles/c-yu-yan-bian-yi-lian-jie-ji-zhi/</url>
