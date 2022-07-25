@@ -201,7 +201,7 @@
     <link href="https://seayj.cn/articles/hexo-matery-tian-jia-zi-ding-yi-loading-ye-mian/"/>
     <id>https://seayj.cn/articles/hexo-matery-tian-jia-zi-ding-yi-loading-ye-mian/</id>
     <published>2022-07-05T07:19:06.000Z</published>
-    <updated>2022-07-17T06:45:11.058Z</updated>
+    <updated>2022-07-25T16:34:00.245Z</updated>
     
     
       
@@ -267,7 +267,7 @@
         
     <summary type="html">&lt;p&gt;最近打算用 VSCode 集成我电脑上的众多编辑器，毕竟谁不想拥有一个万能的 IDE 呢？&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;强调:&lt;/strong&gt; 本篇只注重对 Python 的配置，对于其他不相关内容不做赘述。&lt;/p&gt;
-&lt;h2</summary>
+&lt;h2 id=&quot;一、安装-VSCode&quot;&gt;一、安装</summary>
         
       
     
