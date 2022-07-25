@@ -30,6 +30,8 @@
 
     <!--自定义添加的 Loading Page CSS 样式-->
     
+        <link rel="stylesheet" type="text/css" href="/css/new-css/loading.css">
+    
 
     <!-- 黑夜模式样式 css -->
     <link rel="stylesheet" type="text/css" href="/css/new-css/day-night.css">
@@ -46,6 +48,39 @@
 
 <body>
     <!--自定义的 Loading Page-->
+    
+        
+    <div id="loader-box">
+      <div class="loader-wrapper">
+        <div class="loader">
+          
+        </div>
+        
+        <div class="loader-text">
+            <div>L</div>
+            <div>O</div>
+            <div>A</div>
+            <div>D</div>
+            <div>I</div>
+            <div>N</div>
+            <div>G</div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+      </div>
+
+      <!-- <script>
+        var endLoading = function () {
+          document.body.style.overflow = 'auto';
+          setTimeout(function(){ alert("所有资源加载完毕！");document.getElementById('loader-box').remove(); }, 5000);
+          
+        }
+        window.addEventListener('load',endLoading);
+      </script> -->
+    </div>
+  
+  
     
 
     <!-- 夜间模式按钮 -->
@@ -1010,6 +1045,12 @@
             
             
             
+            <a href="/tags/IDEA/">
+                <span class="chip center-align waves-effect waves-light chip-default">IDEA</span>
+            </a>
+            
+            
+            
             <a href="/tags/Visual-C/">
                 <span class="chip center-align waves-effect waves-light chip-default">Visual C++</span>
             </a>
@@ -1018,12 +1059,6 @@
             
             <a href="/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/">
                 <span class="chip center-align waves-effect waves-light chip-default">资源分享</span>
-            </a>
-            
-            
-            
-            <a href="/tags/IDEA/">
-                <span class="chip center-align waves-effect waves-light chip-default">IDEA</span>
             </a>
             
             
@@ -1106,14 +1141,14 @@
             
             
             
-            <a href="/tags/Live2D/">
-                <span class="chip center-align waves-effect waves-light chip-default">Live2D</span>
+            <a href="/tags/UAC/">
+                <span class="chip center-align waves-effect waves-light chip-default">UAC</span>
             </a>
             
             
             
-            <a href="/tags/UAC/">
-                <span class="chip center-align waves-effect waves-light chip-default">UAC</span>
+            <a href="/tags/Live2D/">
+                <span class="chip center-align waves-effect waves-light chip-default">Live2D</span>
             </a>
             
             
@@ -1628,6 +1663,10 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
+
+    <script>
+        document.getElementById('loader-box').remove();
+    </script>
 
 <script>
             window.imageLazyLoadSetting = {

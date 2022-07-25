@@ -44,6 +44,8 @@ ClaudiaIDE 扩展下载
 
     <!--自定义添加的 Loading Page CSS 样式-->
     
+        <link rel="stylesheet" type="text/css" href="/css/new-css/loading.css">
+    
 
     <!-- 黑夜模式样式 css -->
     <link rel="stylesheet" type="text/css" href="/css/new-css/day-night.css">
@@ -60,6 +62,39 @@ ClaudiaIDE 扩展下载
 
 <body>
     <!--自定义的 Loading Page-->
+    
+        
+    <div id="loader-box">
+      <div class="loader-wrapper">
+        <div class="loader">
+          
+        </div>
+        
+        <div class="loader-text">
+            <div>L</div>
+            <div>O</div>
+            <div>A</div>
+            <div>D</div>
+            <div>I</div>
+            <div>N</div>
+            <div>G</div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+      </div>
+
+      <!-- <script>
+        var endLoading = function () {
+          document.body.style.overflow = 'auto';
+          setTimeout(function(){ alert("所有资源加载完毕！");document.getElementById('loader-box').remove(); }, 5000);
+          
+        }
+        window.addEventListener('load',endLoading);
+      </script> -->
+    </div>
+  
+  
     
 
     <!-- 夜间模式按钮 -->
@@ -1985,6 +2020,10 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
+
+    <script>
+        document.getElementById('loader-box').remove();
+    </script>
 
 <script>
             window.imageLazyLoadSetting = {

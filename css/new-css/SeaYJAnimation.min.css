@@ -584,7 +584,7 @@
     transform-style: preserve-3d
 }
 
-.face-key,.face-keyboard {
+.face-key, .face-keyboard {
     position: absolute
 }
 

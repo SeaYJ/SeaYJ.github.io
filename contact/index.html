@@ -30,6 +30,8 @@
 
     <!--自定义添加的 Loading Page CSS 样式-->
     
+        <link rel="stylesheet" type="text/css" href="/css/new-css/loading.css">
+    
 
     <!-- 黑夜模式样式 css -->
     <link rel="stylesheet" type="text/css" href="/css/new-css/day-night.css">
@@ -46,6 +48,39 @@
 
 <body>
     <!--自定义的 Loading Page-->
+    
+        
+    <div id="loader-box">
+      <div class="loader-wrapper">
+        <div class="loader">
+          
+        </div>
+        
+        <div class="loader-text">
+            <div>L</div>
+            <div>O</div>
+            <div>A</div>
+            <div>D</div>
+            <div>I</div>
+            <div>N</div>
+            <div>G</div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+      </div>
+
+      <!-- <script>
+        var endLoading = function () {
+          document.body.style.overflow = 'auto';
+          setTimeout(function(){ alert("所有资源加载完毕！");document.getElementById('loader-box').remove(); }, 5000);
+          
+        }
+        window.addEventListener('load',endLoading);
+      </script> -->
+    </div>
+  
+  
     
 
     <!-- 夜间模式按钮 -->
@@ -617,7 +652,7 @@
                                         链接：<input class="form-control" name="href" type="text" placeholder="弹幕链接，例如：https://seayj.cn"/>
                                     </div>
                                     <div class="form-group">
-                                        速度：<input  class="form-control"  name="speed" type="text" placeholder="5~20" value="16" />
+                                        速度：<input  class="form-control"  name="speed" type="text" placeholder="5~20" value="20" />
                                     </div>
                                 </form>
                                 <div class="form-group">
@@ -670,7 +705,7 @@
                         let info = $('input[name=info]').val();
                         (info === '' ) ?  info='hello world' : info=info;
                         let href = $('input[name=href]').val();
-                        (href === '' ) ?  href='https://github.com/blinkfox/hexo-theme-matery' : href=href;
+                        (href === '' ) ?  href='https://seayj.cn/404' : href=href;
                         let speed = parseInt($('input[name=speed]').val());
                         if(speed > 20 || speed < 5)
                             speed = Math.floor(Math.random() * 10) + 5;
@@ -1450,6 +1485,10 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
+
+    <script>
+        document.getElementById('loader-box').remove();
+    </script>
 
 <script>
             window.imageLazyLoadSetting = {
