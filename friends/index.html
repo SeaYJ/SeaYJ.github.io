@@ -745,8 +745,25 @@
 <main class="content">
     <div class="container friends-container">
         <div class="card">
-            <div class="Piano-SeaYJani" style="display: inline-block;margin-top: -95px;"  data-aos="zoom-in-down" data-aos-delay="520" data-aos-once="true">
-                <div class="mainV hide-on-med-and-down piano-message aos-init aos-animate"> 
+            <style>
+                #Piano-aniBox {
+                    width: 100%;
+                    height: 330px;
+                    display: inline-block;
+                    margin-top: -11vh;
+                }
+                @media only screen and (max-width: 601px) {
+                    #Piano-aniBox {
+                        /* hide-on-med-and-down */
+                        margin-top: -20vh;
+                        margin-left: -6vh;
+                        margin-bottom: -16vh;
+                        transform: scale(0.4,0.4);
+                    }
+                }
+            </style>
+            <div id="Piano-aniBox">
+                <div class="Piano-SeaYJani piano-message" data-aos="zoom-in-left" data-aos-delay="520" data-aos-once="true"> 
                     <div class="keyboard"> 
                      <div class="keyboard__front face-keyboard"> 
                       <div class="keyboard__f-top"> 
