@@ -6,7 +6,7 @@
   <link href="https://seayj.cn/atom.xml" rel="self"/>
   
   <link href="https://seayj.cn/"/>
-  <updated>2022-07-29T04:47:23.995Z</updated>
+  <updated>2022-07-29T08:02:10.364Z</updated>
   <id>https://seayj.cn/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="https://seayj.cn/articles/hexo-matery-wan-zhuan-markdown/"/>
     <id>https://seayj.cn/articles/hexo-matery-wan-zhuan-markdown/</id>
     <published>2022-07-28T12:25:50.000Z</published>
-    <updated>2022-07-29T04:47:23.995Z</updated>
+    <updated>2022-07-29T08:02:10.364Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;最近想起之前遇到的一个残留的 BUG 问题，是关于 hexo-markdown-it 插件的。&lt;/p&gt;
-&lt;p&gt;我在 &lt;a href=&quot;https://github.com/iissnan/hexo-theme-next/issues/974&quot;&gt;ISSUE&lt;/a&gt;</summary>
+    <summary type="html">&lt;p&gt;最近想起之前遇到的一个残留的 BUG 问题，是关于 hexo-renderer-markdown-it 插件的。&lt;/p&gt;
+&lt;p&gt;我在 &lt;a</summary>
         
       
     
@@ -40,7 +40,7 @@
     
     <category term="Hexo-Matery" scheme="https://seayj.cn/tags/Hexo-Matery/"/>
     
-    <category term="hexo-markdown-it" scheme="https://seayj.cn/tags/hexo-markdown-it/"/>
+    <category term="hexo-renderer-markdown-it" scheme="https://seayj.cn/tags/hexo-renderer-markdown-it/"/>
     
   </entry>
   
@@ -587,9 +587,9 @@
     <category term="C/C++" scheme="https://seayj.cn/categories/C-C/"/>
     
     
-    <category term="UAC" scheme="https://seayj.cn/tags/UAC/"/>
-    
     <category term="Win32" scheme="https://seayj.cn/tags/Win32/"/>
+    
+    <category term="UAC" scheme="https://seayj.cn/tags/UAC/"/>
     
   </entry>
   
