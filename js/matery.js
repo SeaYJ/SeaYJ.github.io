@@ -70,7 +70,10 @@ $(function () {
 
     /*文章内容详情的一些初始化特性*/
     let articleInit = function () {
+        
         $('#articleContent a').attr('target', '_blank');
+        $('#articleContent .footnote-ref a').attr('target', '_self');
+        $('#articleContent a.footnote-backref').attr('target', '_self');
 
         $('#articleContent img').each(function () {
             let imgPath = $(this).attr('src');
@@ -133,7 +136,6 @@ $(function () {
     /*监听滚动条位置*/
     let $nav = $('#headNav');
     let $backTop = $('.top-scroll');
-    let $sumMoonBox = $('.sum-moon-box'); // 黑夜模式按钮
     // 当页面处于文章中部的时候刷新页面，因为此时无滚动，所以需要判断位置,给导航加上绿色。
     showOrHideNavBg($(window).scrollTop());
     $(window).scroll(function () {
@@ -147,11 +149,9 @@ $(function () {
         if (position < showPosition) {
             $nav.addClass('nav-transparent');
             $backTop.fadeOut(300);
-            $sumMoonBox.fadeOut(400);
         } else {
             $nav.removeClass('nav-transparent');
             $backTop.fadeIn(300);
-            $sumMoonBox.fadeIn(400);
         }
     }
 

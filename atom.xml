@@ -6,7 +6,7 @@
   <link href="https://seayj.cn/atom.xml" rel="self"/>
   
   <link href="https://seayj.cn/"/>
-  <updated>2022-07-26T03:23:29.625Z</updated>
+  <updated>2022-07-29T04:47:23.995Z</updated>
   <id>https://seayj.cn/</id>
   
   <author>
@@ -17,21 +17,48 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>hexo[Matery] 玩转 Markdown</title>
+    <link href="https://seayj.cn/articles/hexo-matery-wan-zhuan-markdown/"/>
+    <id>https://seayj.cn/articles/hexo-matery-wan-zhuan-markdown/</id>
+    <published>2022-07-28T12:25:50.000Z</published>
+    <updated>2022-07-29T04:47:23.995Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近想起之前遇到的一个残留的 BUG 问题，是关于 hexo-markdown-it 插件的。&lt;/p&gt;
+&lt;p&gt;我在 &lt;a href=&quot;https://github.com/iissnan/hexo-theme-next/issues/974&quot;&gt;ISSUE&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="Blog" scheme="https://seayj.cn/categories/Blog/"/>
+    
+    
+    <category term="Hexo-Matery" scheme="https://seayj.cn/tags/Hexo-Matery/"/>
+    
+    <category term="hexo-markdown-it" scheme="https://seayj.cn/tags/hexo-markdown-it/"/>
+    
+  </entry>
+  
+  <entry>
     <title>记录一次恶心的网站劫持</title>
     <link href="https://seayj.cn/articles/ji-lu-yi-ci-e-xin-de-wang-zhan-jie-chi/"/>
     <id>https://seayj.cn/articles/ji-lu-yi-ci-e-xin-de-wang-zhan-jie-chi/</id>
     <published>2022-07-23T16:02:37.000Z</published>
-    <updated>2022-07-26T03:23:29.625Z</updated>
+    <updated>2022-07-28T01:26:41.878Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;【2022-07-24】&quot;&gt;【2022.07.24】&lt;/h2&gt;
+    <summary type="html">&lt;h2 id=&quot;2022-07-24&quot; id=&quot;【2022-07-24】&quot;&gt;【2022.07.24】&lt;/h2&gt;
 &lt;p&gt;额，是的，不知道什么原因，我的博客被劫持了。&lt;/p&gt;
-&lt;h3 id=&quot;黑夜到来&quot;&gt;黑夜到来&lt;/h3&gt;
-&lt;p&gt;事情发生在今晚 23:00 左右，我和往常一样准备开始完善自己的博客。但是，当我开始</summary>
+&lt;h3 id=&quot;hei-ye-dao-lai&quot;</summary>
         
       
     
@@ -51,14 +78,15 @@
     <link href="https://seayj.cn/articles/c-yu-yan-bian-yi-lian-jie-ji-zhi/"/>
     <id>https://seayj.cn/articles/c-yu-yan-bian-yi-lian-jie-ji-zhi/</id>
     <published>2022-07-21T06:15:09.000Z</published>
-    <updated>2022-07-21T06:31:14.708Z</updated>
+    <updated>2022-07-28T09:44:11.084Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;C 语言作为一门编译型语言，意味着当我们写完 C</summary>
+    <summary type="html">&lt;h1 id=&quot;yi-c-yu-yan-bian-cheng-ji-zhi-jian-jie&quot;&gt;一、C语言编程机制简介&lt;/h1&gt;
+&lt;p&gt;  生成程序&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;#fn1&quot;</summary>
         
       
     
@@ -149,10 +177,7 @@
         
         
     <summary type="html">&lt;p&gt;这两个星期天天熬夜到一两点，去学习怎么提高博客的访问速度。最终小有成果，下面我总结一下这几十天的研究内容。&lt;/p&gt;
-&lt;h2 id=&quot;一、全站加速（按照推荐等级排列）&quot;&gt;一、全站加速（按照推荐等级排列）&lt;/h2&gt;
-&lt;hr&gt;
-&lt;h4 id=&quot;-5&quot;&gt;&lt;/h4&gt;
-&lt;h4</summary>
+&lt;h2 id=&quot;yi-quan-zhan-jia-su-an-zhao-tui-jian-deng-ji-pai-lie&quot;</summary>
         
       
     
@@ -322,7 +347,7 @@
         
         
     <summary type="html">&lt;p&gt;最近要搞 JAVA ，又下回了那个熟悉的编辑器 IDEA ，正好乘此机会写个教程简单分享一下！&lt;/p&gt;
-&lt;h2 id=&quot;官网下载-IDEA&quot;&gt;官网下载 IDEA&lt;/h2&gt;
+&lt;h2 id=&quot;guan-wang-xia-zai-idea&quot; id=&quot;官网下载-IDEA&quot;&gt;官网下载 IDEA&lt;/h2&gt;
 &lt;p&gt;首先去 &lt;a</summary>
         
       
@@ -349,7 +374,7 @@
         
         
     <summary type="html">&lt;p&gt;  控制台程序编程中，如果主菜单总是需要输入数字选择，那显得很不直观，不像正常主菜单方向键可以上下移动选择按钮，所以这一次写代码的时候就直接改善此问题！&lt;/p&gt;
-&lt;h2 id=&quot;效果预览&quot;&gt;效果预览&lt;/h2&gt;
+&lt;h2 id=&quot;xiao-guo-yu-lan&quot; id=&quot;效果预览&quot;&gt;效果预览&lt;/h2&gt;
 &lt;p&gt;&lt;img</summary>
         
       
@@ -406,7 +431,7 @@
         
     <summary type="html">&lt;p&gt;众所周知程序当前所在目录在我们的编程中有着重要的作用，所以如何获取该变量显得很重要！&lt;/p&gt;
 &lt;p&gt;下面我说说我的思路，并保持更新！以便使用更优质的办法！&lt;/p&gt;
-&lt;h2 id=&quot;实现思路&quot;&gt;实现思路&lt;/h2&gt;
+&lt;h2 id=&quot;shi-xian-si-lu&quot; id=&quot;实现思路&quot;&gt;实现思路&lt;/h2&gt;
 &lt;hr&gt;
 &lt;h3</summary>
         
@@ -465,7 +490,7 @@
       
         
         
-    <summary type="html">&lt;p&gt;有谁会拒绝可爱的板娘入驻自己的博客呢？反正我不会吧o(^▽^)o&lt;/p&gt;
+    <summary type="html">&lt;p&gt;有谁会拒绝可爱的板娘入驻自己的博客呢？反正我不会吧o(&lt;sup&gt;▽&lt;/sup&gt;)o&lt;/p&gt;
 &lt;p&gt;这几天琢磨了一下，成就感满满，写个随笔记录一下！&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;我的博客主题模板的是</summary>
@@ -562,38 +587,9 @@
     <category term="C/C++" scheme="https://seayj.cn/categories/C-C/"/>
     
     
-    <category term="Win32" scheme="https://seayj.cn/tags/Win32/"/>
-    
     <category term="UAC" scheme="https://seayj.cn/tags/UAC/"/>
     
-  </entry>
-  
-  <entry>
-    <title>Visual Studio 设置背景图片主题（所有版本设置方法）</title>
-    <link href="https://seayj.cn/articles/visual-studio-she-zhi-bei-jing-tu-pian-zhu-ti-suo-you-ban-ben-she-zhi-fang-fa/"/>
-    <id>https://seayj.cn/articles/visual-studio-she-zhi-bei-jing-tu-pian-zhu-ti-suo-you-ban-ben-she-zhi-fang-fa/</id>
-    <published>2022-03-29T05:48:47.000Z</published>
-    <updated>2022-06-28T03:25:57.704Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;你知道吗？Visual Studio 编辑器也能设置背景哦~&lt;/p&gt;
-&lt;p&gt;效果预览：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://seayj.cn/medias/lazyload.gif&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="其他" scheme="https://seayj.cn/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    
-    <category term="美化体验" scheme="https://seayj.cn/tags/%E7%BE%8E%E5%8C%96%E4%BD%93%E9%AA%8C/"/>
-    
-    <category term="Visual Studio" scheme="https://seayj.cn/tags/Visual-Studio/"/>
+    <category term="Win32" scheme="https://seayj.cn/tags/Win32/"/>
     
   </entry>
   
