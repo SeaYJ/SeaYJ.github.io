@@ -179,3 +179,10 @@ $(function () {
     // 初始化加载 tooltipped.
     $('.tooltipped').tooltip();
 });
+
+
+// 修复部分页面 AOS 无法触发问题 2022.7.30
+let samt = 0;
+window.addEventListener('scroll', function() {
+    samt <= 10 ? samt++ : AOS.refresh();
+});
