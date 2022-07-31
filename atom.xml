@@ -6,7 +6,7 @@
   <link href="https://seayj.cn/atom.xml" rel="self"/>
   
   <link href="https://seayj.cn/"/>
-  <updated>2022-07-29T08:02:10.364Z</updated>
+  <updated>2022-07-30T12:21:58.504Z</updated>
   <id>https://seayj.cn/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="https://seayj.cn/articles/test/"/>
+    <id>https://seayj.cn/articles/test/</id>
+    <published>2022-07-30T01:32:07.000Z</published>
+    <updated>2022-07-30T12:21:58.504Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;q&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>hexo[Matery] 玩转 Markdown</title>
@@ -561,35 +582,6 @@
     <category term="Console Application" scheme="https://seayj.cn/tags/Console-Application/"/>
     
     <category term="Win32" scheme="https://seayj.cn/tags/Win32/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【Win32】 UAC用户账户控制 (提权)</title>
-    <link href="https://seayj.cn/articles/win32-uac-yong-hu-zhang-hu-kong-zhi-ti-quan/"/>
-    <id>https://seayj.cn/articles/win32-uac-yong-hu-zhang-hu-kong-zhi-ti-quan/</id>
-    <published>2022-03-29T06:16:27.000Z</published>
-    <updated>2022-06-28T03:26:24.616Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;最近写程序时遇到一个问题，就是当一个程序需要管理员权限才能正常运行该怎么办？&lt;/p&gt;
-&lt;p&gt;通过查阅多方资料，我总结出来几个比较实用的办法！(每种办法实现方法不同，同时功能上也有一些小小的差异。)&lt;/p&gt;
-&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="C/C++" scheme="https://seayj.cn/categories/C-C/"/>
-    
-    
-    <category term="Win32" scheme="https://seayj.cn/tags/Win32/"/>
-    
-    <category term="UAC" scheme="https://seayj.cn/tags/UAC/"/>
     
   </entry>
   
